@@ -65,6 +65,11 @@ h1, h2, h3
     background: url("http://img28.imageshack.us/img28/1705/39269107.png") fixed;
 }
 
+#professional-profile p
+{
+    margin-top: -10px;
+}
+
 /* Just for the position of the "professional-profile". */
 #professional-profile-container
 {
