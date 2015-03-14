@@ -1,158 +1,77 @@
-body {
-    background: url("http://img28.imageshack.us/img28/1705/39269107.png") fixed;
+body
+{
     color: #000;
     font-family: "Segoe UI", "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;
-    font-size: 15px;
+    font-size: 25px;
     line-height: 150%;
     margin-bottom: 10px;
+    background-color: #EEE;
 }
 
-a {
+#profile
+{
+    height: 300px;
+    width: 300px;
+    box-shadow: 0px 0px 10px #777;
+}
+
+#header
+{
+    padding: 100px;
+    text-align: center;
+    font-size: 150%;
+}
+
+#complete-name, #subtitle
+{
+    font-weight: normal;
+}
+
+#head-title a 
+{
+    color: #000;
     text-decoration: none;
 }
 
-a strong {
-    color: #000;
-    font-size: 15px;
+#subtitle
+{
+    font-weight: lighter;
 }
 
-a strong:active {
-    color: #561;
-}
-
-hr {
-    background-color: #000;
-    border: 1px solid #000;
-    color: #000;
-    height: 1px;
-}
-
-.postagem {
-    background-color: #FFF;
-    box-shadow: 0px 1px 5px;
-    margin-bottom: 25px;
-}
-
-.postagem:hover {
-    box-shadow: 0px 1px 7px;
-}
-
-.postagem hr {
-    margin-top: 0px;
-    margin-bottom: -2px;
-}
-
-.foto img:hover{
-    filter: alpha(95);
-    opacity: 0.95;
-}
-
-.descricao {
-    color: #000;
-    padding-left: 5px;
-}
-
-.descricao p:first-of-type {
-    font-size: 30px;
-    margin-bottom: 5px;
-}
-
-#limites {
+#container
+{
     margin: 0 auto;
-    padding: 24px;
-    width: 774px;
+    background: url("http://img28.imageshack.us/img28/1705/39269107.png") fixed;
+    font-weight: lighter;
 }
 
-#detalhes {
-    box-shadow: 0px 1px 5px;
-    float: left;
+#container h2, #container h3
+{
+    font-weight: 400;
+}
+
+#container2
+{
+    padding: 100px;
     margin: 0 auto;
-    position: fixed;
-    width: 250px;
+    width: 850px; 
 }
 
-#detalhes:hover {
-    box-shadow: 0px 1px 7px;
+#container2 > div
+{
+    margin-bottom: 100px;
+    border: 1px solid #999;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    padding: 20px 50px;
+    box-shadow: 0px 0px 20px #AAA;
+    background: rgba(255,255,255,0.2);
+    transition: all 0.05s;
+    -webkit-transition: all 0.05s;
 }
 
-#perfil-imagem {
-    width: 250px;
-}
-
-.fundo-verde {
-    background: #561;
-    background: linear-gradient(to bottom, #9A5 0%, #561 100%);
-    background: -o-linear-gradient(top, #9A5 0%, #561 100%);
-    background: -ms-linear-gradient(top, #9A5 0%, #561 100%);
-    background: -moz-linear-gradient(top, #9A5 0%, #561 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop    (0%,#9A5), color-stop(100%,#561)); 
-    background: -webkit-linear-gradient(top, #9A5 0%,#561 100%); 
-    color: #FFF;
-    font-size: 15px;    
-}
-
-#perfil-texto {
-    margin-top: -5px;
-    padding: 5px;
-    text-align: center;
-}
-
-#perfil-texto a {
-    color: #FFF;
-}
-
-#perfil-texto a:hover {
-    text-decoration: underline;
-}
-
-#perfil-texto a:active {
-    color: #000;
-}
-
-#perfil-texto hr {
-    margin-left: -5px;
-    width: 250px;
-}
-
-#postagens, #paginas {
-    float: right;
-    margin: 0 auto;
-    width: 500px;
-}
-
-#postagens a {
-    color: #561;
-}
-
-#postagens a:hover {
-    color: #9A5;
-    text-decoration: underline;
-}
-
-#postagens a:active {
-    color: #000;
-}
-
-#tags {
-    padding-left: 5px;
-    text-transform: lowercase;
-}
-
-#voltar {
-    float: left;
-    text-align: left;
-}
-
-#avancar {
-    float: right;
-    text-align: right;
-}
-
-#voltar, #avancar {
-    padding: 5px;
-    width: 85px;
-}
-
-#voltar:active, #avancar:active {
-    margin-top: 1px;
+#container2 > div:hover
+{
+    background: rgba(255,255,255,0.3);
 }
