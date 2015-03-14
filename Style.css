@@ -43,26 +43,26 @@ body
     font-weight: lighter;
 }
 
-#container
+#limits
 {
     margin: 0 auto;
     background: url("http://img28.imageshack.us/img28/1705/39269107.png") fixed;
     font-weight: lighter;
 }
 
-#container h2, #container h3
+#limits h2, #limits h3
 {
     font-weight: 400;
 }
 
-#container2
+#container
 {
     padding: 100px;
     margin: 0 auto;
     width: 850px; 
 }
 
-#container2 > div
+#container > div
 {
     margin-bottom: 100px;
     border: 1px solid #999;
@@ -76,7 +76,7 @@ body
     -webkit-transition: all 0.1s;
 }
 
-#container2 > div:hover
+#container > div:hover
 {
     background: rgba(255,255,255,0.3);
 }
