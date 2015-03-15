@@ -1,6 +1,6 @@
 body {
     /* Position. */
-    margin-bottom: 10px;
+    margin: 0 0 0 0;
     /* Font. */
     color: #000;
     font-family: "Segoe UI", "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;
@@ -8,6 +8,7 @@ body {
     font-weight: 300;
     /* Background. */
     background-color: #EEE;
+    background-image: url("https://assets.openshift.net/app/assets/stars-83eac15680fab444b50c85ddf22c6468.png"), url("https://assets.openshift.net/app/assets/noise-96172eb36be86da197f442cc05225d45.png");
 }
 
 header {
@@ -40,14 +41,16 @@ a {
     text-decoration: none;
 }
 
+#container {
+    /* Position. */
+    position: relative;
+    margin: 0 0% auto;
+}
+
 #profile {
     /* Size. */
     height: 320px;
     width: 320px;
-    /* Border. */
-    border-radius: 100%;
-    -moz-border-radius: 100%;
-    -webkit-border-radius: 100%;
     /* Effects. */
     box-shadow: 0px 0px 10px #777;
     transition: all 0.3s;
@@ -61,6 +64,10 @@ a {
 #subtitle {
     margin-top: -50px;
     font-weight: 300;
+}
+
+#content {
+    box-shadow: 0px -1px 10px #777;
 }
 
 #menu {
@@ -82,9 +89,12 @@ a {
     }
 
     #menu a {
-        border: none;
-        font-weight: 400;
+        /* Position. */
         margin: 0 20px;
+        /* Border. */
+        border: none;
+        /* Font. */
+        font-weight: 400;
     }
 
         #menu a:hover {
@@ -93,54 +103,61 @@ a {
 
 #about {
     /* Position. */
-    padding: 50px 100px;
+    padding: 2% 5%;
     /* Font. */
     color: #FFF;
     /* Background. */
     background-color: #191919;
-    background-image: url("https://assets.openshift.net/app/assets/planets-f355afb5f66eec401d99d02008392a1f.png"),url("https://assets.openshift.net/app/assets/stars-83eac15680fab444b50c85ddf22c6468.png"),url("https://assets.openshift.net/app/assets/noise-96172eb36be86da197f442cc05225d45.png");
+    background-image: url("https://assets.openshift.net/app/assets/planets-f355afb5f66eec401d99d02008392a1f.png"), url("https://assets.openshift.net/app/assets/stars-83eac15680fab444b50c85ddf22c6468.png"), url("https://assets.openshift.net/app/assets/noise-96172eb36be86da197f442cc05225d45.png");
+    background-attachment: fixed;
     background-repeat: no-repeat, repeat, repeat;
     background-position: center;
 }
 
 #professional-profile {
-    background: url("http://img28.imageshack.us/img28/1705/39269107.png") fixed;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("http://img28.imageshack.us/img28/1705/39269107.png");
+    background-attachment: fixed;
 }
+
+    #professional-profile h2 {
+        padding-left: 10px;
+    }
 
     #professional-profile p {
         margin-top: -20px;
     }
 
-/* Just for the position of the "professional profile". */
-#professional-profile-container {
+#professional-profile-content {
     /* Position. */
-    padding: 100px;
+    padding: 5% 0 1% 0;
     margin: 0 auto;
     /* Size. */
     width: 850px;
+    max-width: 95%;
 }
 
-    #professional-profile-container > div {
+    #professional-profile-content > div {
         margin-bottom: 120px;
     }
 
 .life-event {
     /* Position. */
-    margin-bottom: 30px;
-    padding: 20px 50px;
+    margin: 0 10px 30px 10px;
+    padding: 2% 5%;
+    position: relative;
     /* Border. */
     border: 1px solid #999;
     border-radius: 10px;
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
     /* Background. */
-    background: rgba(255,255,255,0.2);
+    background: rgba(255,255,255,0.18);
     /* Effects. */
-    box-shadow: 0px 0px 20px #AAA;
+    box-shadow: 0px 0px 20px #888;
     transition: all 0.1s;
     -webkit-transition: all 0.1s;
 }
 
     .life-event:hover {
-        background: rgba(255,255,255,0.3);
+        background: rgba(255,255,255,0.25);
     }
