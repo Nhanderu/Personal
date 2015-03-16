@@ -11,40 +11,72 @@ var server = http.createServer(function (request, response) {
         response.end();
     }
     else {
-        var data;
-        var contentType = "";
+
         fs.readFile(__dirname + '/Index.html', function(error, html) {
-            contentType = "text/html";
-            data = html;
+            if(error) {
+                response.writeHead(404, {"Content-type":"text/plain"});
+                response.end("File not found.")
+            }
+            
+            else {
+            response.writeHead(200, { "Content-Type": "text/html" });
+            response.end(html);}
         });
 
         fs.readFile(__dirname + '/Style.css', function(error, css) {
-            contentType = "text/css";
-            data = css;
+            if(error) {
+                response.writeHead(404, {"Content-type":"text/plain"});
+                response.end("File not found.")
+            }
+            
+            else {
+            response.writeHead(200, { "Content-Type": "text/css" });
+            response.end(css);}
         });
 
         fs.readFile(__dirname + '/Media/Profile.jpg', function(error, image) {
-            contentType = "image/jpeg";
-            data = image;
+            if(error) {
+                response.writeHead(404, {"Content-type":"text/plain"});
+                response.end("File not found.")
+            }
+            
+            else {
+            response.writeHead(200, { "Content-Type": "image/jpeg" });
+            response.end(image);}
         });
 
         fs.readFile(__dirname + '/Media/Background/Stars.png', function(error, image) {
-            contentType = "image/png";
-            data = image;
+            if(error) {
+                response.writeHead(404, {"Content-type":"text/plain"});
+                response.end("File not found.")
+            }
+            
+            else {
+            response.writeHead(200, { "Content-Type": "image/png" });
+            response.end(image);}
         });
 
         fs.readFile(__dirname + '/Media/Background/Stripes.png', function(error, image) {
-            contentType = "image/png";
-            data = image;
+            if(error) {
+                response.writeHead(404, {"Content-type":"text/plain"});
+                response.end("File not found.")
+            }
+            
+            else {
+            response.writeHead(200, { "Content-Type": "image/png" });
+            response.end(image);}
         });
 
         fs.readFile(__dirname + '/Media/Background/Texture.png', function(error, image) {
-            contentType = "image/png";
-            data = image;
+            if(error) {
+                response.writeHead(404, {"Content-type":"text/plain"});
+                response.end("File not found.")
+            }
+            
+            else {
+            response.writeHead(200, { "Content-Type": "image/png" });
+            response.end(image);}
         });
-
-        response.writeHead(200, { "Content-Type": contentType });
-        response.end(data);
     }
 });
 
