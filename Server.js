@@ -26,7 +26,7 @@ var server = http.createServer(function (request, response) {
                 }
 
                 if (count == 6) {
-                    respo.end();
+                    response.end();
                 }
             };
         };
