@@ -18,10 +18,10 @@ var server = http.createServer(function (request, response) {
 
                 if (error) {
                     response.writeHead(404, { "Content-type": "text/plain" });
-                    response.end("File not found.");
+                    response.write("File not found.");
                 }
                 else {
-                    response.writeHead(200, { "Content-Type": "text/plain" });
+                    response.writeHead(200, { "Content-Type": "text/html" });
                     response.write(data);
                 }
 
