@@ -16,6 +16,12 @@ var server = http.createServer(function (request, response) {
             response.write(html);
             response.end();
         });
+
+        fs.readFile(__dirname + '/Style.css', function(error, css) {
+            response.writeHead(200, { "Content-Type": "text/css" });
+            response.write(css);
+            response.end();
+        });
     }
 });
 
