@@ -7,13 +7,15 @@ var server_ip_address = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1'
 var server = http.createServer(function (request, response) {
     if (request.url == "/en") {
         response.writeHead(200, { "Content-Type": "text/html" });
-        response.write("<h1>Hello, world!</h1>");
+        response.write("<h1>Site on maintenance!</h1>");
         response.end();
     }
     else {
-        response.writeHead(200, { "Content-Type": "text/html" });
-        response.write("<h1>Olá, mundo!</h1>");
-        response.end();
+        fs.readFile(__dirname + '/Index.html', function(error, html) {
+            response.writeHead(200, { "Content-Type": "text/html" });
+            response.write(html);
+            response.end();
+        });
     }
 });
 
