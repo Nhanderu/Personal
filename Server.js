@@ -11,6 +11,7 @@ var server = http.createServer(function (request, response) {
         response.end();
     }
     else {
+
         fs.readFile(__dirname + '/Index.html', function(error, html) {
             response.writeHead(200, { "Content-Type": "text/html" });
             response.write(html);
@@ -28,17 +29,17 @@ var server = http.createServer(function (request, response) {
             response.end(image);
         });
 
-        fs.readFile(__dirname + '/Media/Background/Stars.jpg', function(error, image) {
+        fs.readFile(__dirname + '/Media/Background/Stars.png', function(error, image) {
             response.writeHead(200, { "Content-Type": "image/png" });
             response.end(image);
         });
 
-        fs.readFile(__dirname + '/Media/Background/Stripes.jpg', function(error, image) {
+        fs.readFile(__dirname + '/Media/Background/Stripes.png', function(error, image) {
             response.writeHead(200, { "Content-Type": "image/png" });
             response.end(image);
         });
 
-        fs.readFile(__dirname + '/Media/Background/Texture.jpg', function(error, image) {
+        fs.readFile(__dirname + '/Media/Background/Texture.png', function(error, image) {
             response.writeHead(200, { "Content-Type": "image/png" });
             response.end(image);
         });
