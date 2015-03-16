@@ -13,17 +13,15 @@ var server = http.createServer(function (request, response) {
     }
     else {
         var count = 0;
-        var handler = function (contentType) {
-            return function (error, data) {
+        var handler = function (error, data) {
                 count++;
 
                 if (error) {
                     response.writeHead(404, { "Content-type": "text/plain" });
                     response.end("File not found.");
                 }
-
                 else {
-                    response.writeHead(200, { "Content-Type": contentType });
+                    response.writeHead(200, { "Content-Type": "text/plain" });
                     response.write(data);
                 }
 
@@ -33,12 +31,12 @@ var server = http.createServer(function (request, response) {
             };
         };
 
-        fs.readFile(__dirname + "/Index.html", handler("text/html"));
-        fs.readFile(__dirname + "/Style.css", handler("text/css"));
-        fs.readFile(__dirname + "/Media/Profile.jpg", handler("image/jpeg"));
-        fs.readFile(__dirname + "/Media/Background/Stars.png", handler("image/png"));
-        fs.readFile(__dirname + "/Media/Background/Stripes.png", handler("image/png"));
-        fs.readFile(__dirname + "/Media/Background/Texture.png", handler("image/png"));
+        fs.readFile(__dirname + "/Index.html", handler);
+        fs.readFile(__dirname + "/Style.css", handler);
+        fs.readFile(__dirname + "/Media/Profile.jpg", handler);
+        fs.readFile(__dirname + "/Media/Background/Stars.png", handler);
+        fs.readFile(__dirname + "/Media/Background/Stripes.png", handler);
+        fs.readFile(__dirname + "/Media/Background/Texture.png", handler);
     }
 });
 
