@@ -12,6 +12,7 @@ var createResponse = function (error, response, data, contentType) {
 
     else {
         response.writeHead(200, { "Content-Type": contentType });
+        response.write(data);
         response.end(data);
     }
 };
@@ -24,27 +25,27 @@ var server = http.createServer(function (request, response) {
     }
     else {
         fs.readFile(__dirname + '/Index.html', function (error, html) {
-            createResponse(error, response, html, "text/html")
+            createResponse(error, response, html, "text/html");
         });
 
         fs.readFile(__dirname + '/Style.css', function (error, css) {
-            createResponse(error, response, css, "text/css")
+            createResponse(error, response, css, "text/css");
         });
 
         fs.readFile(__dirname + '/Media/Profile.jpg', function (error, image) {
-            createResponse(error, response, image, "image/jpeg")
+            createResponse(error, response, image, "image/jpeg");
         });
 
         fs.readFile(__dirname + '/Media/Background/Stars.png', function (error, image) {
-            createResponse(error, response, image, "image/png")
+            createResponse(error, response, image, "image/png");
         });
 
         fs.readFile(__dirname + '/Media/Background/Stripes.png', function (error, image) {
-            createResponse(error, response, image, "image/png")
+            createResponse(error, response, image, "image/png");
         });
 
         fs.readFile(__dirname + '/Media/Background/Texture.png', function (error, image) {
-            createResponse(error, response, image, "image/png")
+            createResponse(error, response, image, "image/png");
         });
     }
 });
