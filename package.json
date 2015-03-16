@@ -1,0 +1,23 @@
+{
+  "name": "Personal",
+  "version": "0.1.0",
+  "description": "My personal website!",
+  "main": "Server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node Server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Nhanderu/Personal.git"
+  },
+  "keywords": [
+    "personal"
+  ],
+  "author": "Rafael Escobar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Nhanderu/Personal/issues"
+  },
+  "homepage": "https://nhanderu.com/"
+}
