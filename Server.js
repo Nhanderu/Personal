@@ -11,39 +11,40 @@ var server = http.createServer(function (request, response) {
         response.end();
     }
     else {
-
+        var data;
+        var contentType = "";
         fs.readFile(__dirname + '/Index.html', function(error, html) {
-            response.writeHead(200, { "Content-Type": "text/html" });
-            response.write(html);
-            response.end();
+            contentType = "text/html";
+            data = html;
         });
 
         fs.readFile(__dirname + '/Style.css', function(error, css) {
-            response.writeHead(200, { "Content-Type": "text/css" });
-            response.write(css);
-            response.end();
+            contentType = "text/css";
+            data = css;
         });
 
         fs.readFile(__dirname + '/Media/Profile.jpg', function(error, image) {
-            response.writeHead(200, { "Content-Type": "image/jpeg" });
-            response.write(image);
-            response.end();
+            contentType = "image/jpeg";
+            data = image;
         });
 
         fs.readFile(__dirname + '/Media/Background/Stars.png', function(error, image) {
-            response.writeHead(200, { "Content-Type": "image/png" });
-            response.end(image);
+            contentType = "image/png";
+            data = image;
         });
 
         fs.readFile(__dirname + '/Media/Background/Stripes.png', function(error, image) {
-            response.writeHead(200, { "Content-Type": "image/png" });
-            response.end(image);
+            contentType = "image/png";
+            data = image;
         });
 
         fs.readFile(__dirname + '/Media/Background/Texture.png', function(error, image) {
-            response.writeHead(200, { "Content-Type": "image/png" });
-            response.end(image);
+            contentType = "image/png";
+            data = image;
         });
+
+        response.writeHead(200, { "Content-Type": contentType });
+        response.end(data);
     }
 });
 
