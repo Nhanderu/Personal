@@ -25,26 +25,22 @@ var server = http.createServer(function (request, response) {
 
         fs.readFile(__dirname + '/Media/Profile.jpg', function(error, image) {
             response.writeHead(200, { "Content-Type": "image/jpeg" });
-            response.write(image);
-            response.end();
+            response.end(image);
         });
 
         fs.readFile(__dirname + '/Media/Background/Stars.jpg', function(error, image) {
             response.writeHead(200, { "Content-Type": "image/png" });
-            response.write(image);
-            response.end();
+            response.end(image);
         });
 
         fs.readFile(__dirname + '/Media/Background/Stripes.jpg', function(error, image) {
             response.writeHead(200, { "Content-Type": "image/png" });
-            response.write(image);
-            response.end();
+            response.end(image);
         });
 
         fs.readFile(__dirname + '/Media/Background/Texture.jpg', function(error, image) {
             response.writeHead(200, { "Content-Type": "image/png" });
-            response.write(image);
-            response.end();
+            response.end(image);
         });
     }
 });
