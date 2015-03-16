@@ -26,7 +26,8 @@ var server = http.createServer(function (request, response) {
 
         fs.readFile(__dirname + '/Media/Profile.jpg', function(error, image) {
             response.writeHead(200, { "Content-Type": "image/jpeg" });
-            response.end(image);
+            response.write(image);
+            response.end();
         });
 
         fs.readFile(__dirname + '/Media/Background/Stars.png', function(error, image) {
