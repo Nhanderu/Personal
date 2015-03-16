@@ -7,7 +7,7 @@ var server_ip_address = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1'
 var createResponse = function (error, response, data, contentType) {
     if(error) {
         response.writeHead(404, {"Content-type": "text/plain"});
-        response.end("File not found.")
+        response.end("File not found.");
     }
 
     else {
