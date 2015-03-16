@@ -8,7 +8,7 @@ body {
     font-weight: 300;
     /* Background. */
     background-color: #FFF;
-    background-image: url("https://assets.openshift.net/app/assets/stars-83eac15680fab444b50c85ddf22c6468.png"), url("https://assets.openshift.net/app/assets/noise-96172eb36be86da197f442cc05225d45.png");
+    background-image: url("Media/Background/Texture.png");
 }
 
 header {
@@ -39,6 +39,10 @@ a {
     /* Font. */
     color: #000;
     text-decoration: none;
+}
+
+figure a {
+    border: none;
 }
 
 #container {
@@ -108,14 +112,14 @@ a {
     color: #FFF;
     /* Background. */
     background-color: #191919;
-    background-image: url("https://assets.openshift.net/app/assets/stars-83eac15680fab444b50c85ddf22c6468.png"), url("https://assets.openshift.net/app/assets/noise-96172eb36be86da197f442cc05225d45.png");
+    background-image: url("Media/Background/Stars.png"), url("Media/Background/Texture.png");
     background-attachment: fixed;
     background-repeat: repeat, repeat;
     background-position: center;
 }
 
 #professional-profile {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("http://img28.imageshack.us/img28/1705/39269107.png");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("Media/Background/Stripes.png");
     background-attachment: fixed;
 }
 
