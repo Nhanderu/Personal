@@ -12,31 +12,22 @@ var server = http.createServer(function (request, response) {
         response.end();
     }
     else {
-        var count = 0;
-        var handler = function (error, data) {
-                count++;
+        response.writeHead(200, { "Content-Type": "text/html" });
 
-                if (error) {
-                    response.writeHead(404, { "Content-type": "text/plain" });
-                    response.write("File not found.");
-                }
-                else {
-                    response.writeHead(200, { "Content-Type": "text/html" });
-                    response.write(data);
-                }
+        var index = fs.readFileSync(__dirname + "/Index.html");
+        response.write(index);
+        var style = fs.readFile(__dirname + "/Style.css");
+        response.write(style);
+        var imageProfile = fs.readFile(__dirname + "/Media/Profile.jpg");
+        response.write(imageProfile);
+        var imageStars = fs.readFile(__dirname + "/Media/Background/Stars.png");
+        response.write(imageStars);
+        var imageStripes = fs.readFile(__dirname + "/Media/Background/Stripes.png");
+        response.write(imageStripes);
+        var imageTexture = fs.readFile(__dirname + "/Media/Background/Texture.png");
+        response.write(imageTexture);
 
-                if (count == 6) {
-                    response.end();
-                }
-            };
-        };
-
-        fs.readFile(__dirname + "/Index.html", handler);
-        fs.readFile(__dirname + "/Style.css", handler);
-        fs.readFile(__dirname + "/Media/Profile.jpg", handler);
-        fs.readFile(__dirname + "/Media/Background/Stars.png", handler);
-        fs.readFile(__dirname + "/Media/Background/Stripes.png", handler);
-        fs.readFile(__dirname + "/Media/Background/Texture.png", handler);
+        response.end();
     }
 });
 
