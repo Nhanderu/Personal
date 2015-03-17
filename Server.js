@@ -15,10 +15,12 @@ var server = http.createServer(function (request, response) {
         response.writeHead(200, { "Content-Type": "text/html" });
         var index = fs.readFileSync(__dirname + "/Index.html");
         response.write(index);
+        response.end();
 
         response.writeHead(200, { "Content-Type": "text/css" });
         var style = fs.readFile(__dirname + "/Style.css");
         response.write(style);
+        response.end();
 
         response.writeHead(200, { "Content-Type": "image/jpeg" });
         var imageProfile = fs.readFile(__dirname + "/Media/Profile.jpg");
