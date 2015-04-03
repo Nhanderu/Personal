@@ -1,4 +1,2 @@
-# OpenShift folder
-personal/
-
+node_modules/
 *.db
