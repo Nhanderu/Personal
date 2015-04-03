@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>Rafael Escobar</title>
+    <link rel="stylesheet" type="text/css" href="Style.css">
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <link rel="stylesheet" type="text/css" href="public/stylesheets/style.css" />
+    <link rel="icon" type="image/x-icon" href="public/images/favicon.ico" />
+</head>
+
+<body>
+    <div id="container">
+        <header>
+            <figure>
+                <a href="."><img src="public/images/profile.jpg" alt="It's me!" title="It's me!" id="profile" /></a>
+            </figure>
+
+            <div id="head-title">
+                <h1 id="complete-name">Rafael B. Z. Escobar</h1>
+                <h2 id="subtitle">{{{subtitle}}}</h2>
+            </div>
+        </header>
+
+        <div id="content">
+            <nav id="menu">
+                <ul>
+                    <li><a href="http://github.com/nhanderu">GitHub</a></li>
+                    <li><a href="http://linkedin.com/in/rafaelbzescobar">LinkedIn</a></li>
+                    <li><a href="http://fb.com/nhanderu">Facebook</a></li>
+                </ul>
+            </nav>
+
+            <div id="about">
+                <h2>{{{about.title}}}</h2>
+
+                {{#each about.paragraphs}}
+
+                <p>{{{this}}}</p>
+
+                {{/each}}
+
+                <h2>{{{contact.title}}}</h2>
+
+                <p>{{{contact.content}}}</p>
+            </div>
+
+            <div id="professional-profile">
+                <div id="professional-profile-content">
+
+                    <div id="experience">
+                        <h2>{{{experience.title}}}</h2>
+
+                        {{#each experience.contents}}
+
+                        <section class="life-event">
+                            <h3>{{{this.title}}}</h3>
+
+                            <p>{{{this.level}}}</p>
+                            <p>{{{this.duration}}}</p>
+                            <p>{{{this.activities}}}</p>
+                            <p>{{{this.technologies}}}</p>
+                        </section>
+
+                        {{/each}}
+                    </div>
+
+                    <div id="academic-formation">
+                        <h2>{{{academic-formation.title}}}</h2>
+
+                        {{#each academic-formation.contents}}
+
+                        <section class="life-event">
+                            <h3>{{{this.title}}}</h3>
+
+                            <p>{{{this.level}}}</p>
+                            <p>{{{this.duration}}}</p>
+                        </section>
+
+                        {{/each}}
+                    </div>
+
+                    <div id="courses">
+                        <h2>{{{courses.title}}}</h2>
+
+                        {{#each courses.contents}}
+
+                        <section class="life-event">
+                            <h3>{{{this.title}}}</h3>
+
+                            <p>{{{this.organization}}}</p>
+                            <p>{{{this.duration}}}</p>
+                            <p>{{{this.contents}}}</p>
+                        </section>
+
+                        {{/each}}
+                    </div>
+
+                    <div id="languages" class="clearfix">
+                        <h2>{{{languages.title}}}</h2>
+
+                        {{#each languages.contents}}
+
+                        <section class="life-event language">
+                            <h3>{{{this.title}}}</h3>
+
+                            <p>{{{this.reading}}}</p>
+                            <p>{{{this.writing}}}</p>
+                            <p>{{{this.comprehension}}}</p>
+                            <p>{{{this.speaking}}}</p>
+                        </section>
+
+                        {{/each}}
+                    </div>
+
+                </div>
+            </div>
+
+            <footer id="copyright">
+                <span>Copyright &copy; 2015 &bull; Rafael Escobar</span>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
