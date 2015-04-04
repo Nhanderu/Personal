@@ -11,12 +11,13 @@ app.use("/public", express.static(__dirname + "/public"));
 app.engine("handlebars", handlebars());
 app.set("view engine", "handlebars");
 
+// Gets the portuguese contents of the page.
 var contents = JSON.parse(require('fs').readFileSync("./public/contents/pt.json"));
 
-// Root page.
+// Sets the router.
 app.use("/", router);
 
-app.listen(app.get("port"), function () {
+app.listen(app.get("port"), app.get("ip address"), function () {
     console.log("Working @ " + app.get("ip address") + ":" + app.get("port") + "!");
 });
 
