@@ -117,18 +117,6 @@ figure a {
 }
 
 #professional-profile {
-    background-attachment: fixed;
-}
-
-    #professional-profile h2 {
-        padding-left: 10px;
-    }
-
-    #professional-profile p {
-        margin-top: -20px;
-    }
-
-#professional-profile-content {
     /* Position. */
     padding: 2.5% 0 1% 0;
     margin: 0 auto;
@@ -137,8 +125,16 @@ figure a {
     max-width: 95%;
 }
 
-    #professional-profile-content > div {
+    #professional-profile > div {
         margin-bottom: 10%;
+    }
+
+    #professional-profile h2 {
+        padding-left: 10px;
+    }
+
+    #professional-profile p {
+        margin-top: -20px;
     }
 
 .life-event {

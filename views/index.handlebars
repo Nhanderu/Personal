@@ -48,74 +48,80 @@
             </div>
 
             <div id="professional-profile">
-                <div id="professional-profile-content">
 
-                    <div id="experience">
-                        <h2>{{{experience.title}}}</h2>
+                <div id="experience">
+                    <h2>{{{experience.title}}}</h2>
 
-                        {{#each experience.contents}}
+                    {{#each experience.contents}}
 
-                        <section class="life-event">
-                            <h3>{{{this.title}}}</h3>
+                    <section class="life-event">
+                        <h3>{{{this.title}}}</h3>
 
+                        <div name="life-event-content">
                             <p>{{{this.level}}}</p>
                             <p>{{{this.duration}}}</p>
                             <p>{{{this.activities}}}</p>
                             <p>{{{this.technologies}}}</p>
-                        </section>
+                        </div>
+                    </section>
 
-                        {{/each}}
-                    </div>
+                    {{/each}}
+                </div>
 
-                    <div id="academic-formation">
-                        <h2>{{{academic-formation.title}}}</h2>
+                <div id="academic-formation">
+                    <h2>{{{academic-formation.title}}}</h2>
 
-                        {{#each academic-formation.contents}}
+                    {{#each academic-formation.contents}}
 
-                        <section class="life-event">
-                            <h3>{{{this.title}}}</h3>
+                    <section class="life-event">
+                        <h3>{{{this.title}}}</h3>
 
+                        <div name="life-event-content">
                             <p>{{{this.level}}}</p>
                             <p>{{{this.duration}}}</p>
-                        </section>
+                        </div>
+                    </section>
 
-                        {{/each}}
-                    </div>
+                    {{/each}}
+                </div>
 
-                    <div id="courses">
-                        <h2>{{{courses.title}}}</h2>
+                <div id="courses">
+                    <h2>{{{courses.title}}}</h2>
 
-                        {{#each courses.contents}}
+                    {{#each courses.contents}}
 
-                        <section class="life-event">
-                            <h3>{{{this.title}}}</h3>
+                    <section class="life-event">
+                        <h3>{{{this.title}}}</h3>
 
+                        <div name="life-event-content">
                             <p>{{{this.organization}}}</p>
                             <p>{{{this.duration}}}</p>
                             <p>{{{this.contents}}}</p>
-                        </section>
+                        </div>
+                    </section>
 
-                        {{/each}}
-                    </div>
+                    {{/each}}
+                </div>
 
-                    <div id="languages" class="clearfix">
-                        <h2>{{{languages.title}}}</h2>
+                <div id="languages" class="clearfix">
+                    <h2>{{{languages.title}}}</h2>
 
-                        {{#each languages.contents}}
+                    {{#each languages.contents}}
 
-                        <section class="life-event language">
-                            <h3>{{{this.title}}}</h3>
+                    <section class="life-event language">
+                        <h3>{{{this.title}}}</h3>
 
+                        <div name="life-event-content">
                             <p>{{{this.reading}}}</p>
                             <p>{{{this.writing}}}</p>
                             <p>{{{this.comprehension}}}</p>
                             <p>{{{this.speaking}}}</p>
-                        </section>
+                        </div>
+                    </section>
 
-                        {{/each}}
-                    </div>
-
+                    {{/each}}
                 </div>
+
             </div>
 
             <footer id="copyright">
