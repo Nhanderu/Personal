@@ -192,23 +192,33 @@
             "list": [
                 {
                     "title": "Node.js",
-                    "description": "server-side application configurations"
+                    "description": "server-side application configurations",
+                    "url": "https://nodejs.org/"
                 },
                 {
                     "title": "Express",
-                    "description": "the back-end of the site, controlling the routes and the HTTP requests"
+                    "description": "the back-end of the site, controlling the routes and the HTTP requests",
+                    "url": "http://expressjs.com/"
                 },
                 {
                     "title": "Handlebars",
-                    "description": "views with dynamic text"
+                    "description": "views with dynamic text",
+                    "url": "http://handlebarsjs.com/"
                 },
                 {
-                    "title": "express-handlebars",
-                    "description": "complemanting the Handlebars usage"
+                    "title": "Express Handlebars",
+                    "description": "complemanting the Handlebars usage",
+                    "url": "https://github.com/ericf/express-handlebars"
                 },
                 {
                     "title": "Red Hat's Openshift",
-                    "description": "hosting and server configurations"
+                    "description": "hosting and server configurations",
+                    "url": "https://www.openshift.com/"
+                },
+                {
+                    "title": "Normalize.css",
+                    "description": "cross-browser compatible design",
+                    "url": "http://necolas.github.io/normalize.css/"
                 }
             ]
         },
