@@ -34,34 +34,30 @@
             </nav>
 
             <div id="about">
-                <h2>{{{about.title}}}</h2>
+                <h2>{{about.title}}</h2>
 
                 {{#each about.paragraphs}}
 
                 <p>{{{this}}}</p>
 
                 {{/each}}
-
-                <h2>{{{contact.title}}}</h2>
-
-                <p>{{{contact.content}}}</p>
             </div>
 
             <div id="professional-profile">
 
                 <div id="experience">
-                    <h2>{{{experience.title}}}</h2>
+                    <h2>{{experience.title}}</h2>
 
                     {{#each experience.contents}}
 
                     <section class="life-event">
-                        <h3>{{{this.title}}}</h3>
+                        <h3>{{this.title}}</h3>
 
                         <div name="life-event-content">
-                            <p>{{{this.level}}}</p>
-                            <p>{{{this.duration}}}</p>
-                            <p>{{{this.activities}}}</p>
-                            <p>{{{this.technologies}}}</p>
+                            <p>{{this.level.title}}: {{this.level.content}}</p>
+                            <p>{{this.duration.title}}: {{this.duration.content}}</p>
+                            <p>{{this.activities.title}}: {{this.activities.content}}</p>
+                            <p>{{this.technologies.title}}: {{this.technologies.content}}</p>
                         </div>
                     </section>
 
@@ -69,16 +65,16 @@
                 </div>
 
                 <div id="academic-formation">
-                    <h2>{{{academic-formation.title}}}</h2>
+                    <h2>{{academic-formation.title}}</h2>
 
                     {{#each academic-formation.contents}}
 
                     <section class="life-event">
-                        <h3>{{{this.title}}}</h3>
+                        <h3>{{this.title}}</h3>
 
                         <div name="life-event-content">
-                            <p>{{{this.level}}}</p>
-                            <p>{{{this.duration}}}</p>
+                            <p>{{this.level.title}}: {{this.level.content}}</p>
+                            <p>{{this.duration.title}}: {{this.duration.content}}</p>
                         </div>
                     </section>
 
@@ -86,17 +82,17 @@
                 </div>
 
                 <div id="courses">
-                    <h2>{{{courses.title}}}</h2>
+                    <h2>{{courses.title}}</h2>
 
                     {{#each courses.contents}}
 
                     <section class="life-event">
-                        <h3>{{{this.title}}}</h3>
+                        <h3>{{this.title}}</h3>
 
                         <div name="life-event-content">
-                            <p>{{{this.organization}}}</p>
-                            <p>{{{this.duration}}}</p>
-                            <p>{{{this.contents}}}</p>
+                            <p>{{this.organization.title}}: {{this.organization.content}}</p>
+                            <p>{{this.duration.title}}: {{this.duration.content}}</p>
+                            <p>{{this.contents.title}}: {{this.contents.content}}</p>
                         </div>
                     </section>
 
@@ -104,18 +100,18 @@
                 </div>
 
                 <div id="languages" class="clearfix">
-                    <h2>{{{languages.title}}}</h2>
+                    <h2>{{languages.title}}</h2>
 
                     {{#each languages.contents}}
 
                     <section class="life-event language">
-                        <h3>{{{this.title}}}</h3>
+                        <h3>{{this.title}}</h3>
 
                         <div name="life-event-content">
-                            <p>{{{this.reading}}}</p>
-                            <p>{{{this.writing}}}</p>
-                            <p>{{{this.comprehension}}}</p>
-                            <p>{{{this.speaking}}}</p>
+                            <p>{{this.reading.title}}: {{this.reading.content}}</p>
+                            <p>{{this.writing.title}}: {{this.writing.content}}</p>
+                            <p>{{this.comprehension.title}}: {{this.comprehension.content}}</p>
+                            <p>{{this.speaking.title}}: {{this.speaking.content}}</p>
                         </div>
                     </section>
 
@@ -125,7 +121,7 @@
             </div>
 
             <footer id="copyright">
-                <span>Copyright &copy; 2015 &bull; Rafael Escobar</span>
+                <span>{{{footer.copyright}}}</span>
             </footer>
         </div>
     </div>
