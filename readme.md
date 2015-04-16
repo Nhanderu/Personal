@@ -12,7 +12,7 @@ My personal website, running @ `nhanderu.com`!
 
 ### To-do list
 
-* Mobile-friendly design
+* Responsive design
 * English page
 * .NET and Javascript technologies list in about
 * Get better backgrounds
