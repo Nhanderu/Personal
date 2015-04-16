@@ -1,11 +1,11 @@
 # Personal
 
-My personal website, running @ `nhanderu.com`.
+My personal website, running @ `nhanderu.com`!
 
 ### Frameworks and tools
 
-* [Node.js](https://nodejs.org/): server-side application configurations
-* [Express](http://expressjs.com/): the back-end of the site, controlling the routes and the HTTP requests
+* [Node.js](https://nodejs.org/): application platform
+* [Express](http://expressjs.com/): the back-end of the web-app, controlling the routes and the HTTP requests
 * [Handlebars](http://handlebarsjs.com/): views with dynamic text
  * [express-handlebars](https://github.com/ericf/express-handlebars): complemanting the Handlebars usage
 * [Red Hat's Openshift](https://www.openshift.com/) hosting and server configurations
