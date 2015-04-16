@@ -20,4 +20,4 @@ My personal website, running @ `nhanderu.com`.
 
 ### License
 
-This project is released under the terms of the [MIT](http://opensource.org/licenses/MIT) license.
+This project content is released under the terms of the [Creative Commons BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/) license and the code is released under the terms of the [MIT](http://opensource.org/licenses/MIT) license.
