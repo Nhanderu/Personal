@@ -1,9 +1,12 @@
 ﻿<!DOCTYPE html>
 
-<html xmlns="http//www.w3.org/1999/xhtml">
+<html lang="{{utils.language}}">
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="UTF-8" />
+    <meta name="author" content="Rafael Escobar" />
+    <meta name="description" content="{{utils.description}}" />
+    <meta name="keywords" content="{{utils.keywords}}" />
 
     <title>Rafael Escobar</title>
 
@@ -29,9 +32,9 @@
             <nav id="menu">
                 <ul>
                     {{#each menu}}
-                    
+
                     <li><a href="{{this.url}}" target="_blank">{{this.name}}</a></li>
-                    
+
                     {{/each}}
                 </ul>
             </nav>
@@ -57,10 +60,10 @@
                         <h3>{{this.title}}</h3>
 
                         <div name="life-event-content">
-                            <p>{{this.level.title}} {{this.level.content}}</p>
-                            <p>{{this.duration.title}} {{this.duration.content}}</p>
-                            <p>{{this.activities.title}} {{this.activities.content}}</p>
-                            <p>{{this.technologies.title}} {{this.technologies.content}}</p>
+                            <p>{{../utils.items.level}} {{this.level}}</p>
+                            <p>{{../utils.items.duration}} {{this.duration}}</p>
+                            <p>{{../utils.items.activities}} {{this.activities}}</p>
+                            <p>{{../utils.items.technologies}} {{this.technologies}}</p>
                         </div>
                     </section>
 
@@ -76,8 +79,8 @@
                         <h3>{{this.title}}</h3>
 
                         <div name="life-event-content">
-                            <p>{{this.level.title}} {{this.level.content}}</p>
-                            <p>{{this.duration.title}} {{this.duration.content}}</p>
+                            <p>{{../utils.items.level}} {{this.level}}</p>
+                            <p>{{../utils.items.duration}} {{this.duration}}</p>
                         </div>
                     </section>
 
@@ -93,9 +96,9 @@
                         <h3>{{this.title}}</h3>
 
                         <div name="life-event-content">
-                            <p>{{this.organization.title}} {{this.organization.content}}</p>
-                            <p>{{this.duration.title}} {{this.duration.content}}</p>
-                            <p>{{this.contents.title}} {{this.contents.content}}</p>
+                            <p>{{../utils.items.organization}} {{this.organization}}</p>
+                            <p>{{../utils.items.duration}} {{this.duration}}</p>
+                            <p>{{../utils.items.contents}} {{this.contents}}</p>
                         </div>
                     </section>
 
@@ -111,10 +114,10 @@
                         <h3>{{this.title}}</h3>
 
                         <div name="life-event-content">
-                            <p>{{this.reading.title}} {{this.reading.content}}</p>
-                            <p>{{this.writing.title}} {{this.writing.content}}</p>
-                            <p>{{this.comprehension.title}} {{this.comprehension.content}}</p>
-                            <p>{{this.speaking.title}} {{this.speaking.content}}</p>
+                            <p>{{../utils.items.reading}} {{this.reading}}</p>
+                            <p>{{../utils.items.writing}} {{this.writing}}</p>
+                            <p>{{../utils.items.comprehension}} {{this.comprehension}}</p>
+                            <p>{{../utils.items.speaking}} {{this.speaking}}</p>
                         </div>
                     </section>
 

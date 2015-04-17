@@ -1,14 +1,18 @@
 var router = require('express').Router();
-var contents = JSON.parse(require('fs').readFileSync("./public/contents/pt.json"));
+var fs = require('fs');
+var contents = {
+    pt: JSON.parse(fs.readFileSync("./public/contents/pt.json")),
+    en: JSON.parse(fs.readFileSync("./public/contents/en.json"))
+};
 
 // Root page.
 router.get("/", function (request, response) {
-    response.render("index", contents);
+    response.render("index", contents.pt);
 });
 
 // English version.
 router.get("/en", function (request, response) {
-    response.send("Página em inglês!");
+    response.render("index", contents.en);
 });
 
 router.get(/^\/en-..$|^\/eng$|^\/english$/g, function (request, response) {

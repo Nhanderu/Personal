@@ -1,0 +1,170 @@
+{
+    "header": {
+        "name": "Rafael B. Z. Escobar",
+        "subtitle": {
+            "position": "Technical Support @",
+            "company": {
+                "name": "FIAP",
+                "url": "http://www.fiap.com.br"
+            }
+        }
+    },
+
+    "menu": [
+        {
+            "name": "GitHub",
+            "url": "http://github.com/nhanderu"
+        },
+        {
+            "name": "LinkedIn",
+            "url": "https://www.linkedin.com/in/rafaelbzescobar"
+        },
+        {
+            "name": "Facebook",
+            "url": "https://www.facebook.com/nhanderu"
+        }
+    ],
+
+    "about": {
+        "title": "About me",
+        "paragraphs": [
+            "Hello, my name is Rafael Escobar!<br />I'm a young Information Systems student at FIAP and an aspiring .NET and JavaScript programmer from S\u00E3o Paulo, Brasil. I like coffee, soccer and trucks."
+        ]
+    },
+
+    "experience": {
+        "title": "Professional experience",
+
+        "contents": [
+            {
+                "title": "Technical Support at FIAP",
+                "level": "1 and 2.",
+                "duration": "from march 2015 to the present.",
+                "activities": "stuff",
+                "technologies": "company's internal system, Fortinet firewall and Trauma Zer0 Suit."
+            },
+            {
+                "title": "Technical Support at FIAP",
+                "level": "intern.",
+                "duration": "10 months, from june 2014 to march 2015.",
+                "activities": "stuff",
+                "technologies": "company's internal system, Fortinet firewall and Trauma Zer0 Suit."
+            },
+            {
+                "title": "Laboratory Monitor at FIAP",
+                "level": "intern.",
+                "duration": "1 year and 5 months, from february 2013 to june 2014.",
+                "activities": "stuff",
+                "technologies": "company's internal system."
+            }
+        ]
+    },
+
+    "academic-formation": {
+        "title": "Academic formation",
+
+        "contents": [
+            {
+                "title": "Information Systems at FIAP",
+                "level": "higher education - baccalaureate.",
+                "duration": "prediction of 4 years, from the 1º semester of 2014 to the 2º semester of 2017."
+            },
+            {
+                "title": "Secondary School at COPI",
+                "level": "technician.",
+                "duration": "3 years, from the 1º semester of 2011 to the 2º semester of 2013."
+            }
+        ]
+    },
+
+    "courses": {
+        "title": "Courses",
+
+        "contents": [
+            {
+                "title": "Fábrica de Desenvolvimento (\"Development Factory\") 2014",
+                "organization": "FIAP.",
+                "duration": "64 hours, at november and december 2014.",
+                "contents": "C# and JavaScript languages, dynamic web pages programming with ASP.NET MVC, RESTful services with ASP.NET Web API, object-relational mapping with Entity Framework (code first), jQuery, Ajax, unit tests with the Visual Studio and design patterns."
+            },
+            {
+                "title": "Fábrica de Desenvolvimento (\"Development Factory\") 2013",
+                "organization": "FIAP.",
+                "duration": "64 hours, at august and september 2013.",
+                "contents": "C# and JavaScript languages, dynamic web pages programming with ASP.NET MVC, object-relational mapping with Entity Framework (database first), jQuery and good practices of programming."
+            }
+        ]
+    },
+
+    "languages": {
+        "title": "Languages",
+
+        "contents": [
+            {
+                "title": "Protuguese",
+                "reading": "fluent.",
+                "writing": "fluent.",
+                "comprehension": "fluent.",
+                "speaking": "fluent."
+            },
+            {
+                "title": "English",
+                "reading": "advanced.",
+                "writing": "advanced.",
+                "comprehension": "medium.",
+                "speaking": "medium."
+            }
+        ]
+    },
+
+    "footer": {
+        "copyright": "Copyright &copy; 2015 &bull; Rafael Escobar",
+        "built-with": {
+            "title": "Made with",
+            "list": [
+                {
+                    "title": "Node.js",
+                    "url": "https://nodejs.org/"
+                },
+                {
+                    "title": "Express",
+                    "url": "http://expressjs.com/"
+                },
+                {
+                    "title": "Handlebars",
+                    "url": "http://handlebarsjs.com/"
+                },
+                {
+                    "title": "Express Handlebars",
+                    "url": "https://github.com/ericf/express-handlebars"
+                },
+                {
+                    "title": "Red Hat's Openshift",
+                    "url": "https://www.openshift.com/"
+                },
+                {
+                    "title": "Normalize.css",
+                    "url": "http://necolas.github.io/normalize.css/"
+                }
+            ]
+        }
+    },
+
+    "utils": {
+        "language": "en-US",
+        "description": "The personal website of a .NET and JavaScript programmer!",
+        "keywords": ".NET, JavaScript, curriculum, curriculum vitae, cv, personal, rafael, rafael escobar, professional",
+        "items": {
+            "level": "Level(s):",
+            "duration": "Duration:",
+            "major-activities": "Major activities:",
+            "major-technologies": "Major technologies:",
+            "organization": "Organization:",
+            "coverage": "Coverage:",
+            "reading": "Reading:",
+            "writing": "Writing",
+            "comprehension": "Comprehension",
+            "speaking": "Speaking"
+        }
+    }
+}
