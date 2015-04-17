@@ -1,9 +1,32 @@
 {
-    "subtitle": "Suporte Técnico na <a href=\"http://www.fiap.com.br\">FIAP</a>",
+    "header": {
+        "name": "Rafael B. Z. Escobar",
+        "subtitle": {
+            "position": "Suporte Técnico na",
+            "company": {
+                "name": "FIAP",
+                "url": "http://www.fiap.com.br"
+            }
+        }
+    },
+
+    "menu": [
+        {
+            "name": "GitHub",
+            "url": "http://github.com/nhanderu"
+        },
+        {
+            "name": "LinkedIn",
+            "url": "https://www.linkedin.com/in/rafaelbzescobar"
+        },
+        {
+            "name": "Facebook",
+            "url": "https://www.facebook.com/nhanderu"
+        }
+    ],
 
     "about": {
         "title": "Sobre mim",
-
         "paragraphs": [
             "Olá, meu nome é Rafael Escobar!<br />Sou um jovem de São Paulo, Brasil, estudante de Sistemas da Informação na FIAP e aspirante a programador .NET e JavaScript. Gosto de café, futebol e caminhões.",
             "As principais linguagens que utilizo são C# e JavaScript. IDE que mais uso e conheço é o Visual Studio, porém em casos mais simples utilizo editores de texto como Sublime Text e Brackets. Possuo conhecimento em SQL (SQL Server e MySQL) e básico em NoSQL (MongoDB). Utilizo frequentemente o Git e (em menos casos) o TFS. Foco na arquitetura .NET e em tecnologias JavaScript, porém possuo conhecimento básico em outras linguagens de programação, como Java, C/C++ e Ruby."
@@ -17,57 +40,57 @@
             {
                 "title": "Suporte Técnico na FIAP",
                 "level": {
-                    "title": "Níveis",
+                    "title": "Níveis:",
                     "content": "1 e 2."
                 },
                 "duration": {
-                    "title": "Duração",
+                    "title": "Duração:",
                     "content": "de março de 2015 até o momento."
                 },
                 "activities": {
-                    "title": "Principais atividades",
+                    "title": "Principais atividades:",
                     "content": "suporte e auxílio aos alunos e colaboradores via acesso remoto (Trauma Zer0), administração e manutenção básica no firewall (Fortinet) e nos servidores de AD, DHCP e de Compartilhamento e Armazenamento, gerenciamento de suprimentos para impressoras e de equipamentos defeituosos, apoio e supervisão da equipe de monitores de laboratório, arrumação dos laboratórios de informática da faculdade, como manutenção e instalação de computadores e softwares, organização de pastas e suas permissões, etc."
                 },
                 "technologies": {
-                    "title": "Principais tecnologias",
+                    "title": "Principais tecnologias:",
                     "content": "sistema interno da empresa, firewall Fortinet e Trauma Zer0 Suit."
                 }
             },
             {
                 "title": "Suporte Técnico na FIAP",
                 "level": {
-                    "title": "Nível",
+                    "title": "Nível:",
                     "content": "estagiário."
                 },
                 "duration": {
-                    "title": "Duração",
+                    "title": "Duração:",
                     "content": "10 meses, de junho de 2014 até março de 2015."
                 },
                 "activities": {
-                    "title": "Principais atividades",
+                    "title": "Principais atividades:",
                     "content": "suporte e auxílio aos alunos e colaboradores via acesso remoto (Trauma Zer0), administração e manutenção básica no firewall (Fortinet) e nos servidores de AD, DHCP e de Compartilhamento e Armazenamento, gerenciamento de suprimentos para impressoras e de equipamentos defeituosos e apoio e supervisão da equipe de monitores de laboratório."
                 },
                 "technologies": {
-                    "title": "Principais tecnologias",
+                    "title": "Principais tecnologias:",
                     "content": "sistema interno da empresa, firewall Fortinet e Trauma Zer0 Suit."
                 }
             },
             {
                 "title": "Monitor de Laboratório na FIAP",
                 "level": {
-                    "title": "Nível",
+                    "title": "Nível:",
                     "content": "estagiário."
                 },
                 "duration": {
-                    "title": "Duração",
+                    "title": "Duração:",
                     "content": "1 ano e 5 meses, de fevereiro de 2013 até junho de 2014."
                 },
                 "activities": {
-                    "title": "Principais atividades",
+                    "title": "Principais atividades:",
                     "content": "organização dos laboratórios de informática, suporte e auxílio aos alunos e colaboradores, zelo pelos equipamentos e manutenção e limpeza das máquinas."
                 },
                 "technologies": {
-                    "title": "Principais tecnologias",
+                    "title": "Principais tecnologias:",
                     "content": "sistema interno da empresa."
                 }
             }
@@ -81,22 +104,22 @@
             {
                 "title": "Sistemas da Informação na FIAP",
                 "level": {
-                    "title": "Nível",
+                    "title": "Nível:",
                     "content": "ensino superior - bacharelado."
                 },
                 "duration": {
-                    "title": "Duração",
+                    "title": "Duração:",
                     "content": "previsão de 4 anos, do 1º semestre de 2014 até o 2º semestre de 2017."
                 }
             },
             {
                 "title": "Ensino Médio Técnico no COPI",
                 "level": {
-                    "title": "Nível",
+                    "title": "Nível:",
                     "content": "2º grau – técnico."
                 },
                 "duration": {
-                    "title": "Duração",
+                    "title": "Duração:",
                     "content": "3 anos, do 1º semestre de 2011 até o 2º semestre de 2013."
                 }
             }
@@ -110,30 +133,30 @@
             {
                 "title": "Fábrica de Desenvolvimento 2014",
                 "organization": {
-                    "title": "Organização",
+                    "title": "Organização:",
                     "content": "FIAP."
                 },
                 "duration": {
-                    "title": "Duração",
+                    "title": "Duração:",
                     "content": "64 horas, em novembro e dezembro de 2014."
                 },
                 "contents": {
-                    "title": "Abrangência",
+                    "title": "Abrangência:",
                     "content": "linguagens C# e Javascript, programação de páginas web dinâmicas com ASP.NET MVC, serviços REST com ASP.NET WebAPI, mapeamento objeto-relacional com Entity Framework (code first), jQuery, Ajax, testes de unidade com o Visual Studio e padrões de projeto."
                 }
             },
             {
                 "title": "Fábrica de Desenvolvimento 2013",
                 "organization": {
-                    "title": "Organização",
+                    "title": "Organização:",
                     "content": "FIAP."
                 },
                 "duration": {
-                    "title": "Duração",
+                    "title": "Duração:",
                     "content": "64 horas, em agosto e setembro de 2013."
                 },
                 "contents": {
-                    "title": "Abrangência",
+                    "title": "Abrangência:",
                     "content": "linguagens C# e Javascript, programação de páginas web dinâmicas com ASP.NET MVC, mapeamento objeto-relacional com Entity Framework (database first), jQuery e boas práticas de programação."
                 }
             }
@@ -147,38 +170,38 @@
             {
                 "title": "Português",
                 "reading": {
-                    "title": "Leitura",
+                    "title": "Leitura:",
                     "content": "fluente."
                 },
                 "writing": {
-                    "title": "Escrita",
+                    "title": "Escrita:",
                     "content": "fluente."
                 },
                 "comprehension": {
-                    "title": "Compreensão",
+                    "title": "Compreensão:",
                     "content": "fluente."
                 },
                 "speaking": {
-                    "title": "Fala/pronúncia",
+                    "title": "Fala/pronúncia:",
                     "content": "fluente."
                 }
             },
             {
                 "title": "Inglês",
                 "reading": {
-                    "title": "Leitura",
+                    "title": "Leitura:",
                     "content": "avançada."
                 },
                 "writing": {
-                    "title": "Escrita",
+                    "title": "Escrita:",
                     "content": "avançada."
                 },
                 "comprehension": {
-                    "title": "Compreensão",
+                    "title": "Compreensão:",
                     "content": "intermediária."
                 },
                 "speaking": {
-                    "title": "Fala/pronúncia",
+                    "title": "Fala/pronúncia:",
                     "content": "intermediária."
                 }
             }

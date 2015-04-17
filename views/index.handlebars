@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http//www.w3.org/1999/xhtml">
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -20,17 +20,19 @@
             </figure>
 
             <div id="head-title">
-                <h1 id="complete-name">Rafael B. Z. Escobar</h1>
-                <h2 id="subtitle">{{{subtitle}}}</h2>
+                <h1 id="complete-name">{{header.name}}</h1>
+                <h2 id="subtitle">{{header.subtitle.position}} <a href="{{header.subtitle.company.link}}">{{header.subtitle.company.name}}</a></h2>
             </div>
         </header>
 
         <div id="content">
             <nav id="menu">
                 <ul>
-                    <li><a href="http://github.com/nhanderu" target="_blank">GitHub</a></li>
-                    <li><a href="http://linkedin.com/in/rafaelbzescobar" target="_blank">LinkedIn</a></li>
-                    <li><a href="http://fb.com/nhanderu" target="_blank">Facebook</a></li>
+                    {{#each menu}}
+                    
+                    <li><a href="{{this.url}}" target="_blank">{{this.name}}</a></li>
+                    
+                    {{/each}}
                 </ul>
             </nav>
 
@@ -55,10 +57,10 @@
                         <h3>{{this.title}}</h3>
 
                         <div name="life-event-content">
-                            <p>{{this.level.title}}: {{this.level.content}}</p>
-                            <p>{{this.duration.title}}: {{this.duration.content}}</p>
-                            <p>{{this.activities.title}}: {{this.activities.content}}</p>
-                            <p>{{this.technologies.title}}: {{this.technologies.content}}</p>
+                            <p>{{this.level.title}} {{this.level.content}}</p>
+                            <p>{{this.duration.title}} {{this.duration.content}}</p>
+                            <p>{{this.activities.title}} {{this.activities.content}}</p>
+                            <p>{{this.technologies.title}} {{this.technologies.content}}</p>
                         </div>
                     </section>
 
@@ -74,8 +76,8 @@
                         <h3>{{this.title}}</h3>
 
                         <div name="life-event-content">
-                            <p>{{this.level.title}}: {{this.level.content}}</p>
-                            <p>{{this.duration.title}}: {{this.duration.content}}</p>
+                            <p>{{this.level.title}} {{this.level.content}}</p>
+                            <p>{{this.duration.title}} {{this.duration.content}}</p>
                         </div>
                     </section>
 
@@ -91,9 +93,9 @@
                         <h3>{{this.title}}</h3>
 
                         <div name="life-event-content">
-                            <p>{{this.organization.title}}: {{this.organization.content}}</p>
-                            <p>{{this.duration.title}}: {{this.duration.content}}</p>
-                            <p>{{this.contents.title}}: {{this.contents.content}}</p>
+                            <p>{{this.organization.title}} {{this.organization.content}}</p>
+                            <p>{{this.duration.title}} {{this.duration.content}}</p>
+                            <p>{{this.contents.title}} {{this.contents.content}}</p>
                         </div>
                     </section>
 
@@ -109,10 +111,10 @@
                         <h3>{{this.title}}</h3>
 
                         <div name="life-event-content">
-                            <p>{{this.reading.title}}: {{this.reading.content}}</p>
-                            <p>{{this.writing.title}}: {{this.writing.content}}</p>
-                            <p>{{this.comprehension.title}}: {{this.comprehension.content}}</p>
-                            <p>{{this.speaking.title}}: {{this.speaking.content}}</p>
+                            <p>{{this.reading.title}} {{this.reading.content}}</p>
+                            <p>{{this.writing.title}} {{this.writing.content}}</p>
+                            <p>{{this.comprehension.title}} {{this.comprehension.content}}</p>
+                            <p>{{this.speaking.title}} {{this.speaking.content}}</p>
                         </div>
                     </section>
 
