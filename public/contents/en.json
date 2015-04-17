@@ -157,8 +157,8 @@
         "items": {
             "level": "Level(s):",
             "duration": "Duration:",
-            "major-activities": "Major activities:",
-            "major-technologies": "Major technologies:",
+            "activities": "Major activities:",
+            "technologies": "Major technologies:",
             "organization": "Organization:",
             "coverage": "Coverage:",
             "reading": "Reading:",
