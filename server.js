@@ -3,8 +3,9 @@ var express = require("express");
 var handlebars = require("express-handlebars");
 
 // References the routers.
-var routes = {
-    index: require("./routes/index")
+var routers = {
+    index: require("./routes/index"),
+    derby: require("./routes/derby")
 };
 
 // Initializes a new Express application.
@@ -14,17 +15,20 @@ var app = express();
 app.set("port", process.env.OPENSHIFT_NODEJS_PORT || "8080");
 app.set("ip address", process.env.OPENSHIFT_NODEJS_IP || "127.0.0.1");
 app.set("views", __dirname + "/views");
-app.engine("handlebars", handlebars());
-app.set("view engine", "handlebars");
+app.engine("hbs", handlebars());
+app.set("view engine", "hbs");
 
-// Gets the portuguese contents of the page.
-var contents = JSON.parse(require('fs').readFileSync("./public/contents/pt.json"));
-
-// Sets the index router.
-app.use("/", router.index);
+// Sets the routers.
+app.use("/", routers.index); // Index.
+app.use("/derby", routers.derby); // Derby.
 
 // Sets the routes of the static files.
 app.use("/public", express.static(__dirname + "/public"));
+
+// Any other page redirects to index.
+app.get("/:error", function (request, response) {
+    response.redirect("/");
+});
 
 // Fly, app! Fly!
 app.listen(app.get("port"), app.get("ip address"), function () {
