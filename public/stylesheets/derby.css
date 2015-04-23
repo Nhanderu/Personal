@@ -39,6 +39,9 @@
     }
 
         #table td a, #table th a {
+            /* Border. */
+            border-bottom: 1px solid #FFF;
+            /* Font. */
             color: #FFF;
             text-decoration: none;
         }
