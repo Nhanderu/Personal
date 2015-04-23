@@ -1,1 +1,67 @@
-﻿
+﻿body {
+    font-family: "Segoe UI", "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;
+    background-color: #FFF;
+    background-image: url("../images/background/texture.png");
+}
+
+#table {
+    /* Position. */
+    margin: 50px auto;
+    /* Size. */
+    width: auto;
+    /* Border. */
+    border: none;
+    border-collapse: collapse;
+    /* Font. */
+    font-size: 40px;
+}
+
+    #table tr {
+        border: none;
+    }
+
+    #table th {
+        color: #000;
+    }
+
+    #table td {
+        color: #FFF;
+    }
+
+    #table td, #table th {
+        /* Position. */
+        padding: 20px;
+        /* Border. */
+        border: none;
+        /* Font. */
+        text-align: center;
+        font-weight: 200;
+    }
+
+        #table td a, #table th a {
+            color: #FFF;
+            text-decoration: none;
+        }
+
+#explicacoes {
+    /* Position. */
+    margin-top: 100px;
+    padding: 0 100px;
+    /* Size. */
+    height: auto;
+    width: auto;
+    /* Font. */
+    font-size: 30px;
+}
+
+    #explicacoes h3 {
+        /* Position. */
+        margin-bottom: -20px;
+        /* Font. */
+        font-weight: 400;
+    }
+
+    #explicacoes p {
+        /* Font. */
+        font-weight: 200;
+    }
