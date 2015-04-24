@@ -58,13 +58,12 @@
 }
 
     #explicacoes h3 {
-        /* Position. */
-        margin-bottom: -20px;
-        /* Font. */
         font-weight: 400;
     }
 
     #explicacoes p {
+        /* Position. */
+        margin-top: -20px;
         /* Font. */
         font-weight: 200;
     }
