@@ -1,6 +1,6 @@
 body {
     /* Position. */
-    margin: 0 0 0 0;
+    margin: 0;
     /* Size. */
     height: 200%;
     /* Font. */
@@ -50,7 +50,7 @@ figure a {
 #container {
     /* Position. */
     position: relative;
-    margin: 0 0% auto;
+    margin: 0 auto;
 }
 
 #profile {
