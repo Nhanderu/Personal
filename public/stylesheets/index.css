@@ -1,6 +1,8 @@
 body {
     /* Position. */
     margin: 0 0 0 0;
+    /* Size. */
+    height: 200%;
     /* Font. */
     color: #000;
     font-family: "Segoe UI", "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;
@@ -46,21 +48,23 @@ figure a {
 }
 
 #container {
-    margin: 0 auto;
+    /* Position. */
+    position: relative;
+    margin: 0 0% auto;
 }
 
 #profile {
     /* Size. */
-    height: 18%;
-    width: 18%;
+    height: 320px;
+    width: 320px;
     /* Effects. */
     box-shadow: 0px 0px 10px #777;
-    transition: all .3s;
-    -webkit-transition: all .3s;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
 }
 
 #subtitle {
-    margin-top: -3%;
+    margin-top: -50px;
     font-weight: 300;
 }
 
@@ -75,7 +79,7 @@ figure a {
     #menu ul {
         /* Position. */
         margin: 0;
-        padding: .5%;
+        padding: 10px;
         /* Size. */
         width: 0 auto;
         /* Font. */
@@ -88,7 +92,7 @@ figure a {
 
     #menu a {
         /* Position. */
-        margin: 0 1%;
+        margin: 0 20px;
         /* Border. */
         border: none;
         /* Font. */
@@ -117,7 +121,7 @@ figure a {
     padding: 2.5% 0 1% 0;
     margin: 0 auto;
     /* Size. */
-    width: 50%;
+    width: 900px;
     max-width: 95%;
 }
 
@@ -126,11 +130,11 @@ figure a {
     }
 
     #professional-profile h2 {
-        padding-left: 1%;
+        padding-left: 10px;
     }
 
     #professional-profile p {
-        margin-top: -2%;
+        margin-top: -20px;
     }
 
 .life-event {
@@ -140,19 +144,19 @@ figure a {
     position: relative;
     /* Border. */
     border: none;
-    border-radius: .8%;
-    -moz-border-radius: .8%;
-    -webkit-border-radius: .8%;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
     /* Background. */
-    background: rgba(255,255,255,.3);
+    background: rgba(255,255,255,0.3);
     /* Effects. */
     box-shadow: 0px 0px 10px #AAA;
-    transition: all .1s;
-    -webkit-transition: all .1s;
+    transition: all 0.1s;
+    -webkit-transition: all 0.1s;
 }
 
     .life-event:hover {
-        background: rgba(255, 255, 255, .4);
+        background: rgba(255, 255, 255, 0.4);
     }
 
 .language {
