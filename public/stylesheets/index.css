@@ -26,10 +26,13 @@ footer {
     padding: 10px 0 20px 0;
     /* Font. */
     color: #FFF;
-    text-align: center;
     /* Background. */
     background-color: #000;
 }
+
+    footer a {
+        color: #FFF;
+    }
 
 h1, h2, h3 {
     font-weight: 400;
@@ -59,8 +62,8 @@ figure a {
     width: 320px;
     /* Effects. */
     box-shadow: 0px 0px 10px #777;
-    transition: all 0.3s;
-    -webkit-transition: all 0.3s;
+    transition: all .3s;
+    -webkit-transition: all .3s;
 }
 
 #subtitle {
@@ -148,15 +151,15 @@ figure a {
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
     /* Background. */
-    background: rgba(255,255,255,0.3);
+    background: rgba(255,255,255,.3);
     /* Effects. */
     box-shadow: 0px 0px 10px #AAA;
-    transition: all 0.1s;
-    -webkit-transition: all 0.1s;
+    transition: all .1s;
+    -webkit-transition: all .1s;
 }
 
     .life-event:hover {
-        background: rgba(255, 255, 255, 0.4);
+        background: rgba(255, 255, 255, .4);
     }
 
 .language {
@@ -176,3 +179,26 @@ figure a {
 .clearfix:after {
     clear: both;
 }
+
+.copyright {
+    /* Position. */
+    margin: 0 auto;
+    /* Font. */
+    text-align: center;
+}
+.lists {
+    /* Position. */
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+    .built-with ul {
+        /* Size. */
+        width: auto;
+        /* Effects. */
+        list-style: circle;
+    }
+
+    .built-with li:hover {
+        text-decoration: underline;
+    }

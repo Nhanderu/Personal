@@ -3,7 +3,8 @@
 <html lang="{{utils.language}}">
 
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="utf-8" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="author" content="Rafael Escobar" />
     <meta name="description" content="{{utils.description}}" />
     <meta name="keywords" content="{{utils.keywords}}" />
@@ -98,7 +99,7 @@
                         <div name="life-event-content">
                             <p>{{../utils.items.organization}} {{this.organization}}</p>
                             <p>{{../utils.items.duration}} {{this.duration}}</p>
-                            <p>{{../utils.items.contents}} {{this.contents}}</p>
+                            <p>{{../utils.items.coverage}} {{this.coverage}}</p>
                         </div>
                     </section>
 
@@ -126,8 +127,18 @@
 
             </div>
 
-            <footer id="copyright">
-                <span>{{{footer.copyright}}}</span>
+            <footer>
+                <div class="lists">
+                    <section class="built-with">
+                        <h3>{{footer.built-with.title}}</h3>
+                        <ul>
+                            {{#each footer.built-with.list}}
+                            <li><a href={{this.url}}>{{this.title}}</a></li>
+                            {{/each}}
+                        </ul>
+                    </section>
+                </div>
+                <div class="copyright">{{{footer.copyright}}}</div>
             </footer>
         </div>
     </div>
