@@ -37,29 +37,25 @@
 
         "contents": [
             {
-                "title": ".NET Programmer at BRQ",
-                "level": "intern.",
+                "title": ".NET Programming Intern at BRQ",
                 "duration": "from april 2015 to the present.",
                 "activities": "",
                 "technologies": ""
             },
             {
-                "title": "Technical Support at FIAP",
-                "level": "1 and 2.",
+                "title": "Technical Support 1 and 2 at FIAP",
                 "duration": "2 months, from march 2015 to april 2015.",
                 "activities": "help and support the students and others employees via remote access (Trauma Zer0), basic administration and maintaince in the firewall (Fortinet) and in the AD, DHCP and Share and Storage servers, management of the printers' supriments and the damaged equipments and control of the laboratory monitors team.",
                 "technologies": "company's internal system, Fortinet firewall and Trauma Zer0 Suit."
             },
             {
-                "title": "Technical Support at FIAP",
-                "level": "intern.",
+                "title": "Technical Support 1 Intern at FIAP",
                 "duration": "10 months, from june 2014 to march 2015.",
                 "activities": "help and support the students and others employees via remote access (Trauma Zer0), basic administration and maintaince in the firewall (Fortinet) and in the AD, DHCP and Share and Storage servers, management of the printers' supriments and the damaged equipments and control of the laboratory monitors team.",
                 "technologies": "company's internal system, Fortinet firewall and Trauma Zer0 Suit."
             },
             {
                 "title": "Laboratory Monitor at FIAP",
-                "level": "intern.",
                 "duration": "1 year and 5 months, from february 2013 to june 2014.",
                 "activities": "organize the IT laboratories, help and support the students and others employees, watch over the equipments (including the user's access) and the maintance of the computers.",
                 "technologies": "company's internal system."
