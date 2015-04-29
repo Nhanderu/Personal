@@ -171,12 +171,7 @@ figure a {
     min-width: 315px;
 }
 
-.clearfix:before, .clearfix:after {
-    content: "";
-    display: table;
-}
-
-.clearfix:after {
+.clearfix {
     clear: both;
 }
 
