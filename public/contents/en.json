@@ -28,7 +28,7 @@
     "about": {
         "title": "About me",
         "paragraphs": [
-            "Hello, my name is Rafael Escobar!<br />I'm a young Information Systems student at FIAP and an aspiring .NET and JavaScript programmer from São Paulo, Brasil. I like coffee, soccer and trucks."
+            "Hello, my name is Rafael Escobar!<br />I'm a young Information Systems student at FIAP and an aspiring .NET and JavaScript programmer from Sï¿½o Paulo, Brasil. I like coffee, soccer and trucks."
         ]
     },
 
@@ -70,12 +70,12 @@
             {
                 "title": "Information Systems at FIAP",
                 "level": "higher education - baccalaureate.",
-                "duration": "prediction of 4 years, from the 1º semester of 2014 to the 2º semester of 2017."
+                "duration": "prediction of 4 years, from the 1Âº semester of 2014 to the 2Âº semester of 2017."
             },
             {
                 "title": "Technical Secondary School at COPI",
                 "level": "secondary education - technical.",
-                "duration": "3 years, from the 1º semester of 2011 to the 2º semester of 2013."
+                "duration": "3 years, from the 1Âº semester of 2011 to the 2Âº semester of 2013."
             }
         ]
     },
@@ -91,13 +91,13 @@
                 "coverage": "C# language."
             },
             {
-                "title": "Fábrica de Desenvolvimento (\"Development Factory\") 2014",
+                "title": "FÃ¡brica de Desenvolvimento (\"Development Factory\") 2014",
                 "organization": "FIAP.",
                 "duration": "64 hours, at november and december 2014.",
                 "coverage": "C# and JavaScript languages, dynamic web pages programming with ASP.NET MVC, RESTful services with ASP.NET Web API, object-relational mapping with Entity Framework (code first), jQuery, Ajax, unit tests with the Visual Studio and design patterns."
             },
             {
-                "title": "Fábrica de Desenvolvimento (\"Development Factory\") 2013",
+                "title": "FÃ¡brica de Desenvolvimento (\"Development Factory\") 2013",
                 "organization": "FIAP.",
                 "duration": "64 hours, at august and september 2013.",
                 "coverage": "C# and JavaScript languages, dynamic web pages programming with ASP.NET MVC, object-relational mapping with Entity Framework (database first), jQuery and good practices of programming."
