@@ -96,10 +96,14 @@ figure a {
     #menu a {
         /* Position. */
         margin: 0 20px;
+        /* Size. */
+        width: auto;
         /* Border. */
-        border: none;
+        border-bottom: 1px solid white;
         /* Font. */
         font-weight: 400;
+        /* Style. */
+        display:inline-block;
     }
 
         #menu a:hover {
@@ -185,15 +189,36 @@ figure a {
     /* Position. */
     margin: 0 auto;
     padding: 0 5%;
+    width: auto;
 }
 
+.built-with {
+    font-size: 17px;
+    display: inline-block;
+}
+
+    .built-with > h3 {
+        margin-bottom: 0px;
+    }
+
     .built-with ul {
+        /* Position. */
+        margin: 0;
         /* Size. */
         width: auto;
         /* Effects. */
-        list-style: circle;
+        list-style: none;
+    }
+    
+    .built-with li {
+        width: auto;
+    }
+    
+    .built-with li a {
+        display: inline-block;
+        width: auto;
     }
 
-    .built-with li:hover {
-        text-decoration: underline;
+    .built-with a:hover {
+        border-bottom: 1px solid white;
     }
