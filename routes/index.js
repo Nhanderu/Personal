@@ -9,8 +9,39 @@ var contents = {
 };
 
 // Root page.
-router.get("/", function (request, response) {
+// Verifies the languages of the client's browser and iterates through them.
+// If it is portuguese, redirects to /pt. If it is english, redirects to /en.
+// If it int's any of them, continue the iteration until reach one of the two languages or the end of the array (then redirects to /en). 
+router.get("/", function (request, response) {    
+    var languages = request.headers["accept-language"].split(",");
+    
+    for (var index = 0; index < languages.length; index++) {
+        var item = languages[index];
+        
+        if (/pt.*/i.test(item)) {
+            response.redirect("/pt");
+            break;
+        }
+        else if (/en.*/i.test(item)) {
+            response.redirect("/en");
+            break;
+        }
+        else if (index == languages.length - 1)
+            response.redirect("/en");
+    }
+});
+
+// Portuguese version.
+router.get("/pt", function (request, response) {
     response.render("index", contents.pt);
+});
+
+router.get(/(^\/pt-..$|^\/por(t(u(g(u(e(se?)?)?)?)?)?)?$)/i, function (request, response) {
+    response.redirect("/pt");
+});
+
+router.use("/pt/:error", function (request, response) {
+    response.redirect("/pt");    
 });
 
 // English version.
@@ -18,8 +49,12 @@ router.get("/en", function (request, response) {
     response.render("index", contents.en);
 });
 
-router.get(/^\/en-..$|^\/eng$|^\/english$/g, function (request, response) {
+router.get(/(^\/en-..$|^\/eng(l(i(sh?)?)?)?$)/i, function (request, response) {
     response.redirect("/en");
+});
+
+router.use("/en/:error", function (request, response) {
+    response.redirect("/en");    
 });
 
 module.exports = router;

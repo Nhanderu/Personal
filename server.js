@@ -27,7 +27,7 @@ app.use("/public", express.static(__dirname + "/public"));
 
 // Any other page redirects to index.
 app.get("/:error", function (request, response) {
-    response.redirect("/");
+    response.sendStatus(404);
 });
 
 // Fly, app! Fly!

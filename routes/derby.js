@@ -9,4 +9,8 @@ router.get("/", function (request, response) {
     response.render("derby");
 });
 
+router.use("/:error", function (request, response) {
+    response.redirect("/");
+});
+
 module.exports = router;
