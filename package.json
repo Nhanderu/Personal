@@ -1,7 +1,7 @@
 {
   "name": "personal",
   "description": "A brazilian .NET programmer's personal site!",
-  "author": "Rafael Escobar <rafael.bze@gmail.com> (http://www.nhanderu.com/)",
+  "author": "Rafael Escobar <rafael@nhanderu.com> (http://www.nhanderu.com/)",
   "version": "1.1.0",
   "license": "MIT",
   "private": true,
