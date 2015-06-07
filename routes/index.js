@@ -10,8 +10,9 @@ var contents = {
 
 // Root page.
 // Verifies the languages of the client's browser and iterates through them.
-// If it is portuguese, redirects to /pt. If it is english, redirects to /en.
-// If it int's any of them, continue the iteration until reach one of the two languages or the end of the array (then redirects to /en). 
+// If it's portuguese, redirects to /pt. If it's english, redirects to /en.
+// If it isn't any of them, continue the iteration until it reaches one of the two languages or the end of the array (then redirects to /en).
+// By default, redirects to /en. 
 router.get("/", function (request, response) {    
     var languages = request.headers["accept-language"].split(",");
     
