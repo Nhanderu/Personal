@@ -5,7 +5,7 @@ var handlebars = require("express-handlebars");
 // References the routers.
 var routers = {
     index: require("./routes/index"),
-    derby: require("./routes/derby")
+    next: require("./routes/next")
 };
 
 // Initializes a new Express application.
@@ -20,7 +20,7 @@ app.set("view engine", "hbs");
 
 // Sets the routers.
 app.use("/", routers.index); // Index.
-app.use("/derby", routers.derby); // Derby.
+app.use("/next", routers.next); // Next.
 
 // Sets the routes of the static files.
 app.use("/public", express.static(__dirname + "/public"));
