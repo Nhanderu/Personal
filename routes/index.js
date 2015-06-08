@@ -19,15 +19,9 @@ router.get("/", function (request, response) {
     for (var index = 0; index < languages.length; index++) {
         var item = languages[index];
         
-        if (/pt.*/i.test(item)) {
+        if (/pt.*/i.test(item))
             response.redirect("/pt");
-            break;
-        }
-        else if (/en.*/i.test(item)) {
-            response.redirect("/en");
-            break;
-        }
-        else if (index == languages.length - 1)
+        if (/en.*/i.test(item) || index == languages.length - 1)
             response.redirect("/en");
     }
 });
