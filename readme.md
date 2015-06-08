@@ -8,7 +8,7 @@ My personal website, running @ `nhanderu.com`!
 * [Express](http://expressjs.com/): the back-end of the web-app, controlling the routes and the HTTP requests
 * [Handlebars](http://handlebarsjs.com/): views with dynamic text
  * [Express Handlebars](https://github.com/ericf/express-handlebars): complemanting the Handlebars usage
-* [Red Hat's Openshift](https://www.openshift.com/) hosting and server configurations
+* [Red Hat's Openshift](https://www.openshift.com/): hosting and server configurations
 
 ### To-do list
 
