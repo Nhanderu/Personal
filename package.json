@@ -12,7 +12,7 @@
   },
   "bugs": {
     "url" : "https://github.com/nhanderu/personal/issues",
-    "email" : "rafael.bze@gmail.com"
+    "email" : "rafael@nhanderu.com"
   },
   "scripts": {
     "start": "node server.js"
