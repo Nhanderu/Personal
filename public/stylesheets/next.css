@@ -1,0 +1,116 @@
+/*
+
+Organization order:
+• diplaying & position;
+• size;
+• border;
+• font & text;
+• background;
+• effects & animation.
+
+*/
+
+body {
+    /* Display. */
+    margin: 0;
+    
+    /* Background. */
+    background-color: #F2F2F2;
+}
+
+.container {
+    margin: 0 auto;
+}
+
+.header {
+    /* Size. */
+    height: 250px;
+    
+    /* Background. */
+    background-color: #191919;
+    background-image:
+        url("http://www.nhanderu.com/public/images/background/stars.png"),
+        url("http://www.nhanderu.com/public/images/background/texture.png");
+    background-attachment: fixed;
+    background-repeat: repeat, repeat;
+    background-position: center;
+}
+
+.avatar {
+    /* Display. */
+    position: relative;
+    top: -150px;
+    margin: 0 auto -100px auto;
+    
+    /* Size. */
+    height: 300px;
+    width: 300px;
+    
+    /* Border.  */
+    border: 3px solid #F2F2F2;
+    border-radius: 100%;
+    
+    /* Background. */
+    background-color: #F2F2F2;
+    background-image: url("http://gravatar.com/avatar/6c96e05a5c9c262e1ad3f86ea8ff7bb2?s=200");
+    background-size: 100%;
+}
+
+.hero-info {
+    font-family: "Helvetica Neue", Helvetica, Arial;
+    font-weight: 500;
+}
+
+.title {
+    margin-top: 0;
+    text-transform: uppercase;
+}
+
+.subtitle {
+    color: #777;
+}
+
+.subtitle-line {
+    display: block;
+}
+
+.centered {
+    text-align: center;
+}
+
+.menu {
+    margin: 30px auto 0 auto;
+}
+
+.menu-list {
+    /* Display. */
+	padding: 0;
+	margin: 0 auto;
+    
+    /* Effects. */
+    list-style: none;
+}
+
+.menu-item {
+    display: inline;
+    padding: 0 10px;
+}
+
+.menu-icon {
+    /* Border. */
+    border: none;
+    
+    /* Font. */
+    font-size: 30px;
+    color: black;
+    text-decoration: none;
+}
+
+.menu-icon:hover, .menu-icon:active, .menu-icon:focus {
+    /* Border. */
+    border: none;
+    
+    /* Font. */
+    color: #555;
+    text-decoration: none;
+}

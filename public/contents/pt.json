@@ -1,0 +1,179 @@
+{
+    "header": {
+        "name": "Rafael B. Z. Escobar",
+        "subtitle": {
+            "position": "Estagiário em Programação .NET na",
+            "company": {
+                "name": "BRQ",
+                "url": "http://www.brq.com"
+            }
+        }
+    },
+
+    "menu": [
+        {
+            "name": "GitHub",
+            "url": "http://github.com/nhanderu"
+        },
+        {
+            "name": "LinkedIn",
+            "url": "https://www.linkedin.com/in/rafaelbzescobar"
+        },
+        {
+            "name": "Facebook",
+            "url": "https://www.facebook.com/nhanderu"
+        }
+    ],
+
+    "about": {
+        "title": "Sobre mim",
+        "paragraphs": [
+            "Olá, meu nome é Rafael Escobar!<br />Sou um jovem de São Paulo, Brasil, estudante de Sistemas da Informação na FIAP e aspirante a programador .NET e JavaScript. Gosto de café, futebol e caminhões."
+        ]
+    },
+
+    "experience": {
+        "title": "Experiência",
+
+        "contents": [
+            {
+                "title": "Estagiário em Programação .NET na BRQ",
+                "duration": "de abril de 2015 até o momento.",
+                "activities": "",
+                "technologies": ""
+            },
+            {
+                "title": "Suporte Técnico  1 e 2 na FIAP",
+                "duration": "2 meses, de março de 2015 até abril de 2015.",
+                "activities": "suporte e auxílio aos alunos e colaboradores via acesso remoto (Trauma Zer0), administração e manutenção básica no firewall (Fortinet) e nos servidores de AD, DHCP e de Compartilhamento e Armazenamento, gerenciamento de suprimentos para impressoras e de equipamentos defeituosos, apoio e supervisão da equipe de monitores de laboratório, arrumação dos laboratórios de informática da faculdade, como manutenção e instalação de computadores e softwares, organização de pastas e suas permissões, etc.",
+                "technologies": "sistema interno da empresa, firewall Fortinet e Trauma Zer0 Suit."
+            },
+            {
+                "title": "Estagiário de Suporte Técnico 1 na FIAP",
+                "duration": "10 meses, de junho de 2014 até março de 2015.",
+                "activities": "suporte e auxílio aos alunos e colaboradores via acesso remoto (Trauma Zer0), administração e manutenção básica no firewall (Fortinet) e nos servidores de AD, DHCP e de Compartilhamento e Armazenamento, gerenciamento de suprimentos para impressoras e de equipamentos defeituosos e apoio e supervisão da equipe de monitores de laboratório.",
+                "technologies": "sistema interno da empresa, firewall Fortinet e Trauma Zer0 Suit."
+            },
+            {
+                "title": "Monitor de Laboratório na FIAP",
+                "duration": "1 ano e 5 meses, de fevereiro de 2013 até junho de 2014.",
+                "activities": "organização dos laboratórios de informática, suporte e auxílio aos alunos e colaboradores, zelo pelos equipamentos e manutenção e limpeza das máquinas.",
+                "technologies": "sistema interno da empresa."
+            }
+        ]
+    },
+
+    "academic-formation": {
+        "title": "Formação acadêmica",
+
+        "contents": [
+            {
+                "title": "Sistemas da Informação at FIAP",
+                "level": "ensino superior - bacharelado.",
+                "duration": "previsão de 4 anos, do 1º semestre de 2014 até o 2º semestre de 2017."
+            },
+            {
+                "title": "Ensino Médio Técnico no COPI",
+                "level": "2º grau – técnico.",
+                "duration": "3 anos, do 1º semestre de 2011 até o 2º semestre de 2013."
+            }
+        ]
+    },
+
+    "courses": {
+        "title": "Cursos extracurriculares",
+
+        "contents": [
+            {
+                "title": "Treinamento .NET",
+                "organization": "BRQ.",
+                "duration": "96 horas, em abril e maio de 2015.",
+                "coverage": "linguagem C#."
+            },
+            {
+                "title": "Fábrica de Desenvolvimento 2014",
+                "organization": "FIAP.",
+                "duration": "64 horas, em novembro e dezembro de 2014.",
+                "coverage": "linguagens C# e JavaScript, programação de páginas web dinâmicas com ASP.NET MVC, serviços REST com ASP.NET Web API, mapeamento objeto-relacional com Entity Framework (code first), jQuery, Ajax, testes de unidade com o Visual Studio e padrões de projeto."
+            },
+            {
+                "title": "Fábrica de Desenvolvimento 2013",
+                "organization": "FIAP.",
+                "duration": "64 horas, em agosto e setembro de 2013.",
+                "coverage": "linguagens C# e JavaScript, programação de páginas web dinâmicas com ASP.NET MVC, mapeamento objeto-relacional com Entity Framework (database first), jQuery e boas práticas de programação."
+            }
+        ]
+    },
+
+    "languages": {
+        "title": "Línguas",
+
+        "contents": [
+            {
+                "title": "Português",
+                "reading": "fluente.",
+                "writing": "fluente.",
+                "comprehension": "fluente.",
+                "speaking": "fluente."
+            },
+            {
+                "title": "Inglês",
+                "reading": "avançada.",
+                "writing": "avançada.",
+                "comprehension": "intermediária.",
+                "speaking": "intermediária."
+            }
+        ]
+    },
+
+    "footer": {
+        "copyright": "Copyright &copy; 2015 &bull; Rafael Escobar",
+        "built-with": {
+            "title": "Feito com",
+            "list": [
+                {
+                    "title": "Normalize.css",
+                    "url": "http://necolas.github.io/normalize.css/"
+                },
+                {
+                    "title": "Express",
+                    "url": "http://expressjs.com/"
+                },
+                {
+                    "title": "Handlebars",
+                    "url": "http://handlebarsjs.com/"
+                },
+                {
+                    "title": "Express Handlebars",
+                    "url": "https://github.com/ericf/express-handlebars"
+                },
+                {
+                    "title": "Node.js",
+                    "url": "https://nodejs.org/"
+                },
+                {
+                    "title": "Openshift",
+                    "url": "https://www.openshift.com/"
+                }
+            ]
+        }
+    },
+
+    "utils": {
+        "language": "pt-BR",
+        "description": "O site pessoal de um programador .NET e JavaScript!",
+        "keywords": ".NET, JavaScript, currículo, curriculum, curriculum vitae, cv, pessoal, rafael, rafael escobar, profissional",
+        "items": {
+            "level": "Nível(is):",
+            "duration": "Duração:",
+            "activities": "Principais atividades:",
+            "technologies": "Principais tecnologias:",
+            "organization": "Organização:",
+            "coverage": "Abrangência:",
+            "reading": "Leitura:",
+            "writing": "Escrita:",
+            "comprehension": "Compreensão:",
+            "speaking": "Fala/pronúncia:"
+        }
+    }
+}

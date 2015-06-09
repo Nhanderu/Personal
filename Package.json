@@ -1,0 +1,24 @@
+{
+  "name": "personal",
+  "description": "A brazilian .NET programmer's personal site!",
+  "author": "Rafael Escobar <rafael@nhanderu.com> (http://www.nhanderu.com/)",
+  "version": "1.1.0",
+  "license": "MIT",
+  "private": true,
+  "repository" :
+  { 
+    "type" : "git",
+    "url" : "https://github.com/nhanderu/personal.git"
+  },
+  "bugs": {
+    "url" : "https://github.com/nhanderu/personal/issues",
+    "email" : "rafael@nhanderu.com"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "~4.11.1",
+    "express-handlebars": "^2.0.0"
+  }
+}
