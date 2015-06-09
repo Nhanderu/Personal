@@ -1,7 +1,7 @@
 // Imports the necessary modules.
 var fs = require('fs');
 
-// Initializes a new Router intance and references the content files.
+// Initializes a new router and references the content files.
 var router = require('express').Router();
 var contents = {
     pt: JSON.parse(fs.readFileSync("./public/contents/pt.json")),

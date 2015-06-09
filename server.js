@@ -2,12 +2,6 @@
 var express = require("express");
 var handlebars = require("express-handlebars");
 
-// References the routers.
-var routers = {
-    index: require("./routes/index"),
-    next: require("./routes/next")
-};
-
 // Initializes a new Express application.
 var app = express();
 
@@ -18,17 +12,11 @@ app.set("views", __dirname + "/views");
 app.engine("hbs", handlebars());
 app.set("view engine", "hbs");
 
-// Sets the routers.
-app.use("/", routers.index); // Index.
-app.use("/next", routers.next); // Next.
+// Sets the router.
+app.use("/", require("./routes/default"));
 
 // Sets the routes of the static files.
 app.use("/public", express.static(__dirname + "/public"));
-
-// Any other page redirects to index.
-app.get("/:error", function (request, response) {
-    response.sendStatus(404);
-});
 
 // Fly, app! Fly!
 app.listen(app.get("port"), app.get("ip address"), function () {
