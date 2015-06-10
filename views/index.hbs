@@ -1,8 +1,6 @@
-﻿<!DOCTYPE html>
-
+<!DOCTYPE html>
 <html lang="{{utils.language}}">
-
-<head>
+  <head>
     <meta charset="utf-8" />
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="author" content="Rafael Escobar" />
@@ -14,136 +12,125 @@
     <link rel="stylesheet" type="text/css" href="../node_modules/normalize.css/normalize.css" />
     <link rel="stylesheet" type="text/css" href="public/stylesheets/index.css" />
     <link rel="icon" type="image/x-icon" href="public/images/icons/index.ico" />
-</head>
-
-<body>
+  </head>
+  <body>
     <div id="container">
-        <header>
-            <figure>
-                <a href="."><img src="public/images/profile.jpg" alt="It's me!" title="It's me!" id="profile" /></a>
-            </figure>
+      <header>
+        <figure>
+          <a href="."><img src="public/images/profile.jpg" alt="It's me!" title="It's me!" id="profile" /></a>
+        </figure>
 
-            <div id="head-title">
-                <h1 id="complete-name">{{header.name}}</h1>
-                <h2 id="subtitle">{{header.subtitle.position}} <a href="{{header.subtitle.company.url}}">{{header.subtitle.company.name}}</a></h2>
-            </div>
-        </header>
-
-        <div id="content">
-            <nav id="menu">
-                <ul>
-                    {{#each menu}}
-
-                    <li><a href="{{this.url}}" target="_blank">{{this.name}}</a></li>
-
-                    {{/each}}
-                </ul>
-            </nav>
-
-            <div id="about">
-                <h2>{{about.title}}</h2>
-
-                {{#each about.paragraphs}}
-
-                <p>{{{this}}}</p>
-
-                {{/each}}
-            </div>
-
-            <div id="professional-profile">
-
-                <div id="experience">
-                    <h2>{{experience.title}}</h2>
-
-                    {{#each experience.contents}}
-
-                    <section class="life-event">
-                        <h3>{{this.title}}</h3>
-
-                        <div name="life-event-content">
-                            <p>{{../utils.items.duration}} {{this.duration}}</p>
-                            <p>{{../utils.items.activities}} {{this.activities}}</p>
-                            <p>{{../utils.items.technologies}} {{this.technologies}}</p>
-                        </div>
-                    </section>
-
-                    {{/each}}
-                </div>
-
-                <div id="academic-formation">
-                    <h2>{{academic-formation.title}}</h2>
-
-                    {{#each academic-formation.contents}}
-
-                    <section class="life-event">
-                        <h3>{{this.title}}</h3>
-
-                        <div name="life-event-content">
-                            <p>{{../utils.items.level}} {{this.level}}</p>
-                            <p>{{../utils.items.duration}} {{this.duration}}</p>
-                        </div>
-                    </section>
-
-                    {{/each}}
-                </div>
-
-                <div id="courses">
-                    <h2>{{courses.title}}</h2>
-
-                    {{#each courses.contents}}
-
-                    <section class="life-event">
-                        <h3>{{this.title}}</h3>
-
-                        <div name="life-event-content">
-                            <p>{{../utils.items.organization}} {{this.organization}}</p>
-                            <p>{{../utils.items.duration}} {{this.duration}}</p>
-                            <p>{{../utils.items.coverage}} {{this.coverage}}</p>
-                        </div>
-                    </section>
-
-                    {{/each}}
-                </div>
-
-                <div id="languages">
-                    <h2>{{languages.title}}</h2>
-
-                    {{#each languages.contents}}
-
-                    <section class="life-event language">
-                        <h3>{{this.title}}</h3>
-
-                        <div name="life-event-content">
-                            <p>{{../utils.items.reading}} {{this.reading}}</p>
-                            <p>{{../utils.items.writing}} {{this.writing}}</p>
-                            <p>{{../utils.items.comprehension}} {{this.comprehension}}</p>
-                            <p>{{../utils.items.speaking}} {{this.speaking}}</p>
-                        </div>
-                    </section>
-
-                    {{/each}}
-
-                    <div class="clearfix"></div>
-                </div>
-
-            </div>
-
-            <footer>
-                <div class="lists">
-                    <section class="built-with">
-                        <h3>{{footer.built-with.title}}</h3>
-                        <ul>
-                            {{#each footer.built-with.list}}
-                            <li><a href={{this.url}}>{{this.title}}</a></li>
-                            {{/each}}
-                        </ul>
-                    </section>
-                </div>
-                <div class="copyright">{{{footer.copyright}}}</div>
-            </footer>
+        <div id="head-title">
+          <h1 id="complete-name">{{header.name}}</h1>
+          <h2 id="subtitle">{{header.subtitle.position}} <a href="{{header.subtitle.company.url}}">{{header.subtitle.company.name}}</a></h2>
         </div>
+      </header>
+
+      <div id="content">
+        <nav id="menu">
+          <ul>
+            {{#each menu}}
+            <li><a href="{{this.url}}" target="_blank">{{this.name}}</a></li>
+            {{/each}}
+          </ul>
+        </nav>
+
+        <div id="about">
+          <h2>{{about.title}}</h2>
+
+          {{#each about.paragraphs}}
+          <p>{{{this}}}</p>
+          {{/each}}
+        </div>
+
+        <div id="professional-profile">
+
+          <div id="experience">
+            <h2>{{experience.title}}</h2>
+
+            {{#each experience.contents}}
+            <section class="life-event">
+              <h3>{{this.title}}</h3>
+
+              <div name="life-event-content">
+                <p>{{../utils.items.duration}} {{this.duration}}</p>
+                <p>{{../utils.items.activities}} {{this.activities}}</p>
+                <p>{{../utils.items.technologies}} {{this.technologies}}</p>
+              </div>
+            </section>
+            {{/each}}
+          </div>
+
+          <div id="academic-formation">
+            <h2>{{academic-formation.title}}</h2>
+
+            {{#each academic-formation.contents}}
+
+            <section class="life-event">
+              <h3>{{this.title}}</h3>
+
+              <div name="life-event-content">
+                <p>{{../utils.items.level}} {{this.level}}</p>
+                <p>{{../utils.items.duration}} {{this.duration}}</p>
+              </div>
+            </section>
+
+            {{/each}}
+          </div>
+
+          <div id="courses">
+            <h2>{{courses.title}}</h2>
+
+            {{#each courses.contents}}
+            <section class="life-event">
+              <h3>{{this.title}}</h3>
+
+              <div name="life-event-content">
+                <p>{{../utils.items.organization}} {{this.organization}}</p>
+                <p>{{../utils.items.duration}} {{this.duration}}</p>
+                <p>{{../utils.items.coverage}} {{this.coverage}}</p>
+              </div>
+            </section>
+            {{/each}}
+          </div>
+
+          <div id="languages">
+            <h2>{{languages.title}}</h2>
+
+            {{#each languages.contents}}
+            <section class="life-event language">
+              <h3>{{this.title}}</h3>
+
+              <div name="life-event-content">
+                <p>{{../utils.items.reading}} {{this.reading}}</p>
+                <p>{{../utils.items.writing}} {{this.writing}}</p>
+                <p>{{../utils.items.comprehension}} {{this.comprehension}}</p>
+                <p>{{../utils.items.speaking}} {{this.speaking}}</p>
+              </div>
+            </section>
+            {{/each}}
+
+            <div class="clearfix"></div>
+          </div>
+
+        </div>
+
+        <footer>
+          <div class="lists">
+            <section class="built-with">
+              <h3>{{footer.built-with.title}}</h3>
+              <ul>
+                {{#each footer.built-with.list}}
+                <li><a href={{this.url}}>{{this.title}}</a></li>
+                {{/each}}
+              </ul>
+            </section>
+          </div>
+          <div class="copyright">{{{footer.copyright}}}</div>
+        </footer>
+      </div>
     </div>
 
-    <script type="text/javascript" src="public/scripts/google-analytics.js"></script>
-</body>
+    <script src="public/scripts/google-analytics.js"></script>
+  </body>
 </html>

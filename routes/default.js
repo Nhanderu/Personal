@@ -3,8 +3,8 @@ var router = require("express").Router();
 
 // References the others routers.
 var routers = {
-    index: require("./index"),
-    next: require("./next")
+  index: require("./index"),
+  next: require("./next")
 };
 
 // Sets the routers.
@@ -13,7 +13,7 @@ router.use("/next", routers.next); // Next.
 
 // Any other page redirects to index.
 router.get("/:error", function (request, response) {
-    response.sendStatus(404);
+  response.sendStatus(404);
 });
 
 module.exports = router;
