@@ -14,6 +14,9 @@ body {
     /* Display. */
     margin: 0;
     
+    /* Font. */
+    font-family: "Helvetica Neue", Helvetica, Arial;
+    
     /* Background. */
     background-color: #F2F2F2;
 }
@@ -23,8 +26,11 @@ body {
 }
 
 .header {
+	/* Display. */
+	position: relative;
+	
     /* Size. */
-    height: 250px;
+    height: 220px;
     
     /* Background. */
     background-color: #354F06;
@@ -32,6 +38,9 @@ body {
     background-attachment: fixed;
     background-repeat: repeat, repeat;
     background-position: center;
+    
+    /* Effects. */
+    box-shadow: 0 0 50px #202F05 inset;
 }
 
 .avatar {
@@ -50,8 +59,9 @@ body {
     
     /* Background. */
     background-color: #F2F2F2;
-    background-image: url("http://gravatar.com/avatar/6c96e05a5c9c262e1ad3f86ea8ff7bb2?s=400");
-    background-size: 100%;
+    background-image: url("http://gravatar.com/avatar/6c96e05a5c9c262e1ad3f86ea8ff7bb2?s=320");
+    background-size: 320px;
+    background-position: center;
     
     /* Effects. */
     transition: .1s;
@@ -59,16 +69,15 @@ body {
 
 .avatar:hover {
     /* Display. */
-    top: -200px;
-    margin: 0 auto -190px auto;
+    top: -160px;
+    margin: 0 auto -110px auto;
     
     /* Size. */
-    height: 400px;
-    width: 400px;
+    height: 320px;
+    width: 320px;
 }
 
 .hero-info {
-    font-family: "Helvetica Neue", Helvetica, Arial;
     font-weight: 500;
 }
 
@@ -90,10 +99,6 @@ body {
 }
 
 .menu {
-    margin: 30px auto 0 auto;
-}
-
-.menu-list {
     /* Display. */
 	padding: 0;
 	margin: 0 auto;
@@ -104,10 +109,60 @@ body {
 
 .menu-item {
     display: inline;
+    padding: 0;
+}
+
+.links {
+	position: absolute;
+	bottom: 20px;
+}
+
+.links-left {
+	left: 25px;
+}
+
+.links-left-item {
+	padding-right: 30px;
+}
+
+.links-right {
+	right: 25px;
+}
+
+.links-right-item {
+	padding-left: 30px;
+}
+
+.links-item {
+	/* Font. */
+	color: #202F05;
+	font-family: Verdana;
+	font-size: 20px;
+	font-weight: 900;
+	text-transform: uppercase;
+	text-decoration: none;
+	
+	/* Effects. */
+	transition: .2s;
+}
+
+.links-item:hover {
+	color: white;
+}
+
+.float-right {
+	float: right;
+}
+
+.social {
+    margin: 30px auto 0 auto;
+}
+
+.social-item {
     padding: 0 10px;
 }
 
-.menu-icon {
+.social-icon {
     /* Border. */
     border: none;
     
@@ -117,7 +172,7 @@ body {
     text-decoration: none;
 }
 
-.menu-icon:hover, .menu-icon:active, .menu-icon:focus {
+.social-icon:hover, .social-icon:active, .social-icon:focus {
     /* Border. */
     border: none;
     
