@@ -27,10 +27,8 @@ body {
     height: 250px;
     
     /* Background. */
-    background-color: #191919;
-    background-image:
-        url("http://www.nhanderu.com/public/images/background/stars.png"),
-        url("http://www.nhanderu.com/public/images/background/texture.png");
+    background-color: #354F06;
+    background-image: url("http://www.nhanderu.com/public/images/background/texture.png");
     background-attachment: fixed;
     background-repeat: repeat, repeat;
     background-position: center;
@@ -40,7 +38,7 @@ body {
     /* Display. */
     position: relative;
     top: -150px;
-    margin: 0 auto -100px auto;
+    margin: 0 auto -90px auto;
     
     /* Size. */
     height: 300px;
@@ -52,8 +50,21 @@ body {
     
     /* Background. */
     background-color: #F2F2F2;
-    background-image: url("http://gravatar.com/avatar/6c96e05a5c9c262e1ad3f86ea8ff7bb2?s=200");
+    background-image: url("http://gravatar.com/avatar/6c96e05a5c9c262e1ad3f86ea8ff7bb2?s=400");
     background-size: 100%;
+    
+    /* Effects. */
+    transition: .1s;
+}
+
+.avatar:hover {
+    /* Display. */
+    top: -200px;
+    margin: 0 auto -190px auto;
+    
+    /* Size. */
+    height: 400px;
+    width: 400px;
 }
 
 .hero-info {
