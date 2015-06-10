@@ -2,6 +2,7 @@
 var express = require("express");
 var handlebars = require("express-handlebars");
 var path = require("path");
+var router = require("../routes/default");
 
 // Initializes a new Express application.
 var app = express();
@@ -14,7 +15,7 @@ app.engine("hbs", handlebars());
 app.set("view engine", "hbs");
 
 // Sets the router.
-app.use("/", require("../routes/default"));
+app.use("/", router);
 
 // Sets the routes of the static files.
 var staticFiles = express.static(path.join(__dirname, "..", "public"));
