@@ -26,15 +26,15 @@ body {
 }
 
 .header {
-	/* Display. */
-	position: relative;
+    /* Display. */
+    position: relative;
 	
     /* Size. */
     height: 220px;
     
     /* Background. */
     background-color: #354F06;
-    background-image: url("http://www.nhanderu.com/public/images/background/texture.png");
+    background-image: url("/public/images/background/texture.png");
     background-attachment: fixed;
     background-repeat: repeat, repeat;
     background-position: center;
@@ -100,8 +100,8 @@ body {
 
 .menu {
     /* Display. */
-	padding: 0;
-	margin: 0 auto;
+    padding: 0;
+    margin: 0 auto;
     
     /* Effects. */
     list-style: none;
@@ -113,45 +113,45 @@ body {
 }
 
 .links {
-	position: absolute;
-	bottom: 20px;
+    position: absolute;
+    bottom: 20px;
 }
 
 .links-left {
-	left: 25px;
+    left: 25px;
 }
 
 .links-left-item {
-	padding-right: 30px;
+    padding-right: 30px;
 }
 
 .links-right {
-	right: 25px;
+    right: 25px;
 }
 
 .links-right-item {
-	padding-left: 30px;
+    padding-left: 30px;
 }
 
 .links-item {
-	/* Font. */
-	color: #202F05;
-	font-family: Verdana;
-	font-size: 20px;
-	font-weight: 900;
-	text-transform: uppercase;
-	text-decoration: none;
-	
-	/* Effects. */
-	transition: .2s;
+    /* Font. */
+    color: #202F05;
+    font-family: Verdana;
+    font-size: 20px;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    /* Effects. */
+    transition: .2s;
 }
 
 .links-item:hover {
-	color: white;
+    color: white;
 }
 
 .float-right {
-	float: right;
+    float: right;
 }
 
 .social {
