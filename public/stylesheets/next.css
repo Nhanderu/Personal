@@ -12,9 +12,16 @@ Organization order:
 
 /* Tags. */
 
+*{margin: 0}
+
+html {
+    height: 100%;
+}
+
 body {
     /* Display. */
     margin: 0;
+    min-height: 100%;
     
     /* Font. */
     font-family: "Helvetica Neue", Helvetica, Arial;
@@ -26,6 +33,7 @@ body {
 /* Parts of the document. */
 
 .container {
+    max-width: 800px;
     margin: 0 auto;
 }
 
@@ -51,7 +59,7 @@ body {
     /* Display. */
     position: relative;
     top: -150px;
-    margin: 0 auto -90px auto;
+    margin: 0 auto -100px auto;
     
     /* Size. */
     height: 300px;
@@ -74,27 +82,24 @@ body {
     .avatar:hover {
         /* Display. */
         top: -175px;
-        margin: 0 auto -140px auto;
+        margin: 0 auto -150px auto;
         
         /* Size. */
         height: 350px;
         width: 350px;
     }
 
-.hero {
-    margin: 0 auto 50px auto;
+.hero-info {
+    font-weight: 500;
 }
-
-    .hero-info {
-        font-weight: 500;
-    }
 
 .title {
     /* Display. */
-    margin: 0 auto 30px auto;
+    margin: 0 auto;
     
     /* Font. */
     text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .subtitle {
@@ -103,22 +108,9 @@ body {
     
     /* Font. */
     font-size: 25px;
+    letter-spacing: -.5px;
     color: #777;
 }
-
-.menu {
-    /* Display. */
-    padding: 0;
-    margin: 0 auto;
-    
-    /* Effects. */
-    list-style: none;
-}
-
-    .menu-item {
-        display: inline;
-        padding: 0;
-    }
 
 .links {
     position: absolute;
@@ -130,7 +122,7 @@ body {
     }
     
         .links-left-item {
-            padding-right: 30px;
+            margin-right: 30px;
         }
     
     .links-right {
@@ -138,7 +130,7 @@ body {
     }
     
         .links-right-item {
-            padding-left: 30px;
+            margin-left: 30px;
         }
 
     .links-item {
@@ -163,7 +155,7 @@ body {
 }
 
     .social-item {
-        padding: 0 10px;
+        margin: 0 10px;
     }
     
     .social-icon {
@@ -172,8 +164,8 @@ body {
         
         /* Font. */
         font-size: 30px;
-        color: black;
         text-decoration: none;
+        color: black;
     }
     
         .social-icon:hover, .social-icon:active, .social-icon:focus {
@@ -181,11 +173,95 @@ body {
             border: none;
             
             /* Font. */
-            color: #555;
             text-decoration: none;
         }
 
+.fa-facebook:hover {
+    color: #3a5795;
+}
+
+.fa-linkedin:hover {
+    color: #007bb6;
+}
+
+.fa-github:hover {
+    color: #444;
+}
+
+.fa-bitbucket:hover {
+    color: #205081;
+}
+
+.fa-envelope-o:hover {
+    color: #777;
+}
+        
+.content {
+    margin: 100px auto;
+}
+    .content-info {
+        line-height: 28px;
+        letter-spacing: .5px;    
+    }
+    
+    .content-title {
+        /* Display. */
+        margin: 30px 0 0 0;
+        
+        /* Font. */
+        font-size: 18px;
+        font-weight: 600;
+        color: black;
+    }
+
+    .content-text {
+        /* Display. */
+        margin: 0;
+        
+        /* Font. */
+        font-size: 18px;
+        font-weight: 200;
+        color: #444;
+        text-align: justify;
+    }
+
+.footer {
+    /* Display. */
+    margin-bottom: 20px;
+    
+    /* Font. */
+    font-size: 15px;
+    color: #666;
+}
+    
+    .footer-line {
+        padding-bottom: 10px;
+    }
+
+    .footer-link {
+        color: #666;
+    }
+
+    .footer-link:hover {
+        color: black;
+    }
+
 /* Classes for a specific effect. */
+
+.menu {
+    /* Display. */
+    display: inline;
+    padding: 0;
+    margin: 0 auto;
+    
+    /* Effects. */
+    list-style: none;
+}
+
+    .menu-item {
+        display: inline;
+        padding: 0;
+    }
 
 .centered {
     text-align: center;
