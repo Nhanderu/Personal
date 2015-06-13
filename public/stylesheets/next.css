@@ -44,7 +44,7 @@ body {
     background-position: center;
     
     /* Effects. */
-    box-shadow: 0 0 50px #202F05 inset;
+    box-shadow: 0 0 30px #202F05 inset;
 }
 
 .avatar {
@@ -63,8 +63,8 @@ body {
     
     /* Background. */
     background-color: #F2F2F2;
-    background-image: url("http://gravatar.com/avatar/6c96e05a5c9c262e1ad3f86ea8ff7bb2?s=320");
-    background-size: 320px;
+    background-image: url("http://gravatar.com/avatar/6c96e05a5c9c262e1ad3f86ea8ff7bb2?s=350");
+    background-size: 350px;
     background-position: center;
     
     /* Effects. */
@@ -73,12 +73,12 @@ body {
 
     .avatar:hover {
         /* Display. */
-        top: -160px;
-        margin: 0 auto -110px auto;
+        top: -175px;
+        margin: 0 auto -140px auto;
         
         /* Size. */
-        height: 320px;
-        width: 320px;
+        height: 350px;
+        width: 350px;
     }
 
 .hero {
