@@ -270,3 +270,17 @@ body {
 .float-right {
     float: right;
 }
+
+/* Golden boy. */
+
+.content section:first-of-type:hover h3 {
+    color: green;
+}
+
+.content section:nth-of-type(2):hover h3 {
+    color: yellow;
+}
+
+.content section:last-of-type:hover h3 {
+    color: red;
+}
