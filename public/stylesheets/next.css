@@ -52,7 +52,7 @@ body {
     background-position: center;
     
     /* Effects. */
-    box-shadow: 0 0 30px #202F05 inset;
+    box-shadow: 0 0 60px #2a3f04 inset;
 }
 
 .avatar {
@@ -238,11 +238,11 @@ body {
         padding-bottom: 10px;
     }
 
-    .footer-link {
+    .footer-focus {
         color: #666;
     }
 
-    .footer-link:hover {
+    .footer-focus:hover {
         color: black;
     }
 
