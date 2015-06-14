@@ -71,23 +71,10 @@ body {
     
     /* Background. */
     background-color: #F2F2F2;
-    background-image: url("http://gravatar.com/avatar/6c96e05a5c9c262e1ad3f86ea8ff7bb2?s=350");
-    background-size: 350px;
+    background-image: url("http://gravatar.com/avatar/6c96e05a5c9c262e1ad3f86ea8ff7bb2?s=300");
+    background-size: 300px;
     background-position: center;
-    
-    /* Effects. */
-    transition: .1s;
 }
-
-    .avatar:hover {
-        /* Display. */
-        top: -175px;
-        margin: 0 auto -150px auto;
-        
-        /* Size. */
-        height: 350px;
-        width: 350px;
-    }
 
 .hero-info {
     font-weight: 500;
