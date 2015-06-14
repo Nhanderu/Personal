@@ -1,149 +1,167 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 
-<html lang="{{utils.language}}">
-
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <meta name="author" content="Rafael Escobar" />
-    <meta name="description" content="{{utils.description}}" />
-    <meta name="keywords" content="{{utils.keywords}}" />
 
+    <meta charset="utf-8">
+    
     <title>Rafael Escobar</title>
 
-    <link rel="stylesheet" type="text/css" href="../node_modules/normalize.css/normalize.css" />
-    <link rel="stylesheet" type="text/css" href="public/stylesheets/index.css" />
-    <link rel="icon" type="image/x-icon" href="public/images/icons/index.ico" />
+    <link
+        rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
+    >
+    
+    <link
+        rel="stylesheet"
+        href="public/stylesheets/next.css"
+    >
+
 </head>
 
 <body>
-    <div id="container">
-        <header>
-            <figure>
-                <a href="."><img src="public/images/profile.jpg" alt="It's me!" title="It's me!" id="profile" /></a>
-            </figure>
 
-            <div id="head-title">
-                <h1 id="complete-name">{{header.name}}</h1>
-                <h2 id="subtitle">{{header.subtitle.position}} <a href="{{header.subtitle.company.url}}">{{header.subtitle.company.name}}</a></h2>
-            </div>
-        </header>
+    <header class="header">
+        <nav class="links links-left">
+        	<li class="menu">
+        		<ul class="menu-item links-left-item">
+        			<a href="http://blog.nhanderu.com/" class="links-item">Blog</a>	
+        		</ul>
+        		
+        		<ul class="menu-item link-left-item">
+        			<a href="#" class="links-item">Bitcoin</a>
+        		</ul>
+        	</li>
+        </nav>
+        
+        <nav class="links links-right">
+        	<li class="menu">
+        		<ul class="menu-item links-right-item">
+        			<a href="../download/curriculum" class="links-item">Curriculum</a>	
+        		</ul>
+        	</li>
+        </nav>
+    </header>
+        
+    <div class="avatar"></div>
+    
+    <div class="container">
 
-        <div id="content">
-            <nav id="menu">
-                <ul>
-                    {{#each menu}}
-
-                    <li><a href="{{this.url}}" target="_blank">{{this.name}}</a></li>
-
-                    {{/each}}
-                </ul>
-            </nav>
-
-            <div id="about">
-                <h2>{{about.title}}</h2>
-
-                {{#each about.paragraphs}}
-
-                <p>{{{this}}}</p>
-
-                {{/each}}
-            </div>
-
-            <div id="professional-profile">
-
-                <div id="experience">
-                    <h2>{{experience.title}}</h2>
-
-                    {{#each experience.contents}}
-
-                    <section class="life-event">
-                        <h3>{{this.title}}</h3>
-
-                        <div name="life-event-content">
-                            <p>{{../utils.items.duration}} {{this.duration}}</p>
-                            <p>{{../utils.items.activities}} {{this.activities}}</p>
-                            <p>{{../utils.items.technologies}} {{this.technologies}}</p>
-                        </div>
-                    </section>
-
-                    {{/each}}
-                </div>
-
-                <div id="academic-formation">
-                    <h2>{{academic-formation.title}}</h2>
-
-                    {{#each academic-formation.contents}}
-
-                    <section class="life-event">
-                        <h3>{{this.title}}</h3>
-
-                        <div name="life-event-content">
-                            <p>{{../utils.items.level}} {{this.level}}</p>
-                            <p>{{../utils.items.duration}} {{this.duration}}</p>
-                        </div>
-                    </section>
-
-                    {{/each}}
-                </div>
-
-                <div id="courses">
-                    <h2>{{courses.title}}</h2>
-
-                    {{#each courses.contents}}
-
-                    <section class="life-event">
-                        <h3>{{this.title}}</h3>
-
-                        <div name="life-event-content">
-                            <p>{{../utils.items.organization}} {{this.organization}}</p>
-                            <p>{{../utils.items.duration}} {{this.duration}}</p>
-                            <p>{{../utils.items.coverage}} {{this.coverage}}</p>
-                        </div>
-                    </section>
-
-                    {{/each}}
-                </div>
-
-                <div id="languages">
-                    <h2>{{languages.title}}</h2>
-
-                    {{#each languages.contents}}
-
-                    <section class="life-event language">
-                        <h3>{{this.title}}</h3>
-
-                        <div name="life-event-content">
-                            <p>{{../utils.items.reading}} {{this.reading}}</p>
-                            <p>{{../utils.items.writing}} {{this.writing}}</p>
-                            <p>{{../utils.items.comprehension}} {{this.comprehension}}</p>
-                            <p>{{../utils.items.speaking}} {{this.speaking}}</p>
-                        </div>
-                    </section>
-
-                    {{/each}}
-
-                    <div class="clearfix"></div>
-                </div>
-
-            </div>
-
-            <footer>
-                <div class="lists">
-                    <section class="built-with">
-                        <h3>{{footer.built-with.title}}</h3>
-                        <ul>
-                            {{#each footer.built-with.list}}
-                            <li><a href={{this.url}}>{{this.title}}</a></li>
-                            {{/each}}
-                        </ul>
-                    </section>
-                </div>
-                <div class="copyright">{{{footer.copyright}}}</div>
-            </footer>
+        <div class="hero">
+            <h1 class="title hero-info centered">
+                Rafael Escobar
+            </h1>
+            
+            <h2 class="subtitle hero-info centered">            
+                .NET and JS programmer
+            </h2>
+                
+            <p class="subtitle hero-info centered">
+                based on São Paulo
+            </p>
         </div>
+        
+        <nav class="social centered">
+            <ul class="menu">
+                <li class="menu-item social-item">
+                    <a href="https://www.facebook.com/Nhanderu" class="social-icon">
+                        <i class="fa fa-facebook"></i>
+                    </a>
+                </li>
+                
+                
+                <li class="menu-item social-item">
+                    <a href="https://www.linkedin.com/in/rafaelbzescobar" class="social-icon">
+                        <i class="fa fa-linkedin"></i>
+                    </a>
+                </li>
+                
+                
+                <li class="menu-item social-item">
+                    <a href="https://github.com/Nhanderu" class="social-icon">
+                        <i class="fa fa-github"></i>
+                    </a>
+                </li>
+                
+                
+                <li class="menu-item social-item">
+                    <a href="https://bitbucket.org/Nhanderu" class="social-icon">
+                        <i class="fa fa-bitbucket"></i>
+                    </a>
+                </li>
+                
+                
+                <li class="menu-item social-item">
+                    <a href="mailto:rafaelbze@gmail.com" class="social-icon">
+                        <i class="fa fa-envelope-o"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        
+        <main class="content">
+            <section>
+                <h3 class="content-info content-title">Golden boy</h3>
+                
+                <div class="content-info content-text">
+                    <p>
+                        Podemos já vislumbrar o modo pelo qual o aumento do diálogo entre os diferentes setores produtivos cumpre um papel essencial na formulação do sistema de participação geral.
+                        No entanto, não podemos esquecer que o desafiador cenário globalizado promove a alavancagem das posturas dos órgãos dirigentes com relação às suas atribuições.
+                        Podemos já vislumbrar o modo pelo qual o aumento do diálogo entre os diferentes setores produtivos cumpre um papel essencial na formulação do sistema de participação geral.
+                        No entanto, não podemos esquecer que o desafiador cenário globalizado promove a alavancagem das posturas dos órgãos dirigentes com relação às suas atribuições.
+                    <p>
+                </div>
+            </section>
+            
+            <section>
+                <h3 class="content-info content-title">Born to love</h3>
+                
+                <div class="content-info content-text">
+                    <p>
+                        Por conseguinte, a estrutura atual da organização obstaculiza a apreciação da importância de alternativas às soluções ortodoxas.
+                        Nunca é demais lembrar o peso e o significado destes problemas, uma vez que o comprometimento entre as equipes agrega valor ao estabelecimento do orçamento setorial.
+                        Por conseguinte, a estrutura atual da organização obstaculiza a apreciação da importância de alternativas às soluções ortodoxas.
+                        Nunca é demais lembrar o peso e o significado destes problemas, uma vez que o comprometimento entre as equipes agrega valor ao estabelecimento do orçamento setorial.
+                    </p>
+                </div>
+            </section>
+            
+            <section>
+                <h3 class="content-info content-title">And live for joy</h3>
+                
+                <div class="content-info content-text">
+                    <p>
+                        Percebemos, cada vez mais, que a percepção das dificuldades representa uma abertura para a melhoria das novas proposições.
+                        A prática cotidiana prova que o julgamento imparcial das eventualidades facilita a criação da gestão inovadora da qual fazemos parte.
+                        Percebemos, cada vez mais, que a percepção das dificuldades representa uma abertura para a melhoria das novas proposições.
+                        A prática cotidiana prova que o julgamento imparcial das eventualidades facilita a criação da gestão inovadora da qual fazemos parte.
+                    </p>
+                </div>
+            </section>
+        </main>
+        
     </div>
+    
+    <footer class="footer centered">
+        <div class="footer-line">
+            Copyright &copy; <span class="footer-focus">Rafael Escobar</span>
+        </div>
+        
+        <nav class="footer-line">
+            built with
+            <a href="https://nodejs.org/" class="footer-focus">Node.js</a>,
+            <a href="http://expressjs.com/" class="footer-focus">Express</a>
+            and
+            <a href="http://fontawesome.io/" class="footer-focus">Font Awesome</a>
+        </nav>
+        
+        <nav class="footer-line">
+            source on
+            <a href="https://github.com/nhanderu/personal/" class="footer-focus">GitHub</a>
+            and
+            <a href="https://bitbucket.com/nhanderu/personal/" class="footer-focus">Bitbucket</a>
+        </nav>
+    </footer>
 
-    <script type="text/javascript" src="public/scripts/google-analytics.js"></script>
 </body>
 </html>

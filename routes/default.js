@@ -4,13 +4,11 @@ var router = require("express").Router();
 // References the others routers.
 var routers = {
     index: require("./index"),
-    next: require("./next"),
     download: require("./download")
 };
 
 // Sets the routers.
 router.use("/", routers.index); // Index.
-router.use("/next", routers.next); // Next.
 router.use("/download", routers.download); // Next.
 
 // Any other page redirects to index.
