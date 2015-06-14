@@ -7,6 +7,8 @@ var contents = {
     pt: JSON.parse(fs.readFileSync("./public/contents/pt.json")),
     en: JSON.parse(fs.readFileSync("./public/contents/en.json"))
 };
+contents.pt.year = new Date().getFullYear();
+contents.en.year = new Date().getFullYear();
 
 // Root page.
 // Verifies the languages of the client's browser and iterates through them.
@@ -28,7 +30,7 @@ router.get("/", function (request, response) {
 
 // Portuguese version.
 router.get("/pt", function (request, response) {
-    response.render("index", contents.pt);
+    response.render("index.html", contents.pt);
 });
 
 router.get(/(^\/pt-..$|^\/por(t(u(g(u(e(se?)?)?)?)?)?)?$)/i, function (request, response) {
@@ -41,7 +43,7 @@ router.use("/pt/:error", function (request, response) {
 
 // English version.
 router.get("/en", function (request, response) {
-    response.render("index", contents.en);
+    response.render("index.html", contents.en);
 });
 
 router.get(/(^\/en-..$|^\/eng(l(i(sh?)?)?)?$)/i, function (request, response) {

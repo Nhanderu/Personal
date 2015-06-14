@@ -1,179 +1,82 @@
 {
+    "language": "en",
+    
     "header": {
-        "name": "Rafael B. Z. Escobar",
-        "subtitle": {
-            "position": ".NET Programming Intern @",
-            "company": {
-                "name": "BRQ",
-                "url": "http://www.brq.com"
-            }
+        "blog": {
+            "title": "Blog",
+            "url": "//blog.nhanderu.com/"
+        },
+        "bitcoin": {
+            "title": "Bitcoin",
+            "url": "#"
+        },
+        "curriculum": {
+            "title": "Curriculum",
+            "url": "/download/curriculum"
         }
     },
-
-    "menu": [
-        {
-            "name": "GitHub",
-            "url": "http://github.com/nhanderu"
-        },
-        {
-            "name": "LinkedIn",
-            "url": "https://www.linkedin.com/in/rafaelbzescobar"
-        },
-        {
-            "name": "Facebook",
-            "url": "https://www.facebook.com/nhanderu"
-        }
+    
+    "title": "Rafael Escobar",
+    "subtitle": [
+        ".NET and JS programmer",
+        "based in São Paulo"
     ],
-
-    "about": {
-        "title": "About me",
-        "paragraphs": [
-            "Hello, my name is Rafael Escobar!<br />I'm a young Information Systems student at FIAP and an aspiring .NET and JavaScript programmer from São Paulo, Brasil. I like coffee, soccer and trucks."
-        ]
+    
+    "social": {
+        "facebook": "//www.facebook.com/nhanderu/",
+        "linkedin": "//www.linkedin.com/in/rafaelbzescobar/en/",
+        "github": "//github.com/nhanderu/",
+        "bitbucket": "//bitbucket.org/nhanderu/",
+        "envelope-o": "mailto:rafael@nhanderu.com"
     },
-
-    "experience": {
-        "title": "Professional experience",
-
-        "contents": [
-            {
-                "title": ".NET Programming Intern at BRQ",
-                "duration": "from april 2015 to the present.",
-                "activities": "",
-                "technologies": ""
-            },
-            {
-                "title": "Technical Support 1 and 2 at FIAP",
-                "duration": "2 months, from march 2015 to april 2015.",
-                "activities": "help and support the students and others employees via remote access (Trauma Zer0), basic administration and maintaince in the firewall (Fortinet) and in the AD, DHCP and Share and Storage servers, management of the printers' supriments and the damaged equipments and control of the laboratory monitors team.",
-                "technologies": "company's internal system, Fortinet firewall and Trauma Zer0 Suit."
-            },
-            {
-                "title": "Technical Support 1 Intern at FIAP",
-                "duration": "10 months, from june 2014 to march 2015.",
-                "activities": "help and support the students and others employees via remote access (Trauma Zer0), basic administration and maintaince in the firewall (Fortinet) and in the AD, DHCP and Share and Storage servers, management of the printers' supriments and the damaged equipments and control of the laboratory monitors team.",
-                "technologies": "company's internal system, Fortinet firewall and Trauma Zer0 Suit."
-            },
-            {
-                "title": "Laboratory Monitor at FIAP",
-                "duration": "1 year and 5 months, from february 2013 to june 2014.",
-                "activities": "organize the IT laboratories, help and support the students and others employees, watch over the equipments (including the user's access) and the maintance of the computers.",
-                "technologies": "company's internal system."
-            }
-        ]
-    },
-
-    "academic-formation": {
-        "title": "Academic formation",
-
-        "contents": [
-            {
-                "title": "Information Systems at FIAP",
-                "level": "higher education - baccalaureate.",
-                "duration": "prediction of 4 years, from the 1º semester of 2014 to the 2º semester of 2017."
-            },
-            {
-                "title": "Technical Secondary School at COPI",
-                "level": "secondary education - technical.",
-                "duration": "3 years, from the 1º semester of 2011 to the 2º semester of 2013."
-            }
-        ]
-    },
-
-    "courses": {
-        "title": "Courses",
-
-        "contents": [
-            {
-                "title": ".NET Training",
-                "organization": "BRQ.",
-                "duration": "96 hours, at april and may 2015.",
-                "coverage": "C# language."
-            },
-            {
-                "title": "Fábrica de Desenvolvimento (\"Development Factory\") 2014",
-                "organization": "FIAP.",
-                "duration": "64 hours, at november and december 2014.",
-                "coverage": "C# and JavaScript languages, dynamic web pages programming with ASP.NET MVC, RESTful services with ASP.NET Web API, object-relational mapping with Entity Framework (code first), jQuery, Ajax, unit tests with the Visual Studio and design patterns."
-            },
-            {
-                "title": "Fábrica de Desenvolvimento (\"Development Factory\") 2013",
-                "organization": "FIAP.",
-                "duration": "64 hours, at august and september 2013.",
-                "coverage": "C# and JavaScript languages, dynamic web pages programming with ASP.NET MVC, object-relational mapping with Entity Framework (database first), jQuery and good practices of programming."
-            }
-        ]
-    },
-
-    "languages": {
-        "title": "Languages",
-
-        "contents": [
-            {
-                "title": "Protuguese",
-                "reading": "fluent.",
-                "writing": "fluent.",
-                "comprehension": "fluent.",
-                "speaking": "fluent."
-            },
-            {
-                "title": "English",
-                "reading": "advanced.",
-                "writing": "advanced.",
-                "comprehension": "medium.",
-                "speaking": "medium."
-            }
-        ]
-    },
-
-    "footer": {
-        "copyright": "Copyright &copy; 2015 &bull; Rafael Escobar",
-        "built-with": {
-            "title": "Made with",
-            "list": [
-                {
-                    "title": "Normalize.css",
-                    "url": "http://necolas.github.io/normalize.css/"
-                },
-                {
-                    "title": "Express",
-                    "url": "http://expressjs.com/"
-                },
-                {
-                    "title": "Handlebars",
-                    "url": "http://handlebarsjs.com/"
-                },
-                {
-                    "title": "Express Handlebars",
-                    "url": "https://github.com/ericf/express-handlebars"
-                },
-                {
-                    "title": "Node.js",
-                    "url": "https://nodejs.org/"
-                },
-                {
-                    "title": "Red Hat's Openshift",
-                    "url": "https://www.openshift.com/"
-                }
+    
+    "content": [
+        {
+            "title": "Golden boy",
+            "paragraphs": [
+                "Podemos já vislumbrar o modo pelo qual o aumento do diálogo entre os diferentes setores produtivos cumpre um papel essencial na formulação do sistema de participação geral. No entanto, não podemos esquecer que o desafiador cenário globalizado promove a alavancagem das posturas dos órgãos dirigentes com relação às suas atribuições. Podemos já vislumbrar o modo pelo qual o aumento do diálogo entre os diferentes setores produtivos cumpre um papel essencial na formulação do sistema de participação geral. No entanto, não podemos esquecer que o desafiador cenário globalizado promove a alavancagem das posturas dos órgãos dirigentes com relação às suas atribuições."
+            ]
+        },
+        {
+            "title": "Born to love",
+            "paragraphs": [
+                "Por conseguinte, a estrutura atual da organização obstaculiza a apreciação da importância de alternativas às soluções ortodoxas. Nunca é demais lembrar o peso e o significado destes problemas, uma vez que o comprometimento entre as equipes agrega valor ao estabelecimento do orçamento setorial. Por conseguinte, a estrutura atual da organização obstaculiza a apreciação da importância de alternativas às soluções ortodoxas. Nunca é demais lembrar o peso e o significado destes problemas, uma vez que o comprometimento entre as equipes agrega valor ao estabelecimento do orçamento setorial."
+            ]
+        },
+        {
+            "title": "And live for joy",
+            "paragraphs": [
+                "Percebemos, cada vez mais, que a percepção das dificuldades representa uma abertura para a melhoria das novas proposições. A prática cotidiana prova que o julgamento imparcial das eventualidades facilita a criação da gestão inovadora da qual fazemos parte. Percebemos, cada vez mais, que a percepção das dificuldades representa uma abertura para a melhoria das novas proposições. A prática cotidiana prova que o julgamento imparcial das eventualidades facilita a criação da gestão inovadora da qual fazemos parte."
             ]
         }
+    ],
+    
+    "footer": {
+        "copyright": "Copyright &copy;",
+        "menus": [
+            {
+                "text": "built with",
+                
+                "list": {
+                    "Node.js": "https://nodejs.org/",
+                    "Express": "http://expressjs.com/",
+                    "Nunjucks": "http://mozilla.github.io/nunjucks/",
+                    "Font Awesome": "http://fontawesome.io/"
+                }
+            },
+            {
+                "text": "source on",
+                
+                "list": {
+                    "GitHub": "https://github.com/nhanderu/personal/",
+                    "Bitbucket": "https://bitbucket.com/nhanderu/personal/" 
+                }
+            }
+        ]
     },
-
-    "utils": {
-        "language": "en-US",
-        "description": "The personal website of a .NET and JavaScript programmer!",
-        "keywords": ".NET, JavaScript, curriculum, curriculum vitae, cv, personal, rafael, rafael escobar, professional",
-        "items": {
-            "level": "Level(s):",
-            "duration": "Duration:",
-            "activities": "Major activities:",
-            "technologies": "Major technologies:",
-            "organization": "Organization:",
-            "coverage": "Coverage:",
-            "reading": "Reading:",
-            "writing": "Writing:",
-            "comprehension": "Comprehension:",
-            "speaking": "Speaking:"
-        }
-    }
+    
+    "helpers": {
+        "joiner": ",",
+        "and": "and"
+    } 
 }

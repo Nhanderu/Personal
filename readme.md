@@ -6,16 +6,12 @@ My personal website, running @ `nhanderu.com`!
 
 * [Node.js](https://nodejs.org/): application platform
 * [Express](http://expressjs.com/): the back-end of the web-app, controlling the routes and the HTTP requests
-* [Handlebars](http://handlebarsjs.com/): views with dynamic text
- * [Express Handlebars](https://github.com/ericf/express-handlebars): complemanting the Handlebars usage
+* [Nunjucks](http://mozilla.github.io/nunjucks/): rendering the views
 * [Red Hat's Openshift](https://www.openshift.com/): hosting and server configurations
 
 ### To-do list
 
 * Responsive design
-* English page
-* .NET and Javascript technologies list in about
-* Get better backgrounds
 * Stop being lazy
 
 ### License

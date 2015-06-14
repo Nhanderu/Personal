@@ -1,6 +1,6 @@
 // Imports the necessary modules.
 var express = require("express");
-var handlebars = require("express-handlebars");
+var nunjucks = require("nunjucks");
 var path = require("path");
 var router = require("../routes/default");
 
@@ -11,8 +11,10 @@ var app = express();
 app.set("port", process.env.OPENSHIFT_NODEJS_PORT || "8080");
 app.set("ip address", process.env.OPENSHIFT_NODEJS_IP || "127.0.0.1");
 app.set("views", path.join(__dirname, "..", "views"));
-app.engine("hbs", handlebars());
-app.set("view engine", "hbs");
+app.set("view engine", "html");
+
+// Nunjucks settings.
+nunjucks.configure("views", { express: app });
 
 // Sets the router.
 app.use("/", router);
