@@ -2,7 +2,7 @@
 var express = require("express");
 var nunjucks = require("nunjucks");
 var path = require("path");
-var router = require("../routes/default");
+var router = require("../routes/index");
 
 // Initializes a new Express application.
 var app = express();

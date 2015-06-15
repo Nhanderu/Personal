@@ -1,57 +1,30 @@
-// Imports the necessary modules.
-var fs = require('fs');
+// Initializes a new router.
+var router = require("express").Router();
 
-// Initializes a new router and references the content files.
-var router = require('express').Router();
-var contents = {
-    pt: JSON.parse(fs.readFileSync("./public/contents/pt.json")),
-    en: JSON.parse(fs.readFileSync("./public/contents/en.json"))
+// Imports the controllers.
+var controllers = {
+	index: require("../controllers/index"),
+	portuguese: require("../controllers/portuguese"),
+	english: require("../controllers/english"),
+	download: require("../controllers/download"),
 };
-contents.pt.year = new Date().getFullYear();
-contents.en.year = new Date().getFullYear();
 
 // Root page.
-// Verifies the languages of the client's browser and iterates through them.
-// If it's portuguese, redirects to /pt. If it's english, redirects to /en.
-// If it isn't any of them, continue the iteration until it reaches one of the two languages or the end of the array (then redirects to /en).
-// By default, redirects to /en. 
-router.get("/", function (request, response) {    
-    var languages = request.headers["accept-language"].split(",");
-    
-    for (var index = 0; index < languages.length; index++) {
-        var item = languages[index];
-        
-        if (/pt.*/i.test(item))
-            response.redirect("/pt");
-        if (/en.*/i.test(item) || index == languages.length - 1)
-            response.redirect("/en");
-    }
-});
+router.get("/", controllers.index.index);
 
 // Portuguese version.
-router.get("/pt", function (request, response) {
-    response.render("index.html", contents.pt);
-});
-
-router.get(/(^\/pt-..$|^\/por(t(u(g(u(e(se?)?)?)?)?)?)?$)/i, function (request, response) {
-    response.redirect("/pt");
-});
-
-router.use("/pt/:error", function (request, response) {
-    response.redirect("/pt");    
-});
+router.get("/pt", controllers.portuguese.index);
+router.get(/(^\/pt-..$|^\/por(t(u(g(u(e(se?)?)?)?)?)?)?$)/i, controllers.portuguese.redirect);
+router.get("/pt/download/curriculum", controllers.download.curriculum("pt"));
+router.use("/pt/:error", controllers.portuguese.redirect);
 
 // English version.
-router.get("/en", function (request, response) {
-    response.render("index.html", contents.en);
-});
+router.get("/en", controllers.english.index);
+router.get(/(^\/en-..$|^\/eng(l(i(sh?)?)?)?$)/i, controllers.english.redirect);
+router.get("/en/download/curriculum", controllers.download.curriculum("en"));
+router.use("/en/:error", controllers.english.redirect);
 
-router.get(/(^\/en-..$|^\/eng(l(i(sh?)?)?)?$)/i, function (request, response) {
-    response.redirect("/en");
-});
-
-router.use("/en/:error", function (request, response) {
-    response.redirect("/en");    
-});
+// Any other page redirects to index.
+router.get("/:error", controllers.index.redirect);
 
 module.exports = router;
