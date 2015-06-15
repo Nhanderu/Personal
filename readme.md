@@ -7,7 +7,7 @@ My personal website, running @ `nhanderu.com`!
 * [Node.js](https://nodejs.org/): application platform
 * [Express](http://expressjs.com/): the back-end of the web-app, controlling the routes and the HTTP requests
 * [Nunjucks](http://mozilla.github.io/nunjucks/): rendering the views
-* [Red Hat's Openshift](https://www.openshift.com/): hosting and server configurations
+* [Openshift](https://www.openshift.com/): hosting and server configurations
 
 ### To-do list
 
