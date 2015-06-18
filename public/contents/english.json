@@ -42,13 +42,15 @@
             "paragraphs": [
                 "I work at BRQ, an IT services company, by building web apps and Windows programs using the .NET platform, mostly with the C# and VB.NET languages.",
                 "In my free times, I like to search about new technologies and its best practices, to test what I've learned by creating little and useless projects, and to seek for minimum details in this website that nobody would notice.",
-                "Most of all, I'm interested in some new web frameworks for .NET, like ASP.NET vNext and its new features and another OWIN's implementations, like NancyFx."
+                "Most of all, I'm interested in some new web frameworks for .NET, like ASP.NET vNext and its new features and another OWIN's implementations, like NancyFx.",
+                "A less frequent participant in the JavaScript world, but in love with Node.js (and its frameworks and tools) and its facilities for web development."
             ]
         },
         {
             "title": "The student",
             "paragraphs": [
-                "Currently studying Information Systems at FIAP, an IT-focused faculty, one of the greatest colleges in this field in Brazil. But, even before I entered the universitarian life, I used to study about programming. Actually, I do it since when I had my first contact with computing, in my vocational and technical high school."
+                "Currently studying Information Systems at FIAP, an IT-focused faculty, one of the greatest colleges in this field in Brazil. But, even before I entered the universitarian life, I used to study about programming. Actually, I do it since when I had my first contact with computing, in my vocational and technical high school.",
+                "Curiously, when I was 14 years old, I started with VB.NET and C#, which certainly influenced my decision in the higher education and in the programming platform."
             ]
         }
     ],
