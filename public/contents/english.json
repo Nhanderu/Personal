@@ -32,21 +32,23 @@
     
     "content": [
         {
-            "title": "Golden boy",
+            "title": "The person",
             "paragraphs": [
-                "Podemos já vislumbrar o modo pelo qual o aumento do diálogo entre os diferentes setores produtivos cumpre um papel essencial na formulação do sistema de participação geral. No entanto, não podemos esquecer que o desafiador cenário globalizado promove a alavancagem das posturas dos órgãos dirigentes com relação às suas atribuições. Podemos já vislumbrar o modo pelo qual o aumento do diálogo entre os diferentes setores produtivos cumpre um papel essencial na formulação do sistema de participação geral. No entanto, não podemos esquecer que o desafiador cenário globalizado promove a alavancagem das posturas dos órgãos dirigentes com relação às suas atribuições."
+                "Hello, my name is Rafael, I'm 18 and I'm from São Paulo, Brazil. Besides being a programmer, I'm a human being, also a Corinthians huge fan, a coffee lover and a philosophy and political science enthusiast."
             ]
         },
         {
-            "title": "Born to love",
+            "title": "The programmer",
             "paragraphs": [
-                "Por conseguinte, a estrutura atual da organização obstaculiza a apreciação da importância de alternativas às soluções ortodoxas. Nunca é demais lembrar o peso e o significado destes problemas, uma vez que o comprometimento entre as equipes agrega valor ao estabelecimento do orçamento setorial. Por conseguinte, a estrutura atual da organização obstaculiza a apreciação da importância de alternativas às soluções ortodoxas. Nunca é demais lembrar o peso e o significado destes problemas, uma vez que o comprometimento entre as equipes agrega valor ao estabelecimento do orçamento setorial."
+                "I work at BRQ, an IT services company, by building web apps and Windows programs using the .NET platform, mostly with the C# and VB.NET languages.",
+                "In my free times, I like to search about new technologies and its best practices, to test what I've learned by creating little and useless projects, and to seek for minimum details in this website that nobody would notice.",
+                "Most of all, I'm interested in some new web frameworks for .NET, like ASP.NET vNext and its new features and another OWIN's implementations, like NancyFx."
             ]
         },
         {
-            "title": "And live for joy",
+            "title": "The student",
             "paragraphs": [
-                "Percebemos, cada vez mais, que a percepção das dificuldades representa uma abertura para a melhoria das novas proposições. A prática cotidiana prova que o julgamento imparcial das eventualidades facilita a criação da gestão inovadora da qual fazemos parte. Percebemos, cada vez mais, que a percepção das dificuldades representa uma abertura para a melhoria das novas proposições. A prática cotidiana prova que o julgamento imparcial das eventualidades facilita a criação da gestão inovadora da qual fazemos parte."
+                "Currently studying Information Systems at FIAP, an IT-focused faculty, one of the greatest colleges in this field in Brazil. But, even before I entered the universitarian life, I used to study about programming. Actually, I do it since when I had my first contact with computing, in my vocational and technical high school."
             ]
         }
     ],
