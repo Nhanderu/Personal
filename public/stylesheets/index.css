@@ -12,8 +12,6 @@ Organization order:
 
 /* Tags. */
 
-*{margin: 0}
-
 html {
     height: 100%;
 }
@@ -219,30 +217,30 @@ body {
 .content {
     margin: 100px auto;
 }
-    .content-info {
-        line-height: 28px;
-        letter-spacing: .5px;    
-    }
-    
-    .content-title {
-        /* Display. */
-        margin: 30px 0 0 0;
-        
-        /* Font. */
-        font-size: 18px;
-        font-weight: 600;
-        color: black;
+
+    .content-section {
+    	margin-top: 30px;
     }
 
-    .content-text {
+    .content-info {
         /* Display. */
         margin: 0;
         
         /* Font. */
         font-size: 18px;
+        line-height: 28px;
+        letter-spacing: .5px;    
+    }
+    
+    .content-title {
+        font-weight: 600;
+        color: black;
+    }
+
+    .content-text {
         font-weight: 200;
-        color: #444;
         text-align: justify;
+        color: #444;
     }
 
 .footer {
