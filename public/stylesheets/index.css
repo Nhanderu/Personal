@@ -140,10 +140,6 @@ body {
 .social {
     margin: 30px auto 0 auto;
 }
-
-    .social-item {
-        margin: 0 10px;
-    }
     
     .social-icon {
         /* Border. */
@@ -163,12 +159,35 @@ body {
             text-decoration: none;
         }
 
+.fa {
+    /* Display. */
+    padding-top: 10px;
+    
+    /* Size. */
+    width: 50px;
+    height: 40px;
+}
+
 .fa-facebook:hover {
-    color: #3a5795;
+    /* Border. */
+    border-radius: 100px;
+    
+    /* Font. */
+    color: white;
+    
+    /* Background. */
+    background-color: #3a5795;
 }
 
 .fa-linkedin:hover {
-    color: #007bb6;
+    /* Border. */
+    border-radius: 100px;
+    
+    /* Font. */
+    color: white;
+    
+    /* Background. */
+    background-color: #007bb6;
 }
 
 .fa-github:hover {
@@ -176,11 +195,25 @@ body {
 }
 
 .fa-bitbucket:hover {
-    color: #205081;
+    /* Border. */
+    border-radius: 100px;
+    
+    /* Font. */
+    color: white;
+    
+    /* Background. */
+    background-color: #205081;
 }
 
 .fa-envelope-o:hover {
-    color: #777;
+    /* Border. */
+    border-radius: 100px;
+    
+    /* Font. */
+    color: white;
+    
+    /* Background. */
+    background-color: #777;
 }
         
 .content {
