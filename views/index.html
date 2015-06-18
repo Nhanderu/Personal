@@ -48,7 +48,7 @@
         	</li>
         </nav>
     </header>
-        
+
     <div class="avatar"></div>
     
     <div class="container">
@@ -69,13 +69,15 @@
         
         <nav class="social centered">
             <ul class="menu">
+                
                 {% for item, url in social %}
-                <li class="menu-item social-item">
-                    <a href="{{ url }}" class="social-icon">
-                        <i class="fa fa-{{ item }}"></i>
-                    </a>
-                </li>
+                    <li class="menu-item social-item">
+                        <a href="{{ url }}" class="social-icon">
+                            <i class="fa fa-{{ item }}"></i>
+                        </a>
+                    </li>
                 {% endfor %}
+                
             </ul>
         </nav>
         
@@ -86,9 +88,11 @@
                     <h3 class="content-info content-title">{{ section.title }}</h3>
                     
                     <div class="content-info content-text">
+                        
                         {% for paragraph in section.paragraphs %}
                             <p class="content-info">{{ paragraph }}</p>
                         {% endfor %}
+                        
                     </div>
                 </section>
             {% endfor %}
@@ -98,6 +102,7 @@
     </div>
     
     <footer class="footer centered">
+        
         <div class="footer-line">
             {{ footer.copyright }} {{ year }} <span class="footer-focus">{{ title }}</span>
         </div>
@@ -117,6 +122,7 @@
                 {% endfor %}
             </nav>
         {% endfor %}
+        
     </footer>
 
 </body>
