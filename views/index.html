@@ -82,12 +82,12 @@
         <main class="content">
             
             {% for section in content %}
-                <section>
+                <section class="content-section">
                     <h3 class="content-info content-title">{{ section.title }}</h3>
                     
                     <div class="content-info content-text">
                         {% for paragraph in section.paragraphs %}
-                            <p>{{ paragraph }}</p>
+                            <p class="content-info">{{ paragraph }}</p>
                         {% endfor %}
                     </div>
                 </section>
