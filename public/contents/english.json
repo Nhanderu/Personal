@@ -62,18 +62,18 @@
                 "text": "built with",
                 
                 "list": {
-                    "Node.js": "https://nodejs.org/",
-                    "Express": "http://expressjs.com/",
-                    "Nunjucks": "http://mozilla.github.io/nunjucks/",
-                    "Font Awesome": "http://fontawesome.io/"
+                    "Node.js": "//nodejs.org/",
+                    "Express": "//expressjs.com/",
+                    "Nunjucks": "//mozilla.github.io/nunjucks/",
+                    "Font Awesome": "//fontawesome.io/"
                 }
             },
             {
                 "text": "source on",
                 
                 "list": {
-                    "GitHub": "https://github.com/nhanderu/personal/",
-                    "Bitbucket": "https://bitbucket.com/nhanderu/personal/" 
+                    "GitHub": "//github.com/nhanderu/personal/",
+                    "Bitbucket": "//bitbucket.com/nhanderu/personal/" 
                 }
             }
         ]
