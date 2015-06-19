@@ -32,21 +32,25 @@
     
     "content": [
         {
-            "title": "Golden boy",
+            "title": "The person",
             "paragraphs": [
-                "Podemos já vislumbrar o modo pelo qual o aumento do diálogo entre os diferentes setores produtivos cumpre um papel essencial na formulação do sistema de participação geral. No entanto, não podemos esquecer que o desafiador cenário globalizado promove a alavancagem das posturas dos órgãos dirigentes com relação às suas atribuições. Podemos já vislumbrar o modo pelo qual o aumento do diálogo entre os diferentes setores produtivos cumpre um papel essencial na formulação do sistema de participação geral. No entanto, não podemos esquecer que o desafiador cenário globalizado promove a alavancagem das posturas dos órgãos dirigentes com relação às suas atribuições."
+                "Olá, meu nome é Rafael, tenho 18 anos e sou de São Paulo. Além de ser programador, sou um ser humano, também um corinthiano roxo, um amante de café e um entusiasta de filosofia e ciência política."
             ]
         },
         {
-            "title": "Born to love",
+            "title": "The programmer",
             "paragraphs": [
-                "Por conseguinte, a estrutura atual da organização obstaculiza a apreciação da importância de alternativas às soluções ortodoxas. Nunca é demais lembrar o peso e o significado destes problemas, uma vez que o comprometimento entre as equipes agrega valor ao estabelecimento do orçamento setorial. Por conseguinte, a estrutura atual da organização obstaculiza a apreciação da importância de alternativas às soluções ortodoxas. Nunca é demais lembrar o peso e o significado destes problemas, uma vez que o comprometimento entre as equipes agrega valor ao estabelecimento do orçamento setorial."
+                "Trabalho na BRQ, uma empresa de serviços de TI, construindo aplicativos para a web e Windows utilizando a plataforma .NET, principalmente com as liguagens C# e VB.NET.",
+                "Nos meus tempos livres, gosto de pesquisar sobre novas tecnologias e suas melhores práticas, testar o que eu aprendi criando pequenos e inúteis projetos e procurar por mínimos detalhes para arrumar neste site que ninguém perceberia.",
+                "Acima de tudo, estou interessado em alguns novas ferramentas web para .NET, como o ASP.NET vNext e suas novidades e outras implementações OWIN, como NancyFx.",
+                "Um participante menos assíduo do mundo JavaScript, porém apaixonado por Node.js (e seus framworks e ferramentas) e suas facilidades para desenvolvimento web."
             ]
         },
         {
-            "title": "And live for joy",
+            "title": "The student",
             "paragraphs": [
-                "Percebemos, cada vez mais, que a percepção das dificuldades representa uma abertura para a melhoria das novas proposições. A prática cotidiana prova que o julgamento imparcial das eventualidades facilita a criação da gestão inovadora da qual fazemos parte. Percebemos, cada vez mais, que a percepção das dificuldades representa uma abertura para a melhoria das novas proposições. A prática cotidiana prova que o julgamento imparcial das eventualidades facilita a criação da gestão inovadora da qual fazemos parte."
+                "Atualmente, estudo Sistemas da Informação na FIAP, faculdade focada em TI, uma das melhores deste ramo no Brazil. Mas, antes mesmo de eu entrar para a vida universitário, costumava a estudar sobre programação. Na verdade, o faço desde que tive meu primeiro contato com computação, no meu ensino médio técnico.",
+                "Curiosamente, quando eu tinha 14 anos, eu comecei com VB.NET and C#, o que certamente influenciou minha decisão para o ensino superior e para a plataforma de programação."
             ]
         }
     ],
