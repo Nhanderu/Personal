@@ -23,29 +23,29 @@
 
     <header class="header">
         <nav class="links links-left">
-        	<li class="menu">
-        		<ul class="menu-item links-left-item">
-        			<a href="{{ header.blog.url }}" class="links-item">
+            <ul class="menu">
+                <li class="menu-item links-left-item">
+                    <a href="{{ header.blog.url }}" class="links-item">
                         {{ header.blog.title }}
                     </a>	
-        		</ul>
-        		
-        		<ul class="menu-item link-left-item">
-        			<a href="{{ header.bitcoin.url }}" class="links-item">
+                </li>
+                
+                <li class="menu-item link-left-item">
+                    <a href="{{ header.bitcoin.url }}" class="links-item">
                         {{ header.bitcoin.title }}
                     </a>
-        		</ul>
-        	</li>
+                </li>
+            </ul>
         </nav>
         
         <nav class="links links-right">
-        	<li class="menu">
-        		<ul class="menu-item links-right-item">
-        			<a href="{{ header.curriculum.url }}" class="links-item">
+            <ul class="menu">
+                <li class="menu-item links-right-item">
+                    <a href="{{ header.curriculum.url }}" class="links-item">
                         {{ header.curriculum.title }}
-                    </a>	
-        		</ul>
-        	</li>
+                    </a>
+                </li>
+            </ul>
         </nav>
     </header>
 
@@ -53,51 +53,51 @@
     
     <div class="container">
 
-        <div class="hero">
-            <h1 class="title hero-info centered">
-                {{ title }}
-            </h1>
-            
-            <h2 class="subtitle hero-info centered">            
-                {{ subtitle[0] }}
-            </h2>
-                
-            <p class="subtitle hero-info centered">
-                {{ subtitle[1] }}
-            </p>
-        </div>
+    <div class="hero">
+        <h1 class="title hero-info centered">
+            {{ title }}
+        </h1>
         
-        <nav class="social centered">
-            <ul class="menu">
-                
-                {% for item, url in social %}
-                    <li class="menu-item social-item">
-                        <a href="{{ url }}" class="social-icon">
-                            <i class="fa fa-{{ item }}"></i>
-                        </a>
-                    </li>
-                {% endfor %}
-                
-            </ul>
-        </nav>
-        
-        <main class="content">
+        <h2 class="subtitle hero-info centered">            
+            {{ subtitle[0] }}
+        </h2>
             
-            {% for section in content %}
-                <section class="content-section">
-                    <h3 class="content-info content-title">{{ section.title }}</h3>
-                    
-                    <div class="content-info content-text">
-                        
-                        {% for paragraph in section.paragraphs %}
-                            <p class="content-info">{{ paragraph }}</p>
-                        {% endfor %}
-                        
-                    </div>
-                </section>
+        <p class="subtitle hero-info centered">
+            {{ subtitle[1] }}
+        </p>
+    </div>
+    
+    <nav class="social centered">
+        <ul class="menu">
+            
+            {% for item, url in social %}
+                <li class="menu-item social-item">
+                    <a href="{{ url }}" class="social-icon">
+                        <i class="fa fa-{{ item }}"></i>
+                    </a>
+                </li>
             {% endfor %}
             
-        </main>
+        </ul>
+    </nav>
+
+    <main class="content">
+        
+        {% for section in content %}
+            <section class="content-section">
+                <h3 class="content-info content-title">{{ section.title }}</h3>
+                
+                <div class="content-info content-text">
+                    
+                    {% for paragraph in section.paragraphs %}
+                        <p class="content-info">{{ paragraph }}</p>
+                    {% endfor %}
+                    
+                </div>
+            </section>
+        {% endfor %}
+        
+    </main>
         
     </div>
     
@@ -109,8 +109,9 @@
         
         {% for menu in footer.menus %}
             <nav class="footer-line">
+                    
                 {{ menu.text }}
-                
+
                 {% for item, url in menu.list %}
                     {% if loop.index == loop.length %}
                         <a href="{{ url }}" class="footer-focus">{{ item }}</a>
@@ -120,6 +121,7 @@
                         <a href="{{ url }}" class="footer-focus">{{ item }}</a>{{ helpers.joiner }}
                     {% endif %}
                 {% endfor %}
+                
             </nav>
         {% endfor %}
         
