@@ -189,7 +189,14 @@ body {
 }
 
 .fa-github:hover {
-    color: #444;
+    /* Border. */
+    border-radius: 100px;
+    
+    /* Font. */
+    color: white;
+    
+    /* Background. */
+    background-color: black;
 }
 
 .fa-bitbucket:hover {
