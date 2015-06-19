@@ -32,13 +32,13 @@
     
     "content": [
         {
-            "title": "The person",
+            "title": "A pessoa",
             "paragraphs": [
                 "Olá, meu nome é Rafael, tenho 18 anos e sou de São Paulo. Além de ser programador, sou um ser humano, também um corinthiano roxo, um amante de café e um entusiasta de filosofia e ciência política."
             ]
         },
         {
-            "title": "The programmer",
+            "title": "O programador",
             "paragraphs": [
                 "Trabalho na BRQ, uma empresa de serviços de TI, construindo aplicativos para a web e Windows utilizando a plataforma .NET, principalmente com as liguagens C# e VB.NET.",
                 "Nos meus tempos livres, gosto de pesquisar sobre novas tecnologias e suas melhores práticas, testar o que eu aprendi criando pequenos e inúteis projetos e procurar por mínimos detalhes para arrumar neste site que ninguém perceberia.",
@@ -47,7 +47,7 @@
             ]
         },
         {
-            "title": "The student",
+            "title": "O estudante",
             "paragraphs": [
                 "Atualmente, estudo Sistemas da Informação na FIAP, faculdade focada em TI, uma das melhores deste ramo no Brazil. Mas, antes mesmo de eu entrar para a vida universitário, costumava a estudar sobre programação. Na verdade, o faço desde que tive meu primeiro contato com computação, no meu ensino médio técnico.",
                 "Curiosamente, quando eu tinha 14 anos, eu comecei com VB.NET and C#, o que certamente influenciou minha decisão para o ensino superior e para a plataforma de programação."
