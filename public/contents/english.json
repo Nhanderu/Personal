@@ -2,6 +2,7 @@
     "language": "en",
     
     "header": {
+        "photo": "Photo by",
         "blog": {
             "title": "Blog",
             "url": "//blog.nhanderu.com/"
@@ -40,17 +41,13 @@
         {
             "title": "The programmer",
             "paragraphs": [
-                "I work at BRQ, an IT services company, by building web apps and Windows programs using the .NET platform, mostly with the C# and VB.NET languages.",
-                "In my free times, I like to search about new technologies and its best practices, to test what I've learned by creating little and useless projects, and to seek for minimum details to fix in this website that nobody would notice.",
-                "Most of all, I'm interested in some new web frameworks for .NET, like ASP.NET vNext and its new features and another OWIN implementations, like NancyFx.",
-                "A less frequent participant in the JavaScript world, but in love with Node.js (and its frameworks and tools) and its facilities for web development."
+                "I work at BRQ, an IT services company, by building web apps and Windows programs using the .NET platform, mostly with the C# and VB.NET languages. In my free times, I like to search about new technologies and its best practices, to test what I've learned by creating little and useless projects, and to seek for minimum details to fix in this website that nobody would notice. I'm interested, most of all, in some new web frameworks for .NET, like ASP.NET vNext and another OWIN implementations (like NancyFx), and for the JavaScript world, like Node.js and Express, besides being a less frequent participant in this platforms."
             ]
         },
         {
             "title": "The student",
             "paragraphs": [
-                "Currently studying Information Systems at FIAP, an IT-focused faculty, one of the greatest colleges in this field in Brazil. But, even before I entered the universitarian life, I used to study about programming. Actually, I do it since when I had my first contact with computing, in my vocational and technical high school.",
-                "Curiously, when I was 14 years old, I started with VB.NET and C#, which certainly influenced my decision for the higher education and for the programming platform."
+                "Currently studying Information Systems at FIAP, an IT-focused faculty, one of the greatest colleges in this field in Brazil. But, even before I entered the universitarian life, I used to study about programming. Actually, I do it since when I had my first contact with computing, in my vocational and technical high school, when I was 14 years old. Curiously, , I started with VB.NET and C#, which certainly influenced my decision for the higher education and for the programming platform."
             ]
         }
     ],

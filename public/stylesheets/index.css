@@ -12,15 +12,12 @@ Organization order:
 
 /* Tags. */
 
-html {
+html, body {
+    margin: 0;
     height: 100%;
 }
 
 body {
-    /* Display. */
-    margin: 0;
-    min-height: 100%;
-    
     /* Font. */
     font-family: "Helvetica Neue", Helvetica, Arial;
     
@@ -40,18 +37,70 @@ body {
     position: relative;
 	
     /* Size. */
-    height: 220px;
-    
-    /* Background. */
-    background-color: #354F06;
-    background-image: url("/public/images/background/texture.png");
-    background-attachment: fixed;
-    background-repeat: repeat, repeat;
-    background-position: center;
-    
-    /* Effects. */
-    box-shadow: 0 0 60px #2a3f04 inset;
+    height: 60vh;
 }
+
+    .header-image {
+        /* Display. */
+        position: absolute;
+          
+        /* Size. */
+        height: 100%;
+        width: 100%;
+    
+        /* Background. */
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    .header-layout {
+        /* Display. */
+        position: absolute;
+        opacity: .5;
+        
+        /* Size. */
+        height: 100%;
+        width: 100%;
+    
+        /* Background. */
+        background-color: black;
+        background-position: center;
+        background-size: cover;
+    }
+    
+    .header-attribution {
+        /* Display. */
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        
+        /* Font. */
+        font-size: 15px;
+        color: #BBB;
+    }
+    
+    .header-text {
+        /* Display */
+       padding: 3px 7px;
+        
+        /* Font. */
+        font-family: Verdana;
+        text-shadow: 0 0 5px black;
+        text-decoration: none;
+        color: inherit;
+    
+        /* Effects. */
+        transition: .2s;
+    }
+
+        .header-text:hover {
+            /* Font */
+            color: white;
+            
+            /* Background. */
+            background-color: rgba(0, 0, 0, .5);
+        }
 
 .avatar {
     /* Display. */
@@ -119,21 +168,11 @@ body {
         }
 
     .links-item {
-        /* Font. */
-        color: #202F05;
-        font-family: Verdana;
         font-size: 20px;
         font-weight: 900;
         text-transform: uppercase;
-        text-decoration: none;
-    
-        /* Effects. */
-        transition: .2s;
+        color: white;
     }
-
-        .links-item:hover {
-            color: white;
-        }
 
 .social {
     margin: 30px auto 0 auto;

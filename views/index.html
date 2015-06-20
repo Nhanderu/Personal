@@ -22,16 +22,27 @@
 <body>
 
     <header class="header">
+        
+        <div id="header-image" class="header-image"></div>
+        <div class="header-layout"></div>
+        
+        <div id="header-attribution" class="header-attribution">
+            <a href="" id="header-attribution-link" class="header-text">
+                <span>{{ header.photo }}</span>
+                <span id="header-author"></span>
+            </a>
+        </div>
+        
         <nav class="links links-left">
             <ul class="menu">
                 <li class="menu-item links-left-item">
-                    <a href="{{ header.blog.url }}" class="links-item">
+                    <a href="{{ header.blog.url }}" class="links-item header-text">
                         {{ header.blog.title }}
                     </a>	
                 </li>
                 
                 <li class="menu-item link-left-item">
-                    <a href="{{ header.bitcoin.url }}" class="links-item">
+                    <a href="{{ header.bitcoin.url }}" class="links-item header-text">
                         {{ header.bitcoin.title }}
                     </a>
                 </li>
@@ -41,12 +52,13 @@
         <nav class="links links-right">
             <ul class="menu">
                 <li class="menu-item links-right-item">
-                    <a href="{{ header.curriculum.url }}" class="links-item">
+                    <a href="{{ header.curriculum.url }}" class="links-item header-text">
                         {{ header.curriculum.title }}
                     </a>
                 </li>
             </ul>
         </nav>
+        
     </header>
 
     <div class="avatar"></div>
@@ -127,5 +139,14 @@
         
     </footer>
 
+    <script type="text/javascript" src="/public/scripts/google-analytics.js"></script>
+    <script type="text/javascript" src="/public/scripts/header-background.js"></script>
+    
+    <noscript>
+        <style type="text/css">
+            .header-image { background-image: url("/public/images/background/01.jpg"); }
+            .header-attribution { visibility: hidden; }
+        </style>
+    </noscript>
 </body>
 </html>

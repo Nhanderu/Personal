@@ -2,6 +2,7 @@
     "language": "pt-br",
     
     "header": {
+        "photo": "Foto por",
         "blog": {
             "title": "Blog",
             "url": "//blog.nhanderu.com/"
@@ -40,17 +41,13 @@
         {
             "title": "O programador",
             "paragraphs": [
-                "Trabalho na BRQ, uma empresa de serviços de TI, construindo aplicativos para a web e Windows utilizando a plataforma .NET, principalmente com as liguagens C# e VB.NET.",
-                "Nos meus tempos livres, gosto de pesquisar sobre novas tecnologias e suas melhores práticas, testar o que eu aprendi criando pequenos e inúteis projetos e procurar por mínimos detalhes para arrumar neste site que ninguém perceberia.",
-                "Acima de tudo, estou interessado em alguns novas ferramentas web para .NET, como o ASP.NET vNext e suas novidades e outras implementações OWIN, como NancyFx.",
-                "Um participante menos assíduo do mundo JavaScript, porém apaixonado por Node.js (e seus framworks e ferramentas) e suas facilidades para desenvolvimento web."
+                "Trabalho na BRQ, uma empresa de serviços de TI, construindo aplicativos para a web e Windows utilizando a plataforma .NET, principalmente com as liguagens C# e VB.NET. Nos meus tempos livres, gosto de pesquisar sobre novas tecnologias e suas melhores práticas, testar o que eu aprendi criando pequenos e inúteis projetos e procurar por mínimos detalhes para arrumar neste site que ninguém perceberia. Me interesso, acima de tudo, por algumas novas ferramentas web para .NET, como o ASP.NET vNext e outras implementações OWIN (como NancyFx), e para o mundo JavaScript, como Node.js e Express, apesar de ser um participante menos assíduo destas plataformas."
             ]
         },
         {
             "title": "O estudante",
             "paragraphs": [
-                "Atualmente, estudo Sistemas da Informação na FIAP, faculdade focada em TI, uma das melhores deste ramo no Brazil. Mas, antes mesmo de eu entrar para a vida universitário, costumava a estudar sobre programação. Na verdade, o faço desde que tive meu primeiro contato com computação, no meu ensino médio técnico.",
-                "Curiosamente, quando eu tinha 14 anos, eu comecei com VB.NET and C#, o que certamente influenciou minha decisão para o ensino superior e para a plataforma de programação."
+                "Atualmente, estudo Sistemas da Informação na FIAP, faculdade focada em TI, uma das melhores deste ramo no Brazil. Mas, antes mesmo de eu entrar para a vida universitário, costumava a estudar sobre programação. Na verdade, o faço desde que tive meu primeiro contato com computação, no meu ensino médio técnico, quando eu tinha 14 anos. Curiosamente, eu comecei com VB.NET and C#, o que certamente influenciou minha decisão para o ensino superior e para a plataforma de programação."
             ]
         }
     ],
