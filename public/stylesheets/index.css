@@ -10,6 +10,14 @@ Organization order:
 
 */
 
+::selection {
+    /* Font. */
+    color: white;
+    
+    /* Background. */
+    background-color: #574;
+}
+
 /* Tags. */
 
 html, body {
