@@ -110,6 +110,72 @@ body {
             background-color: rgba(0, 0, 0, .5);
         }
 
+    .links {
+        position: absolute;
+        bottom: 20px;
+    }
+    
+        .links-left {
+            left: 25px;
+        }
+        
+            .links-left-item {
+                margin-right: 30px;
+            }
+        
+        .links-right {
+            right: 25px;
+        }
+        
+            .links-right-item {
+                margin-left: 30px;
+            }
+    
+        .links-item {
+            font-size: 20px;
+            font-weight: 900;
+            text-transform: uppercase;
+            color: white;
+        }
+        
+            .bitcoin-text {
+                /* Display. */
+                position: absolute;
+                left: 27.5%;
+                bottom: 50px;
+                padding: 7px;
+                opacity: 0;
+                
+                /* Size. */
+                width: 200px;
+                
+                /* Font. */
+                color: white;
+                
+                /* Background. */
+                background-color: rgba(0, 0, 0, .5);
+            
+                /* Effects. */
+                transition: opacity .8s;
+            }
+            
+            .bitcoin-text:after {
+                /* Display. */
+                content: '';
+                position: absolute;
+                bottom: -10px;
+                left: 45%;
+                
+                /* Size. */
+                width: 0;
+                height: 0;
+                
+                /* Border. */
+                border-top: 10px solid rgba(0, 0, 0, .5);
+                border-right: 10px solid transparent;
+                border-left: 10px solid transparent;
+            }
+
 .avatar {
     /* Display. */
     position: relative;
@@ -153,34 +219,6 @@ body {
     letter-spacing: -.5px;
     color: #777;
 }
-
-.links {
-    position: absolute;
-    bottom: 20px;
-}
-
-    .links-left {
-        left: 25px;
-    }
-    
-        .links-left-item {
-            margin-right: 30px;
-        }
-    
-    .links-right {
-        right: 25px;
-    }
-    
-        .links-right-item {
-            margin-left: 30px;
-        }
-
-    .links-item {
-        font-size: 20px;
-        font-weight: 900;
-        text-transform: uppercase;
-        color: white;
-    }
 
 .social {
     margin: 30px auto 0 auto;

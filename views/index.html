@@ -46,9 +46,13 @@
                 </li>
                 
                 <li class="menu-item link-left-item">
-                    <a href="{{ header.bitcoin.url }}" class="links-item header-text">
+                    <a id="bitcoin-activator" href="{{ header.bitcoin.url }}" class="links-item header-text">
                         {{ header.bitcoin.title }}
                     </a>
+                    
+                    <span id="bitcoin-text" class="bitcoin-text centered">
+                        Donate some BTCs for this poor programmer! Eu sô trabaiadô, sinhô!
+                    </span>
                 </li>
             </ul>
         </nav>
@@ -145,6 +149,7 @@
 
     <script type="text/javascript" src="/public/scripts/google-analytics.js"></script>
     <script type="text/javascript" src="/public/scripts/header-background.js"></script>
+    <script type="text/javascript" src="/public/scripts/bitcoin-tooltip.js"></script>
     
     <noscript>
         <style type="text/css">
