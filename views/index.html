@@ -24,83 +24,85 @@
 </head>
 
 <body>
-
-    <header class="header">
+    
+    <div class="principal">
         
-        <div id="header-image" class="header-image"></div>
-        <div class="header-layout"></div>
+        <header class="header">
+            
+            <div id="header-image" class="header-image"></div>
+            <div class="header-layout"></div>
+            
+            <div id="header-attribution" class="header-attribution">
+                <a href="" id="header-attribution-link" class="header-text">
+                    <span>{{ header.photo }}</span>
+                    <span id="header-author"></span>
+                </a>
+            </div>
+            
+            <nav class="links links-left">
+                <ul class="menu">
+                    <li class="menu-item links-left-item">
+                        <a href="{{ header.blog.url }}" class="links-item header-text">
+                            {{ header.blog.title }}
+                        </a>	
+                    </li>
+                    
+                    <li class="menu-item link-left-item">
+                        <a id="bitcoin-activator" href="{{ header.bitcoin.url }}" class="links-item header-text">
+                            {{ header.bitcoin.title }}
+                        </a>
+                        
+                        <span id="bitcoin-text" class="bitcoin-text centered">
+                            Donate some BTCs for this poor programmer! Eu sô trabaiadô, sinhô!
+                        </span>
+                    </li>
+                </ul>
+            </nav>
+            
+            <nav class="links links-right">
+                <ul class="menu">
+                    <li class="menu-item links-right-item">
+                        <a href="{{ header.curriculum.url }}" class="links-item header-text">
+                            {{ header.curriculum.title }}
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+        </header>
+    
+        <div class="avatar"></div>
         
-        <div id="header-attribution" class="header-attribution">
-            <a href="" id="header-attribution-link" class="header-text">
-                <span>{{ header.photo }}</span>
-                <span id="header-author"></span>
-            </a>
+        <div class="hero">
+            <h1 class="title hero-info centered">
+                {{ title }}
+            </h1>
+            
+            <h2 class="subtitle hero-info centered">            
+                {{ subtitle[0] }}
+            </h2>
+                
+            <p class="subtitle hero-info centered">
+                {{ subtitle[1] }}
+            </p>
         </div>
         
-        <nav class="links links-left">
+        <nav class="social centered">
             <ul class="menu">
-                <li class="menu-item links-left-item">
-                    <a href="{{ header.blog.url }}" class="links-item header-text">
-                        {{ header.blog.title }}
-                    </a>	
-                </li>
                 
-                <li class="menu-item link-left-item">
-                    <a id="bitcoin-activator" href="{{ header.bitcoin.url }}" class="links-item header-text">
-                        {{ header.bitcoin.title }}
-                    </a>
-                    
-                    <span id="bitcoin-text" class="bitcoin-text centered">
-                        Donate some BTCs for this poor programmer! Eu sô trabaiadô, sinhô!
-                    </span>
-                </li>
+                {% for item, url in social %}
+                    <li class="menu-item social-item">
+                        <a href="{{ url }}" class="social-icon">
+                            <i class="fa fa-{{ item }}"></i>
+                        </a>
+                    </li>
+                {% endfor %}
+                
             </ul>
         </nav>
         
-        <nav class="links links-right">
-            <ul class="menu">
-                <li class="menu-item links-right-item">
-                    <a href="{{ header.curriculum.url }}" class="links-item header-text">
-                        {{ header.curriculum.title }}
-                    </a>
-                </li>
-            </ul>
-        </nav>
-        
-    </header>
-
-    <div class="avatar"></div>
-    
-    <div class="container">
-
-    <div class="hero">
-        <h1 class="title hero-info centered">
-            {{ title }}
-        </h1>
-        
-        <h2 class="subtitle hero-info centered">            
-            {{ subtitle[0] }}
-        </h2>
-            
-        <p class="subtitle hero-info centered">
-            {{ subtitle[1] }}
-        </p>
     </div>
     
-    <nav class="social centered">
-        <ul class="menu">
-            
-            {% for item, url in social %}
-                <li class="menu-item social-item">
-                    <a href="{{ url }}" class="social-icon">
-                        <i class="fa fa-{{ item }}"></i>
-                    </a>
-                </li>
-            {% endfor %}
-            
-        </ul>
-    </nav>
-
     <main class="content">
         
         {% for section in content %}
@@ -118,8 +120,6 @@
         {% endfor %}
         
     </main>
-        
-    </div>
     
     <footer class="footer centered">
         
