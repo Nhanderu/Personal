@@ -35,153 +35,161 @@ body {
 
 /* Parts of the document. */
 
-.container {
-    max-width: 800px;
-    margin: 0 auto;
+@media (max-width: 800px) {
+    .header { display: none; }
 }
 
-.header {
-    /* Display. */
-    position: relative;
-	
-    /* Size. */
-    height: 60vh;
-}
-
-    .header-image {
+@media (min-width: 801px) {
+    .header {
         /* Display. */
-        position: absolute;
-          
+        position: relative;
+    	
         /* Size. */
-        height: 100%;
-        width: 100%;
-    
-        /* Background. */
-        background-attachment: fixed;
-        background-repeat: no-repeat;
-        background-size: cover;
+        height: 50vh;
     }
     
-    .header-layout {
-        /* Display. */
-        position: absolute;
-        opacity: .5;
+        .header-image {
+            /* Display. */
+            position: absolute;
+              
+            /* Size. */
+            height: 100%;
+            width: 100%;
         
-        /* Size. */
-        height: 100%;
-        width: 100%;
-    
-        /* Background. */
-        background-color: black;
-        background-position: center;
-        background-size: cover;
-    }
-    
-    .header-attribution {
-        /* Display. */
-        position: absolute;
-        right: 20px;
-        top: 20px;
-        
-        /* Font. */
-        font-size: 15px;
-        color: #BBB;
-    }
-    
-    .header-text {
-        /* Display */
-       padding: 3px 7px;
-        
-        /* Font. */
-        font-family: Verdana;
-        text-shadow: 0 0 5px black;
-        text-decoration: none;
-        color: inherit;
-    
-        /* Effects. */
-        transition: .2s;
-    }
-
-        .header-text:hover {
-            /* Font */
-            color: white;
-            
             /* Background. */
-            background-color: rgba(0, 0, 0, .5);
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
         }
-
-    .links {
-        position: absolute;
-        bottom: 20px;
-    }
+        
+        .header-layout {
+            /* Display. */
+            position: absolute;
+            opacity: .5;
+            
+            /* Size. */
+            height: 100%;
+            width: 100%;
+        
+            /* Background. */
+            background-color: black;
+            background-position: center;
+            background-size: cover;
+        }
+        
+        .header-attribution {
+            /* Display. */
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            
+            /* Font. */
+            font-size: 15px;
+            color: #BBB;
+        }
+        
+        .header-text {
+            /* Display */
+           padding: 3px 7px;
+            
+            /* Font. */
+            font-family: Verdana;
+            text-shadow: 0 0 5px black;
+            text-decoration: none;
+            color: inherit;
+        
+            /* Effects. */
+            transition: .2s;
+        }
     
-        .links-left {
-            left: 25px;
-        }
-        
-            .links-left-item {
-                margin-right: 30px;
-            }
-        
-        .links-right {
-            right: 25px;
-        }
-        
-            .links-right-item {
-                margin-left: 30px;
-            }
-    
-        .links-item {
-            font-size: 20px;
-            font-weight: 900;
-            text-transform: uppercase;
-            color: white;
-        }
-        
-            .bitcoin-text {
-                /* Display. */
-                position: absolute;
-                left: 27.5%;
-                bottom: 50px;
-                padding: 7px;
-                opacity: 0;
-                
-                /* Size. */
-                width: 200px;
-                
-                /* Font. */
+            .header-text:hover {
+                /* Font */
                 color: white;
                 
                 /* Background. */
                 background-color: rgba(0, 0, 0, .5);
-            
-                /* Effects. */
-                transition: opacity .8s;
+            }
+    
+        .links {
+            position: absolute;
+            bottom: 20px;
+        }
+        
+            .links-left {
+                left: 25px;
             }
             
-            .bitcoin-text:after {
-                /* Display. */
-                content: '';
-                position: absolute;
-                bottom: -10px;
-                left: 45%;
-                
-                /* Size. */
-                width: 0;
-                height: 0;
-                
-                /* Border. */
-                border-top: 10px solid rgba(0, 0, 0, .5);
-                border-right: 10px solid transparent;
-                border-left: 10px solid transparent;
+                .links-left-item {
+                    margin-right: 30px;
+                }
+            
+            .links-right {
+                right: 25px;
             }
+            
+                .links-right-item {
+                    margin-left: 30px;
+                }
+        
+            .links-item {
+                font-size: 20px;
+                font-weight: 900;
+                text-transform: uppercase;
+                color: white;
+            }
+            
+                .bitcoin-text {
+                    /* Display. */
+                    position: absolute;
+                    left: 27.5%;
+                    bottom: 50px;
+                    padding: 7px;
+                    opacity: 0;
+                    
+                    /* Size. */
+                    width: 200px;
+                    
+                    /* Font. */
+                    color: white;
+                    
+                    /* Background. */
+                    background-color: rgba(0, 0, 0, .5);
+                
+                    /* Effects. */
+                    transition: opacity .8s;
+                }
+                
+                .bitcoin-text:after {
+                    /* Display. */
+                    content: '';
+                    position: absolute;
+                    bottom: -10px;
+                    left: 45%;
+                    
+                    /* Size. */
+                    width: 0;
+                    height: 0;
+                    
+                    /* Border. */
+                    border-top: 10px solid rgba(0, 0, 0, .5);
+                    border-right: 10px solid transparent;
+                    border-left: 10px solid transparent;
+                }
+}
+
+@media (max-width: 800px) {
+    .avatar { margin: 50px auto; }
+}
+
+@media (min-width: 801px) {
+    .avatar {
+        position: relative;
+        top: -150px;
+        margin: 0 auto -100px auto;
+    }
+}
 
 .avatar {
-    /* Display. */
-    position: relative;
-    top: -150px;
-    margin: 0 auto -100px auto;
-    
     /* Size. */
     height: 300px;
     width: 300px;
@@ -197,9 +205,7 @@ body {
     background-position: center;
 }
 
-.hero-info {
-    font-weight: 500;
-}
+.hero-info { font-weight: 500; }
 
 .title {
     /* Display. */
@@ -220,9 +226,7 @@ body {
     color: #777;
 }
 
-.social {
-    margin: 30px auto 0 auto;
-}
+.social { margin: 30px auto 0 auto; }
     
     .social-icon {
         /* Border. */
@@ -249,12 +253,12 @@ body {
     /* Size. */
     width: 50px;
     height: 40px;
+    
+    /* Border. */
+    border-radius: 100px;
 }
 
 .fa-facebook:hover {
-    /* Border. */
-    border-radius: 100px;
-    
     /* Font. */
     color: white;
     
@@ -263,9 +267,6 @@ body {
 }
 
 .fa-linkedin:hover {
-    /* Border. */
-    border-radius: 100px;
-    
     /* Font. */
     color: white;
     
@@ -274,9 +275,6 @@ body {
 }
 
 .fa-github:hover {
-    /* Border. */
-    border-radius: 100px;
-    
     /* Font. */
     color: white;
     
@@ -285,9 +283,6 @@ body {
 }
 
 .fa-bitbucket:hover {
-    /* Border. */
-    border-radius: 100px;
-    
     /* Font. */
     color: white;
     
@@ -296,9 +291,6 @@ body {
 }
 
 .fa-envelope-o:hover {
-    /* Border. */
-    border-radius: 100px;
-    
     /* Font. */
     color: white;
     
@@ -307,12 +299,11 @@ body {
 }
         
 .content {
-    margin: 100px auto;
+    max-width: 800px;
+    margin: 10px auto;
 }
 
-    .content-section {
-    	margin-top: 30px;
-    }
+    .content-section { margin-top: 30px; }
 
     .content-info {
         /* Display. */
@@ -344,17 +335,11 @@ body {
     color: #666;
 }
     
-    .footer-line {
-        padding-bottom: 10px;
-    }
+    .footer-line { padding-bottom: 10px; }
 
-    .footer-focus {
-        color: #666;
-    }
+    .footer-focus { color: #666; }
 
-    .footer-focus:hover {
-        color: black;
-    }
+    .footer-focus:hover { color: black; }
 
 /* Classes for a specific effect. */
 
@@ -373,10 +358,6 @@ body {
         padding: 0;
     }
 
-.centered {
-    text-align: center;
-}
+.centered { text-align: center; }
 
-.float-right {
-    float: right;
-}
+.float-right { float: right; }
