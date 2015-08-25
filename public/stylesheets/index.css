@@ -115,21 +115,13 @@ body {
             bottom: 20px;
         }
         
-            .links-left {
-                left: 25px;
-            }
+            .links-left { left: 25px; }
             
-                .links-left-item {
-                    margin-right: 30px;
-                }
+                .links-left-item { margin-right: 30px; }
             
-            .links-right {
-                right: 25px;
-            }
+            .links-right { right: 25px; }
             
-                .links-right-item {
-                    margin-left: 30px;
-                }
+                .links-right-item { margin-left: 30px; }
         
             .links-item {
                 font-size: 20px;
@@ -328,7 +320,7 @@ body {
 
 .footer {
     /* Display. */
-    margin-bottom: 20px;
+    margin: 75px 0 20px 0;
     
     /* Font. */
     font-size: 15px;
