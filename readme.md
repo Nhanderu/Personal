@@ -4,8 +4,9 @@ My personal website, running @ `nhanderu.com`!
 
 ### Frameworks and tools
 
-* [Node.js](https://nodejs.org/): application platform
 * [Express](http://expressjs.com/): the back-end of the web-app, controlling the routes and the HTTP requests
+* [FontAwesome](http://fontawesome.io/): icons in the web page
+* [Node.js](https://nodejs.org/): application platform
 * [Nunjucks](http://mozilla.github.io/nunjucks/): rendering the views
 * [Openshift](https://www.openshift.com/): hosting and server configurations
 
