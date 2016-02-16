@@ -9,6 +9,7 @@ My personal website, running @ `nhanderu.com`!
 * [Node.js](https://nodejs.org/): application platform
 * [Nunjucks](http://mozilla.github.io/nunjucks/): rendering the views
 * [Openshift](https://www.openshift.com/): hosting and server configurations
+* [Smooth Scroll](https://github.com/galambalazs/smoothscroll-for-websites): beautiful scrolling
 
 ### To-do list
 

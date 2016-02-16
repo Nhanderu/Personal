@@ -56,17 +56,7 @@
         "copyright": "Copyright &copy;",
         "menus": [
             {
-                "text": "feito com",
-                
-                "list": {
-                    "Node.js": "//nodejs.org/",
-                    "Express": "//expressjs.com/",
-                    "Nunjucks": "//mozilla.github.io/nunjucks/",
-                    "Font Awesome": "//fontawesome.io/"
-                }
-            },
-            {
-                "text": "código no",
+                "text": "código e agradecimentos no",
                 
                 "list": {
                     "GitHub": "//github.com/nhanderu/personal/",
