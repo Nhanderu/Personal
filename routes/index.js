@@ -4,27 +4,27 @@ var router = require("express").Router();
 // Imports the controllers.
 var controllers = {
 	index: require("../controllers/index"),
-	portuguese: require("../controllers/portuguese"),
-	english: require("../controllers/english"),
-	download: require("../controllers/download"),
+	download: require("../controllers/download")
 };
 
 // Root page.
 router.get("/", controllers.index.index);
 
 // Portuguese version.
-router.get("/pt", controllers.portuguese.index);
-router.get(/(^\/pt-..$|^\/por(t(u(g(u(e(se?)?)?)?)?)?)?$)/i, controllers.portuguese.redirect);
-router.get("/pt/download/curriculum", controllers.download.curriculum("pt"));
-router.use("/pt/:error", controllers.portuguese.redirect);
+var pt = "/pt";
+router.get(pt, controllers.index.pt);
+router.get(/(^\/pt-..$|^\/por(t(u(g(u(e(se?)?)?)?)?)?)?$)/i, controllers.index.redirect(pt));
+router.get(pt + "/download/curriculum", controllers.download.curriculum("pt"));
+router.use(pt + "/:error", controllers.index.redirect(pt));
 
 // English version.
-router.get("/en", controllers.english.index);
-router.get(/(^\/en-..$|^\/eng(l(i(sh?)?)?)?$)/i, controllers.english.redirect);
-router.get("/en/download/curriculum", controllers.download.curriculum("en"));
-router.use("/en/:error", controllers.english.redirect);
+var en = "/en";
+router.get(en, controllers.index.en);
+router.get(/(^\/en-..$|^\/eng(l(i(sh?)?)?)?$)/i, controllers.index.redirect(en));
+router.get(en + "/download/curriculum", controllers.download.curriculum("en"));
+router.use(en + "/:error", controllers.index.redirect(en));
 
 // Any other page redirects to index.
-router.get("/:error", controllers.index.redirect);
+router.get("/:error", controllers.index.redirect("/"));
 
 module.exports = router;

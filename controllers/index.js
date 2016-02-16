@@ -1,3 +1,25 @@
+// Imports the necessary modules.
+var fs = require('fs');
+var path = require('path');
+
+function getContents(lang) {
+	// Get file path.
+	var filePath = path.join(__dirname, "..", "assets", "contents", lang + ".json");
+	
+	// Get the content object.
+	var contents = JSON.parse(fs.readFileSync(filePath));
+	contents.year = new Date().getFullYear();
+	return contents;
+}
+
+function ptPage(request, response) {
+	response.render("index.html", getContents("portuguese"));
+}
+
+function enPage(request, response) {
+	response.render("index.html", getContents("english"));
+}
+
 module.exports = {
 	// Verifies the languages of the client's browser and iterates through them.
 	// If it's portuguese, redirects to /pt. If it's english, redirects to /en.
@@ -10,14 +32,22 @@ module.exports = {
 	        var item = languages[index];
 	        
 	        if (/pt.*/i.test(item))
-	            response.redirect("/pt");
+	            return ptPage(request, response);
 	        if (/en.*/i.test(item) || index == languages.length - 1)
-	            response.redirect("/en");
+	            return enPage(request, response);
 	    }
 	},
-
+	
+	// Portuguese page.
+	pt: ptPage,
+	
+	// English page.
+	en: enPage,
+	
 	// The redirector function.
-	redirect: function (request, response) {
-		response.redirect("/");
+	redirect: function (route) {
+		return function (request, response) {
+			response.redirect(route);
+		}
 	}
 };
