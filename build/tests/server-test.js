@@ -1,7 +1,7 @@
 'use strict';
 var chai, request, server;
 
-server = require('../source/index');
+server = require('../source');
 
 chai = require('chai').expect;
 

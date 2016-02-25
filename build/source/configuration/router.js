@@ -5,7 +5,8 @@
 /source/configuration/router
 Router module!
 
-Defines all the routes of the application and its responses (by calling the right controller).
+Defines all the routes of the application and its responses.
+Calls the controllers to respond to each path.
  */
 var router, routes, use;
 
@@ -14,6 +15,7 @@ router = require('koa-route');
 routes = [];
 
 routes.push(router.get('/', function*(next) {
+  this.body = 'personal';
   return (yield next);
 }));
 

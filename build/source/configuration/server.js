@@ -1,4 +1,13 @@
 'use strict';
+
+/*
+
+/source/configuration/server
+Server Configuration module!
+
+Defines all the variables and confiration of the application before it runs.
+Exports the configurated application.
+ */
 var app, http, ip, koa, log, port, route, run;
 
 koa = require('koa');
@@ -11,22 +20,22 @@ log = require('./logger');
 
 app = koa();
 
-port = process.env.OPENSHIFT_NODEJS_PORT || 8080;
+port = app.context.port = process.env.OPENSHIFT_NODEJS_PORT || 8080;
 
-ip = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1';
+ip = app.context.ipAddr = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1';
 
 route(app);
 
-app.on('error', log.error);
+log.set(app);
 
 run = function(p) {
-  var func;
+  var fn;
   p = p || port;
-  func = function() {
+  fn = function() {
     log.start(ip, p);
     return app.callback();
   };
-  return http.createServer(func()).listen(p);
+  return http.createServer(fn()).listen(p);
 };
 
 module.exports = run;
