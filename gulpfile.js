@@ -1,15 +1,6 @@
-'use strict';
+'use strict'
 
-var gulp = require('gulp');
-var uglify = require('gulp-uglify');
-var rename = require('gulp-rename');
+const folders = require('./definitions.json').folders
+const requireDir = require('require-dir')
 
-gulp.task('default', function () {
-	var x =
-		gulp.src('./assets/scripts/*.js')
-			.pipe(uglify())
-			.pipe(rename({ extname: '.min.js' }))
-			.pipe(gulp.dest('dist'));
-	
-	return x;
-});
+requireDir(folders.tasks, { recurse: true })
