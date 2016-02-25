@@ -1,17 +1,24 @@
 'use strict'
 
-chai = require 'chai'
-request = require 'supertest'
 server = require '../source/index'
+chai =
+    require 'chai'
+        .expect
+request =
+    require 'co-supertest'
+        .agent server.listen()
 
 #chai.use http 
 #expect = chai.expect
 
 describe 'index', ->
-	it 'should respond 200 on "/" GET', (done) ->
-		request server
-			.get '/'
-			.expect(200)
+	it 'should respond 200 on "/" GET', ->
+        response = yield
+            request
+                .get '/'
+                .expect 200
+                .end()
+        yield undefined
 ###
 		chai.request server 
 			.get '/'

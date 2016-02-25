@@ -1,14 +1,8 @@
 'use strict';
-var app, config, ip, port;
+var config;
 
 config = require('./configuration/server');
 
-app = config.app;
+module.exports = config.app;
 
-port = config.port;
-
-ip = config.ip;
-
-app.listen(port);
-
-module.exports = app;
+config.app.listen(config.port);
