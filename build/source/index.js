@@ -1,8 +1,8 @@
 'use strict';
-var config;
+var server;
 
-config = require('./configuration/server');
+server = require('./configuration/server');
 
-module.exports = config.app;
+server();
 
-config.app.listen(config.port);
+module.exports = server;

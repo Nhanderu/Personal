@@ -1,9 +1,10 @@
 'use strict'
 
 # Gets the configurated Express app.
-config = require './configuration/server'
-
-module.exports = config.app
+server = require './configuration/server'
 
 # Fly, app! Fly!
-config.app.listen config.port
+server()
+
+# Export.
+module.exports = server
