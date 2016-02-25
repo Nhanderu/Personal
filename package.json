@@ -2,17 +2,24 @@
   "name": "personal",
   "author": "Rafael Escobar <rafael@nhanderu.com> (http://www.nhanderu.com/)",
   "description": "The personal website of the handsomest boy in the world!",
+  
   "private": true,
   "version": "3.0.0",
-  "license": "MIT",
+  "license": "UNLICENSED",
+  
   "scripts": {
     "start": "npm run rebuild && npm run app",
     "test": "npm run rebuild && npm run tests",
-    
     "rebuild": "gulp clean && gulp build",
     "app": "node --harmony build/source/index.js",
     "tests": "mocha build/tests"
   },
+  
+  "dependencies": {
+    "koa": "^1.1.2",
+    "koa-route": "^2.4.2"
+  },
+  
   "devDependencies": {
     "chai": "^3.5.0",
     "co-supertest": "0.0.10",
