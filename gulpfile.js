@@ -1,6 +1,6 @@
 'use strict'
 
 const folders = require('./definitions.json').folders
-const requireDir = require('require-dir')
+const dir = require('require-dir')
 
-requireDir(folders.tasks, { recurse: true })
+dir(folders.tasks, { recurse: true })
