@@ -1,4 +1,7 @@
+dir = require 'require-dir'
+contents = dir '../assets/contents'
+
 x = (_) ->
-    _.body = 'index'
+    _.render('index', contents.portuguese, false)
 
 module.exports = x

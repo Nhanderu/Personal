@@ -13,19 +13,25 @@ Exports the configurated application.
 # Imports the required modules.
 koa = require 'koa'
 http = require 'http'
-route = require './router'
-log = require './logger'
+
+router = require './router'
+logger = require './logger'
+render = require './rendering'
 
 # App definitions.
 app = koa()
 port = app.context.port = process.env.OPENSHIFT_NODEJS_PORT || 8080
 ip = app.context.ipAddr = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1'
 
-# Define the routes of the app.
-route app
 
-# Define the logger of the app.
-log.set app
+# Defines the render of the app.
+render.use app
+
+# Defines the routes of the app.
+router.use app
+
+# Defines the logger of the app.
+logger.use app
 
 # Function that runs the server with (or not) a specified port and log that it's working.
 run = (p) ->

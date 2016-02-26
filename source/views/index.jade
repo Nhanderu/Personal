@@ -1,0 +1,92 @@
+doctype html
+
+html(lang=language)
+    head
+        title #{ title }
+        
+        meta(charset='utf-8')
+        meta(name='author' content=title)
+        meta(name="description" content=subtitle.join(' '))
+        meta(name='viewport' content='width=device-width, initial-scale=1.0')
+        
+        link(rel='icon' href='/public/images/icons/favicon.ico' type='image/x-icon')
+        link(rel='stylesheet' href='//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css')
+        link(rel='stylesheet' href='/public/stylesheets/index.css')
+        
+    body
+        .principal
+            header.header
+                #header-image.header-image
+                .header-layout
+                
+                #header-attribution.header-attribution
+                    a#header-attribution-link.header-text(href='')
+                        span #{ header.photo }
+                        span.header-author
+                
+                nav.links.links-left
+                    ul.menu
+                        li.menu-item.links-left-item
+                            a.links-item.header-text(href=header.blog.url).
+                                #{ header.blog.title }
+                        
+                        li.menu-item.link-left-item
+                            a#bitcoin-activator.links-item.header-text(href=header.bitcoin.url).
+                                #{ header.bitcoin.title }
+                            
+                            span#bitcoin-text.bitcoin-text.centered.
+                                Donate some BTCs for this poor programmer! Eu sô trabaiadô, sinhô!
+                
+                nav.links.links-right
+                    ul.menu
+                        li.menu-item.links-right-item
+                            a.links-item.header-text(href=header.curriculum.url).
+                                #{ header.curriculum.title } 
+        
+            .avatar
+            
+            .hero
+                h1.title.hero-info.centered.
+                    #{ title }
+                
+                h2.subtitle.hero-info.centered.
+                    #{ subtitle[0] }
+                    
+                p.subtitle.hero-info.centered.
+                    #{ subtitle[1] }
+            
+            nav.social.centered
+                ul.menu
+                    each item, url in social
+                        li.menu-item.social-item
+                            a.social-icon(href=url)
+                                i(class='fa fa-'+item)
+        
+        main.content
+            each section in content
+                section.content-section
+                    h3.content-info.content-title #{ section.title }
+                    
+                    .content-info.content-text
+                        each paragraph in section.paragraphs
+                            p.content-info #{ paragraph }
+        
+        footer.footer.centered
+            
+            .footer-line #{ footer.copyright + year }
+                span.footer-focus #{ title }
+            
+            each menu in footer.menus
+                nav.footer-line #{ menu.text }
+                    each item, url in menu.list
+                        a(href=url) item
+                        
+
+        script(type='text/javascript' src='/public/scripts/script-caller.js')
+        script(type='text/javascript' src='/public/scripts/google-analytics.js')
+        script(type='text/javascript' src='/public/scripts/smooth-scroll.js')
+        
+        noscript
+            style(type='text/css').
+                .header-image { background-image: url("/public/images/background/01.jpg"); }
+                .header-attribution { visibility: hidden; }

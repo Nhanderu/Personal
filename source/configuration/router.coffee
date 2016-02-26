@@ -4,6 +4,7 @@
 
 /source/configuration/router
 Router module!
+
 Defines all the routes of the application and its responses.
 Calls the controllers to respond to each path. 
  
@@ -27,4 +28,5 @@ routes.push router.get '/', (next) ->
 use = (app) ->
     routes.forEach (x) -> app.use x
 
-module.exports = use
+module.exports =
+    use: use

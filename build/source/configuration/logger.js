@@ -10,13 +10,13 @@ Creates `run` function that executes server and log on the server creation.
 Uses "koa-logger" to log the requests and the resposes.
 Exports the function that updates the application logging.
  */
-var chalk, logger, set, start;
+var chalk, logger, start, use;
 
 logger = require('koa-logger');
 
 chalk = require('chalk');
 
-set = function(app) {
+use = function(app) {
   app.use(logger());
   return app.on('error', function(err) {
     var msg;
@@ -32,6 +32,6 @@ start = function(ip, port) {
 };
 
 module.exports = {
-  set: set,
+  use: use,
   start: start
 };

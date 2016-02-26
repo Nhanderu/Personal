@@ -8,15 +8,17 @@ Server Configuration module!
 Defines all the variables and confiration of the application before it runs.
 Exports the configurated application.
  */
-var app, http, ip, koa, log, port, route, run;
+var app, http, ip, koa, logger, port, render, router, run;
 
 koa = require('koa');
 
 http = require('http');
 
-route = require('./router');
+router = require('./router');
 
-log = require('./logger');
+logger = require('./logger');
+
+render = require('./rendering');
 
 app = koa();
 
@@ -24,9 +26,11 @@ port = app.context.port = process.env.OPENSHIFT_NODEJS_PORT || 8080;
 
 ip = app.context.ipAddr = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1';
 
-route(app);
+render.use(app);
 
-log.set(app);
+router.use(app);
+
+logger.use(app);
 
 run = function(p) {
   var fn;

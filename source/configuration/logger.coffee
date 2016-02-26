@@ -16,7 +16,7 @@ logger = require 'koa-logger'
 chalk = require 'chalk'
 
 # Function that gets the app and defines the logger.
-set = (app) ->
+use = (app) ->
         
     # Uses the "koa-logger".
     app.use logger()
@@ -36,5 +36,5 @@ start = (ip, port) ->
     console.log chalk.green msg
 
 module.exports =
-    set: set
+    use: use
     start: start
