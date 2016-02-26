@@ -5,6 +5,4 @@ const rimraf = require('rimraf')
 
 const folders = require('../definitions.json').folders
 
-gulp.task('clean', function (cb) {
-	rimraf(folders.binaries, cb)
-});
+gulp.task('clean', cb => rimraf(folders.binaries, cb))

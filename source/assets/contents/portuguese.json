@@ -1,0 +1,73 @@
+{
+    "language": "pt-br",
+    
+    "header": {
+        "photo": "Foto por",
+        "blog": {
+            "title": "Blog",
+            "url": "//blog.nhanderu.com/"
+        },
+        "bitcoin": {
+            "title": "Bitcoin",
+            "url": "#"
+        },
+        "curriculum": {
+            "title": "Currículo",
+            "url": "/pt/download/curriculum"
+        }
+    },
+    
+    "title": "Rafael Escobar",
+    "subtitle": [
+        "programador .NET e JS",
+        "de São Paulo, SP"
+    ],
+    
+    "social": {
+        "facebook": "//www.facebook.com/nhanderu/",
+        "linkedin": "//www.linkedin.com/in/rafaelbzescobar/",
+        "github": "//github.com/nhanderu/",
+        "bitbucket": "//bitbucket.org/nhanderu/",
+        "envelope-o": "mailto:rafael@nhanderu.com"
+    },
+    
+    "content": [
+        {
+            "title": "A pessoa",
+            "paragraphs": [
+                "Olá, meu nome é Rafael, tenho 18 anos e sou de São Paulo. Além de ser programador, sou um ser humano, também um corinthiano roxo, um amante de café, filosofia e política e um entusiasta do anarcocapitalismo."
+            ]
+        },
+        {
+            "title": "O programador",
+            "paragraphs": [
+                "Trabalho na BRQ, uma empresa de serviços de TI, construindo aplicativos para a web e Windows utilizando a plataforma .NET, principalmente com as liguagens C# e VB.NET. Nos meus tempos livres, gosto de pesquisar sobre novas tecnologias e suas melhores práticas, testar o que eu aprendi criando pequenos e inúteis projetos e procurar por mínimos detalhes para arrumar neste site que ninguém perceberia. Me interesso, acima de tudo, por algumas novas ferramentas web para .NET, como o ASP.NET vNext e outras implementações OWIN (como NancyFx), e para o mundo JavaScript, como Node.js e Express, apesar de ser um participante menos assíduo destas plataformas."
+            ]
+        },
+        {
+            "title": "O estudante",
+            "paragraphs": [
+                "Atualmente estudo Sistemas da Informação na FIAP, faculdade focada em TI, uma das melhores deste ramo no Brasil. Mas, antes mesmo de eu entrar para a vida universitária, costumava a estudar sobre programação. Na verdade, o faço desde que tive meu primeiro contato com computação, no meu ensino médio técnico, quando eu tinha 14 anos. Curiosamente comecei com VB.NET e C#, o que certamente influenciou minha decisão para o ensino superior e para a plataforma de programação."
+            ]
+        }
+    ],
+    
+    "footer": {
+        "copyright": "Copyright &copy;",
+        "menus": [
+            {
+                "text": "código e agradecimentos no",
+                
+                "list": {
+                    "GitHub": "//github.com/nhanderu/personal/",
+                    "Bitbucket": "//bitbucket.com/nhanderu/personal/" 
+                }
+            }
+        ]
+    },
+    
+    "helpers": {
+        "joiner": ",",
+        "and": "e"
+    } 
+}
