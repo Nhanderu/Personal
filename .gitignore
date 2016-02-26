@@ -32,4 +32,4 @@ node_modules
 # Visual Studio Code folder
 .vscode
 
-/dist
+/build
