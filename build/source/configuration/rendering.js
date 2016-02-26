@@ -7,12 +7,16 @@ View rendering module!
 
 Configurates the "koa-jade" module to work with the views.
  */
-var Jade, jade;
+var folders, j, jade, path;
 
-Jade = require('koa-jade');
+jade = require('koa-jade');
 
-jade = new Jade({
-  viewPath: '../views'
+folders = require('../../../definitions').folders;
+
+path = folders.binaries + '/' + folders.views;
+
+j = new jade({
+  viewPath: path
 });
 
-module.exports = jade;
+module.exports = j;

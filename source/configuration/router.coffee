@@ -17,12 +17,16 @@ dir = require 'require-dir'
 # Array with all the route middlewares.
 routes = []
 
+serve = require './static'
 controllers = dir '../controllers/'
 
 # GET on "/" (index).
 routes.push router.get '/', (next) ->
     controllers.index this
     yield next
+    
+# GET on "/public" (static files).
+routes.push router.get '/public/:path', serve
 
 # Function that adds every route on the app.
 use = (app) ->

@@ -19,9 +19,7 @@ chalk = require('chalk');
 use = function(app) {
   app.use(logger());
   return app.on('error', function(err) {
-    var msg;
-    msg = chalk.red('ERROR');
-    return console.log(msg + err);
+    return console.log((chalk.red('ERROR')) + ": " + err.message);
   });
 };
 

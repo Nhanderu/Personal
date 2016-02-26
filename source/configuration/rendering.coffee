@@ -9,9 +9,17 @@ Configurates the "koa-jade" module to work with the views.
  
 ###
 
-Jade = require 'koa-jade'
+# Imports the required modules. 
+jade = require 'koa-jade'
 
-jade = new Jade
-  viewPath: '../views'
+folders =
+    require '../../../definitions'
+        .folders
+
+# Gets the folder of the views.
+path = folders.binaries + '/' + folders.views
+
+j = new jade
+  viewPath: path
   
-module.exports = jade
+module.exports = j

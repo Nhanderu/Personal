@@ -23,8 +23,7 @@ use = (app) ->
     
     # Logs on the error.
     app.on 'error', (err) ->
-        msg = chalk.red 'ERROR'
-        console.log msg + err
+        console.log "#{chalk.red 'ERROR'}: #{err.message}"
         
 start = (ip, port) ->
     msg =
