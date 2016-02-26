@@ -1,12 +1,15 @@
 {
   "folders": {
     "binaries": "build",
+    "source": "source",
+    "views": "source/views",
+    "assets": "source/assets",
+    "contents": "source/assets/contents",
+    "documents": "source/assets/documents",
     "images": "source/assets/images",
     "scripts": "source/assets/scripts",
-    "source": "source",
     "stylesheets": "source/assets/stylesheets",
     "tasks": "tasks",
-    "tests": "tests",
-    "views": "source/views"
+    "tests": "tests"
   }
 }
