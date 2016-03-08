@@ -11,14 +11,13 @@ Exports the configurated application.
 ###
 
 # Imports the required modules.
-koa = require 'koa'
+app = (require 'koa')()
 
 router = require './router'
 logger = require './logger'
 render = require './rendering'
 
 # App definitions.
-app = koa()
 port = app.context.port = process.env.OPENSHIFT_NODEJS_PORT || 8080
 ip = app.context.ipAddr = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1'
 
