@@ -1,7 +1,16 @@
 dir = require 'require-dir'
 contents = dir '../assets/contents'
 
-x = (_) ->
+index = (_) ->
+    _.redirect('/pt')
+    
+pt = (_) ->
     _.render('index', contents.portuguese, false)
 
-module.exports = x
+en = (_) ->
+    _.render('index', contents.english, false)
+
+module.exports =
+    index: index
+    pt: pt
+    en: en

@@ -31,10 +31,16 @@ cally = (ctrlr) ->
 controller = dir '../controllers/'
 
 # GET on "/" (index).
-router.get '/', call controller.index
+router.get '/', call controller.index.index
+
+# GET on "/pt" (index on portuguese).
+router.get '/pt', call controller.index.pt
+
+# GET on "/en" (index on portuguese).
+router.get '/en', call controller.index.en
     
 # GET on "/public" (static files).
-router.get /^\/public\/(.*)/, cally controller.static
+router.get /^\/public\/(.*)/, cally controller.static.index
 
 # Function that adds every route on the app.
 use = (app) -> app.use router.routes()
