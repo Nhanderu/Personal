@@ -11,26 +11,33 @@ Calls the controllers to respond to each path.
 ###
 
 # Imports the required modules.
-router = require 'koa-route'
+router = (require 'koa-router')()
 dir = require 'require-dir'
 
-# Array with all the route middlewares.
-routes = []
+folders = require '../../../definitions.json'
 
-serve = require './static'
-controllers = dir '../controllers/'
+# Defines the basic function.
+call = (ctrlr) ->
+    (next) ->
+        ctrlr this
+        yield next
+        
+cally = (ctrlr) ->
+    (next) ->
+        yield ctrlr this
+        yield next
+
+# Gets the controllers.
+controller = dir '../controllers/'
 
 # GET on "/" (index).
-routes.push router.get '/', (next) ->
-    controllers.index this
-    yield next
+router.get '/', call controller.index
     
 # GET on "/public" (static files).
-routes.push router.get '/public/:path', serve
+router.get /^\/public\/(.*)/, cally controller.static
 
 # Function that adds every route on the app.
-use = (app) ->
-    routes.forEach (x) -> app.use x
+use = (app) -> app.use router.routes()
 
 module.exports =
     use: use
