@@ -31,13 +31,13 @@ cally = (ctrlr) ->
 controller = dir '../controllers/'
 
 # GET on "/" (index).
-router.get '/', call controller.index.index
+router.get '/', call controller.home.index
 
 # GET on "/pt" (index on portuguese).
-router.get '/pt', call controller.index.pt
+router.get '/pt', call controller.home.pt
 
 # GET on "/en" (index on portuguese).
-router.get '/en', call controller.index.en
+router.get '/en', call controller.home.en
     
 # GET on "/public" (static files).
 router.get /^\/public\/(.*)/, cally controller.static.index
