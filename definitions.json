@@ -15,11 +15,11 @@
   "routes": {
       "portuguese": {
           "index": "/pt",
-          "pattern": ""
+          "pattern": "^\\/pt-..$|^\\/por(t(u(g(u(e(se?)?)?)?)?)?)?$"
       },
       "english": {
           "index": "/en",
-          "pattern": ""
+          "pattern": "^\\/en-..$|^\\/eng(l(i(sh?)?)?)?$"
       },
       "static": {
           "index": "/public",

@@ -20,6 +20,7 @@ folders = definitions.folders
 routes = definitions.routes
 
 # Defines helper functions.
+regex = (x) -> new RegExp x
 
 # Defines the basic controller caller functions.
 call = (ctrlr) ->
@@ -35,17 +36,19 @@ cally = (ctrlr) ->
 # Gets the controllers.
 controller = dir '../controllers/'
 
-# GET on "/" (index).
+# GET -> "/" (index).
 router.get '/', call controller.home.index
 
-# GET on "/pt" (index on portuguese).
+# GET -> portuguese page.
 router.get routes.portuguese.index, call controller.home.pt
+router.get (regex routes.portuguese.pattern), call controller.home.pt
 
-# GET on "/en" (index on portuguese).
+# GET -> english page.
 router.get routes.english.index, call controller.home.en
+router.get (regex routes.english.pattern), call controller.home.en
     
-# GET on "/public" (static files).
-router.get (new RegExp routes.static.pattern), cally controller.static.index
+# GET -> static files.
+router.get (regex routes.static.pattern), cally controller.static.index
 
 # Function that adds every route on the app.
 use = (app) -> app.use router.routes()
