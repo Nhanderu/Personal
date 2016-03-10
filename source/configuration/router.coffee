@@ -19,7 +19,9 @@ definitions = require '../../../definitions.json'
 folders = definitions.folders
 routes = definitions.routes
 
-# Defines the basic function.
+# Defines helper functions.
+
+# Defines the basic controller caller functions.
 call = (ctrlr) ->
     (next) ->
         ctrlr this
@@ -43,7 +45,7 @@ router.get routes.portuguese.index, call controller.home.pt
 router.get routes.english.index, call controller.home.en
     
 # GET on "/public" (static files).
-router.get /^\/public\/(.*)/, cally controller.static.index
+router.get (new RegExp routes.static.pattern), cally controller.static.index
 
 # Function that adds every route on the app.
 use = (app) -> app.use router.routes()

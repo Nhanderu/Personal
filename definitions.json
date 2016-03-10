@@ -15,11 +15,15 @@
   "routes": {
       "portuguese": {
           "index": "/pt",
-          "redirect": ""
+          "pattern": ""
       },
       "english": {
           "index": "/en",
-          "redirect": ""
+          "pattern": ""
+      },
+      "static": {
+          "index": "/public",
+          "pattern": "^\\/public\\/(.*)"
       }
   }
 }
