@@ -26,12 +26,9 @@ use = (app) ->
         console.log "#{chalk.red 'ERROR'}: #{err.message}"
         
 start = (ip, port) ->
-    msg =
-        "Working @ #{
-            chalk.green.underline(ip)
-        }:#{
-            chalk.green.underline(port)
-        }!\n"
+    ip = chalk.green.underline ip
+    port = chalk.green.underline port
+    msg = "Working @ #{ip}:#{port}!\n"
     console.log chalk.green msg
 
 module.exports =
