@@ -11,5 +11,15 @@
     "stylesheets": "source/assets/stylesheets",
     "tasks": "tasks",
     "tests": "tests"
+  },
+  "routes": {
+      "portuguese": {
+          "index": "/pt",
+          "redirect": ""
+      },
+      "english": {
+          "index": "/en",
+          "redirect": ""
+      }
   }
 }
