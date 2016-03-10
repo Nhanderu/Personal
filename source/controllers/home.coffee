@@ -7,21 +7,25 @@ definitions = require '../../../definitions.json'
 folders = definitions.folders
 routes = definitions.routes
 
+# Listener of the index route.
 index = (_) ->
-    _.redirect routes.portuguese.index
-    #languages = _.request.headers["accept-language"].split ","
-    #languages.map (lang) ->
-    #    if /pt.*/i.test item
-    #        pt _
-    #    if /en.*/i.test(item) or index == languages.length - 1
-    #        en _
-    
-pt = (_) -> _.render('index', contents.portuguese, false)
+    langs = _.request.headers['accept-language'].split ','
+    langs.map (lang) ->
+        if /pt.*/i.test lang
+            ptRedirect _
+        else if (/en.*/i.test lang) or index == langs.length - 1
+            enRedirect _
+        else  index++
+
+# Listeners of the portuguese page route.    
+pt = (_) -> _.render 'index', contents.portuguese, false
 ptRedirect = (_) -> _.response.redirect routes.portuguese.index
 
-en = (_) -> _.render('index', contents.english, false)
+# Listeners of the english page route.
+en = (_) -> _.render 'index', contents.english, false
 enRedirect = (_) -> _.response.redirect routes.english.index
 
+# Exports the listeners.
 module.exports =
     index: index
     pt: pt
