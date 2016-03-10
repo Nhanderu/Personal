@@ -1,3 +1,5 @@
+'use strict'
+
 # Imports the necessary modules.
 dir = require 'require-dir'
 contents = dir '../assets/contents'

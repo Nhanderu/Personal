@@ -1,3 +1,5 @@
+'use strict'
+
 # Imports the necessary modules.
 send = require 'koa-send'
 

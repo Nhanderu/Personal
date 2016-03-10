@@ -12,9 +12,9 @@ Configurates the "koa-jade" module to work with the views.
 # Imports the required modules. 
 jade = require 'koa-jade'
 
-folders =
-    require '../../../definitions'
-        .folders
+# Imports the definitions.
+definitions = require '../../../definitions.json'
+folders = definitions.folders
 
 # Gets the folder of the views.
 path = folders.binaries + '/' + folders.views
