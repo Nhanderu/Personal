@@ -27,7 +27,7 @@ use app, [render, router, logger]
 
 # Function that runs the server with (or not) a specified port and log that it's working.
 run = (p) ->
-    p = p || port
+    p = p or port
     app.listen p
     logger.start ip, p 
 
