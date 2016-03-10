@@ -14,7 +14,10 @@ Calls the controllers to respond to each path.
 router = (require 'koa-router')()
 dir = require 'require-dir'
 
-folders = require '../../../definitions.json'
+# Imports the definitions.
+definitions = require '../../../definitions.json'
+folders = definitions.folders
+routes = definitions.routes
 
 # Defines the basic function.
 call = (ctrlr) ->
@@ -34,10 +37,10 @@ controller = dir '../controllers/'
 router.get '/', call controller.home.index
 
 # GET on "/pt" (index on portuguese).
-router.get '/pt', call controller.home.pt
+router.get routes.portuguese.index, call controller.home.pt
 
 # GET on "/en" (index on portuguese).
-router.get '/en', call controller.home.en
+router.get routes.english.index, call controller.home.en
     
 # GET on "/public" (static files).
 router.get /^\/public\/(.*)/, cally controller.static.index
