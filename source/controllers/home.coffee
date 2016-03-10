@@ -15,7 +15,7 @@ index = (_) ->
             ptRedirect _
         else if (/en.*/i.test lang) or index == langs.length - 1
             enRedirect _
-        else  index++
+        else index++
 
 # Listeners of the portuguese page route.    
 pt = (_) -> _.render 'index', contents.portuguese, false
