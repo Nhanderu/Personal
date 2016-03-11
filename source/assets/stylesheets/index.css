@@ -45,128 +45,126 @@ body {
         position: relative;
     	
         /* Size. */
-        height: 50vh;
+        height: 100vh;
     }
     
-        .header-image {
-            /* Display. */
-            position: absolute;
-              
-            /* Size. */
-            height: 100%;
-            width: 100%;
-        
-            /* Background. */
-            background-attachment: fixed;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-        
-        .header-layout {
-            /* Display. */
-            position: absolute;
-            opacity: .5;
-            
-            /* Size. */
-            height: 100%;
-            width: 100%;
-        
-            /* Background. */
-            background-color: black;
-            background-position: center;
-            background-size: cover;
-        }
-        
-        .header-attribution {
-            /* Display. */
-            position: absolute;
-            right: 20px;
-            top: 20px;
-            
-            /* Font. */
-            font-size: 15px;
-            color: #BBB;
-        }
-        
-        .header-text {
-            /* Display */
-           padding: 3px 7px;
-            
-            /* Font. */
-            font-family: Verdana;
-            text-shadow: 0 0 5px black;
-            text-decoration: none;
-            color: inherit;
-        
-            /* Effects. */
-            transition: .2s;
-        }
+    .header-image {                   
+        /* Size. */
+        height: 100%;
+        width: 100%;
     
-            .header-text:hover {
-                /* Font */
-                color: white;
-                
-                /* Background. */
-                background-color: rgba(0, 0, 0, .5);
-            }
+        /* Background. */
+        background-attachment: fixed;
+        background-image: url('/public/images/background.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
     
-        .links {
-            position: absolute;
-            bottom: 20px;
-        }
+    .header-layout {
+        /* Display. */
+        position: absolute;
+        opacity: .5;
         
-            .links-left { left: 25px; }
-            
-                .links-left-item { margin-right: 30px; }
-            
-            .links-right { right: 25px; }
-            
-                .links-right-item { margin-left: 30px; }
+        /* Size. */
+        height: 100%;
+        width: 100%;
+    
+        /* Background. */
+        background-color: black;
+        background-position: center;
+        background-size: cover;
+    }
+    
+    .header-attribution {
+        /* Display. */
+        position: absolute;
+        right: 20px;
+        top: 20px;
         
-            .links-item {
-                font-size: 20px;
-                font-weight: 900;
-                text-transform: uppercase;
-                color: white;
-            }
-            
-                .bitcoin-text {
-                    /* Display. */
-                    position: absolute;
-                    left: 27.5%;
-                    bottom: 50px;
-                    padding: 7px;
-                    opacity: 0;
-                    
-                    /* Size. */
-                    width: 200px;
-                    
-                    /* Font. */
-                    color: white;
-                    
-                    /* Background. */
-                    background-color: rgba(0, 0, 0, .5);
-                
-                    /* Effects. */
-                    transition: opacity .8s;
-                }
-                
-                .bitcoin-text:after {
-                    /* Display. */
-                    content: '';
-                    position: absolute;
-                    bottom: -10px;
-                    left: 45%;
-                    
-                    /* Size. */
-                    width: 0;
-                    height: 0;
-                    
-                    /* Border. */
-                    border-top: 10px solid rgba(0, 0, 0, .5);
-                    border-right: 10px solid transparent;
-                    border-left: 10px solid transparent;
-                }
+        /* Font. */
+        font-size: 15px;
+        color: #BBB;
+    }
+    
+    .header-text {
+        /* Display */
+        padding: 3px 7px;
+        
+        /* Font. */
+        font-family: Verdana;
+        text-shadow: 0 0 5px black;
+        text-decoration: none;
+        color: inherit;
+    
+        /* Effects. */
+        transition: .2s;
+    }
+    
+    .header-text:hover {
+        /* Font */
+        color: white;
+        
+        /* Background. */
+        background-color: rgba(0, 0, 0, .5);
+    }
+
+    .links {
+        position: absolute;
+        bottom: 20px;
+    }
+        
+    .links-left { left: 25px; }
+    
+    .links-left-item { margin-right: 30px; }
+    
+    .links-right { right: 25px; }
+    
+    .links-right-item { margin-left: 30px; }
+        
+    .links-item {
+        font-size: 20px;
+        font-weight: 900;
+        text-transform: uppercase;
+        color: white;
+    }
+    
+    .bitcoin-text {
+        /* Display. */
+        position: absolute;
+        left: 27.5%;
+        bottom: 50px;
+        padding: 7px;
+        opacity: 0;
+        
+        /* Size. */
+        width: 200px;
+        
+        /* Font. */
+        color: white;
+        
+        /* Background. */
+        background-color: rgba(0, 0, 0, .5);
+    
+        /* Effects. */
+        transition: opacity .8s;
+    }
+    
+    .bitcoin-text:after {
+        /* Display. */
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 45%;
+        
+        /* Size. */
+        width: 0;
+        height: 0;
+        
+        /* Border. */
+        border-top: 10px solid rgba(0, 0, 0, .5);
+        border-right: 10px solid transparent;
+        border-left: 10px solid transparent;
+    }
 }
 
 @media (max-width: 800px) {
@@ -220,23 +218,23 @@ body {
 
 .social { margin: 30px auto 0 auto; }
     
-    .social-icon {
-        /* Border. */
-        border: none;
-        
-        /* Font. */
-        font-size: 30px;
-        text-decoration: none;
-        color: black;
-    }
+.social-icon {
+    /* Border. */
+    border: none;
     
-        .social-icon:hover, .social-icon:active, .social-icon:focus {
-            /* Border. */
-            border: none;
-            
-            /* Font. */
-            text-decoration: none;
-        }
+    /* Font. */
+    font-size: 30px;
+    text-decoration: none;
+    color: black;
+}
+
+.social-icon:hover, .social-icon:active, .social-icon:focus {
+    /* Border. */
+    border: none;
+    
+    /* Font. */
+    text-decoration: none;
+}
 
 .fa {
     /* Display. */
@@ -295,28 +293,28 @@ body {
     margin: 10px auto;
 }
 
-    .content-section { margin-top: 30px; }
+.content-section { margin-top: 30px; }
 
-    .content-info {
-        /* Display. */
-        margin: 0;
-        
-        /* Font. */
-        font-size: 18px;
-        line-height: 28px;
-        letter-spacing: .5px;    
-    }
+.content-info {
+    /* Display. */
+    margin: 0;
     
-    .content-title {
-        font-weight: 600;
-        color: black;
-    }
+    /* Font. */
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: .5px;    
+}
 
-    .content-text {
-        font-weight: 200;
-        text-align: justify;
-        color: #444;
-    }
+.content-title {
+    font-weight: 600;
+    color: black;
+}
+
+.content-text {
+    font-weight: 200;
+    text-align: justify;
+    color: #444;
+}
 
 .footer {
     /* Display. */
@@ -327,11 +325,11 @@ body {
     color: #666;
 }
     
-    .footer-line { padding-bottom: 10px; }
+.footer-line { padding-bottom: 10px; }
 
-    .footer-focus { color: #666; }
+.footer-focus { color: #666; }
 
-    .footer-focus:hover { color: black; }
+.footer-focus:hover { color: black; }
 
 /* Classes for a specific effect. */
 
@@ -345,10 +343,10 @@ body {
     list-style: none;
 }
 
-    .menu-item {
-        display: inline;
-        padding: 0;
-    }
+.menu-item {
+    display: inline;
+    padding: 0;
+}
 
 .centered { text-align: center; }
 
