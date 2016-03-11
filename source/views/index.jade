@@ -6,7 +6,7 @@ html(lang=language)
         
         meta(charset='utf-8')
         meta(name='author' content=title)
-        meta(name="description" content=subtitle.join(' '))
+        meta(name='description' content=subtitle.join(' '))
         meta(name='viewport' content='width=device-width, initial-scale=1.0')
         
         link(rel='icon' href='/public/images/icons/favicon.ico' type='image/x-icon')
@@ -22,7 +22,6 @@ html(lang=language)
                 #header-attribution.header-attribution
                     a#header-attribution-link.header-text(href='')
                         span #{ header.photo }
-                        span.header-author
                 
                 nav.links.links-left
                     ul.menu
@@ -82,11 +81,11 @@ html(lang=language)
                         a(href=url) item
                         
 
-        script(type='text/javascript' src='/public/scripts/script-caller.js')
+        script(type='text/javascript' src='/public/scripts/bitcoin-tooltip.js')
         script(type='text/javascript' src='/public/scripts/google-analytics.js')
         script(type='text/javascript' src='/public/scripts/smooth-scroll.js')
         
         noscript
             style(type='text/css').
-                .header-image { background-image: url("/public/images/background/01.jpg"); }
+                .header-image { background-image: url('/public/images/background/01.jpg'); }
                 .header-attribution { visibility: hidden; }
