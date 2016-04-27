@@ -22,9 +22,12 @@ html, body
     height 100%
 
 body
-//
+    // Font.
     font-family "Helvetica Neue", Helvetica, Arial
+    // Background.
     background-color #F1F1F1
+    
+/* Parts of the document. */
 
 @media (max-width: 800px)
     .header
@@ -32,29 +35,46 @@ body
 
 @media (min-width: 801px)
     .header
+        // Display.
         position relative
+        // Size.
         height 100vh
+    
     .header-image
+        // Display.
+        position absolute
+        z-index -99
+        // Size.
         height 100%
         width 100%
+        // Background.
         background-attachment fixed
         background-image url('/public/images/background.jpg')
         background-repeat no-repeat
         background-size cover
+    
     .header-layout
+        // Display.
         position absolute
-        opacity .5
+        z-index -98
+        // Size.
         height 100%
         width 100%
+        // Background.
         background-color black
         background-position center
         background-size cover
+        opacity .5
+    
     .header-attribution
+        // Display.
         position absolute
         right 20px
         top 20px
+        // Font.
         font-size 15px
         color #BBB
+    
     .header-text
         padding 3px 7px
         font-family Verdana
@@ -65,22 +85,29 @@ body
         &:hover
             color white
             background-color rgba(0, 0, 0, .5)
+            
     .links
         position absolute
         bottom 20px
+        
     .links-left
         left 25px
+        
     .links-left-item
         margin-right 30px
+        
     .links-right
         right 25px
+        
     .links-right-item
         margin-left 30px
+        
     .links-item
         font-size 20px
         font-weight 900
         text-transform uppercase
         color white
+        
     .bitcoin-text
         position absolute
         left 27.5%
@@ -102,21 +129,19 @@ body
             border-right 10px solid transparent
             border-left 10px solid transparent
 
-@media (max-width: 800px)
-    .avatar
-        margin 50px auto
-
-@media (min-width: 801px)
-    .avatar
-        position relative
-        top -150px
-        margin 0 auto -100px auto
-
 .avatar
+    // Display.
+    position absolute
+    top 40%
+    left 50%
+    transform translate(-50%, -50%)
+    // Size.
     height 300px
     width 300px
+    // Border.
     border 3px solid #F2F2F2
     border-radius 100%
+    // Background.
     background-color #F2F2F2
     background-image url("http://gravatar.com/avatar/6c96e05a5c9c262e1ad3f86ea8ff7bb2?s=300")
     background-size 300px
@@ -225,3 +250,6 @@ body
 
 .float-right
     float right
+    
+.absolute
+    position absolute

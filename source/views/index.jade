@@ -16,6 +16,18 @@ html(lang=language)
     body
         .principal
             header.header
+                .avatar
+            
+                .hero.absolute
+                    h1.title.hero-info.centered.
+                        #{ title }
+                    
+                    h2.subtitle.hero-info.centered.
+                        #{ subtitle[0] }
+                        
+                    p.subtitle.hero-info.centered.
+                        #{ subtitle[1] }
+            
                 #header-image.header-image
                 .header-layout
                 
@@ -41,18 +53,7 @@ html(lang=language)
                         li.menu-item.links-right-item
                             a.links-item.header-text(href=header.curriculum.url).
                                 #{ header.curriculum.title } 
-        
-            .avatar
-            
-            .hero
-                h1.title.hero-info.centered.
-                    #{ title }
-                
-                h2.subtitle.hero-info.centered.
-                    #{ subtitle[0] }
-                    
-                p.subtitle.hero-info.centered.
-                    #{ subtitle[1] }
+                                
             
             nav.social.centered
                 ul.menu
