@@ -14,55 +14,49 @@ html(lang=language)
         link(rel='stylesheet' href='/public/stylesheets/index.css')
         
     body
-        .principal
-            header.header
-                .avatar
-            
-                .hero.absolute
-                    h1.title.hero-info.centered.
-                        #{ title }
+        header.header
+        
+            .hero.absolute.screen-center.self-center
+                .avatar.base-center
+                .description.header-box.base-center
+                    h1.title #{ title }
+                    h2.subtitle #{ subtitle[0] }
+                    p.subtitle #{ subtitle[1] }
                     
-                    h2.subtitle.hero-info.centered.
-                        #{ subtitle[0] }
-                        
-                    p.subtitle.hero-info.centered.
-                        #{ subtitle[1] }
+            .header-image
+            .header-layout
+            .header-attribution
+                a.header-box-hover(href='//pixabay.com/pt/centro-s%C3%A3o-paulo-viadutos-271296/')
+                    span #{ header.photo }
             
-                #header-image.header-image
-                .header-layout
-                
-                #header-attribution.header-attribution
-                    a#header-attribution-link.header-text(href='//pixabay.com/pt/centro-s%C3%A3o-paulo-viadutos-271296/')
-                        span #{ header.photo }
-                
-                nav.links.links-left
-                    ul.menu
-                        li.menu-item.links-left-item
-                            a.links-item.header-text(href=header.blog.url).
-                                #{ header.blog.title }
+            nav.links.absolute.links-left
+                ul.menu
+                    li.menu-item.links-left-item
+                        a.links-item.header-box-hover(href=header.blog.url).
+                            #{ header.blog.title }
+                    
+                    li.menu-item.link-left-item
+                        a#bitcoin-activator.links-item.header-box-hover(href=header.bitcoin.url).
+                            #{ header.bitcoin.title }
                         
-                        li.menu-item.link-left-item
-                            a#bitcoin-activator.links-item.header-text(href=header.bitcoin.url).
-                                #{ header.bitcoin.title }
-                            
-                            span#bitcoin-text.bitcoin-text.centered.
-                                Donate some BTCs for this poor programmer! Eu sô trabaiadô, sinhô!
-                
-                nav.links.links-right
-                    ul.menu
-                        li.menu-item.links-right-item
-                            a.links-item.header-text(href=header.curriculum.url).
-                                #{ header.curriculum.title } 
+                        span#bitcoin-box.bitcoin-box.self-center.
+                            Donate some BTCs for this poor programmer! Eu sô trabaiadô, sinhô!
+            
+            nav.links.absolute.links-right
+                ul.menu
+                    li.menu-item.links-right-item
+                        a.links-item.header-box-hover(href=header.curriculum.url).
+                            #{ header.curriculum.title } 
                                 
             
-            nav.social.centered
-                ul.menu
-                    each item, url in social
-                        li.menu-item.social-item
-                            a.social-icon(href=url)
-                                i(class='fa fa-'+item)
+        nav.social.self-center
+            ul.menu
+                each item, url in social
+                    li.menu-item.social-item
+                        a.social-icon(href=url)
+                            i(class='fa fa-'+item)
         
-        main.content
+        main.content(role='main')
             each section in content
                 section.content-section
                     h3.content-info.content-title #{ section.title }
@@ -71,7 +65,7 @@ html(lang=language)
                         each paragraph in section.paragraphs
                             p.content-info #{ paragraph }
         
-        footer.footer.centered
+        footer.footer.self-center
             
             .footer-line #{ footer.copyright + year }
                 span.footer-focus #{ title }

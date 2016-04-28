@@ -12,11 +12,12 @@ Organization order:
 
 ::selection
     // Font.
-    color white    
+    color white
     // Background.
     background-color #794
 
 /* Tags. */
+
 html, body
     margin 0
     height 100%
@@ -29,173 +30,159 @@ body
     
 /* Parts of the document. */
 
-@media (max-width: 800px)
-    .header
-        display none
+.header
+    // Display.
+    position relative
+    // Size.
+    height 100vh
 
-@media (min-width: 801px)
-    .header
-        // Display.
-        position relative
-        // Size.
-        height 100vh
-    
-    .header-image
-        // Display.
-        position absolute
-        z-index -99
-        // Size.
-        height 100%
-        width 100%
-        // Background.
-        background-attachment fixed
-        background-image url('/public/images/background.jpg')
-        background-repeat no-repeat
-        background-size cover
-    
-    .header-layout
-        // Display.
-        position absolute
-        z-index -98
-        // Size.
-        height 100%
-        width 100%
-        // Background.
-        background-color black
-        background-position center
-        background-size cover
-        opacity .5
-    
-    .header-attribution
-        // Display.
-        position absolute
-        right 20px
-        top 20px
-        // Font.
-        font-size 15px
-        color #BBB
-    
-    .header-text
-        padding 3px 7px
-        font-family Verdana
-        text-shadow 0 0 5px black
-        text-decoration none
-        color inherit
-        transition .2s
-        &:hover
-            color white
-            background-color rgba(0, 0, 0, .5)
-            
-    .links
-        position absolute
-        bottom 20px
-        
-    .links-left
-        left 25px
-        
-    .links-left-item
-        margin-right 30px
-        
-    .links-right
-        right 25px
-        
-    .links-right-item
-        margin-left 30px
-        
-    .links-item
-        font-size 20px
-        font-weight 900
-        text-transform uppercase
-        color white
-        
-    .bitcoin-text
-        position absolute
-        left 27.5%
-        bottom 50px
-        padding 7px
-        opacity 0
-        width 200px
-        color white
-        background-color rgba(0, 0, 0, .5)
-        transition opacity .8s
-        &:after
-            content ''
-            position absolute
-            bottom -10px
-            left 45%
-            width 0
-            height 0
-            border-top 10px solid rgba(0, 0, 0, .5)
-            border-right 10px solid transparent
-            border-left 10px solid transparent
-
-.avatar
+.header-image
     // Display.
     position absolute
-    top 40%
-    left 50%
-    transform translate(-50%, -50%)
+    z-index -99999
+    // Size.
+    height 100%
+    width 100%
+    // Background.
+    background-attachment fixed
+    background-image url('/public/images/background.jpg')
+    background-repeat no-repeat
+    background-size cover
+
+.header-layout
+    // Display.
+    position absolute
+    z-index -99998
+    // Size.
+    height 100%
+    width 100%
+    // Background.
+    background-color black
+    background-position center
+    background-size cover
+    opacity .5
+
+.header-attribution
+    // Display.
+    position absolute
+    right 20px
+    top 20px
+    // Font.
+    font-size 15px
+    color #BBB
+
+// Little boxes of texts inside the header.
+.header-box, .header-box-hover
+    color white
+.header-box, .header-box-hover, .header-subbox
+    // Display.
+    padding 3px 7px
+    // Font.
+    text-shadow 0 0 5px black
+    text-decoration none
+    // Effects.
+    transition background .2s
+.header-box, .header-box-hover:hover
+    background-color rgba(0, 0, 0, .5)
+
+// My face.
+.avatar
+    // Display.
+    margin-bottom 30px
     // Size.
     height 300px
     width 300px
     // Border.
-    border 3px solid #F2F2F2
+    border none
     border-radius 100%
+    box-shadow 0 0 15px black
     // Background.
     background-color #F2F2F2
     background-image url("http://gravatar.com/avatar/6c96e05a5c9c262e1ad3f86ea8ff7bb2?s=300")
     background-size 300px
     background-position center
-
-.hero-info
+    
+// The description box below the photo.
+.title, .subtitle
     font-weight 500
-
-.title
     margin 0 auto
+.title
     text-transform uppercase
     letter-spacing 1px
-
 .subtitle
-    margin 0 auto
     font-size 25px
     letter-spacing -.5px
     color #777
 
+// The links menu in the header.
+.links
+    bottom 20px
+.links-left
+    left 25px
+.links-left-item
+    margin-right 30px
+.links-right
+    right 25px
+.links-right-item
+    margin-left 30px
+.links-item
+    font-size 20px
+    font-weight 900
+    text-transform uppercase
+    color white
+
+// The tooltip box that shows on bitcoin link.
+.bitcoin-box
+    position absolute
+    left 27.5%
+    bottom 50px
+    padding 7px
+    opacity 0
+    width 200px
+    color white
+    background-color rgba(0, 0, 0, .5)
+    transition opacity .8s
+    &:after
+        content ''
+        position absolute
+        bottom -10px
+        left 45%
+        width 0
+        height 0
+        border-top 10px solid rgba(0, 0, 0, .5)
+        border-right 10px solid transparent
+        border-left 10px solid transparent
+
+// The menu of social networks.
 .social
     margin 30px auto 0 auto
-
 .social-icon
     border none
     font-size 30px
     text-decoration none
     color black
-
 .social-icon:hover, .social-icon:active, .social-icon:focus
     border none
     text-decoration none
 
+// The external images for the social menu.
 .fa
     padding-top 10px
     width 50px
     height 40px
     border-radius 100px
-
 .fa-facebook:hover
     color white
     background-color #3a5795
-
 .fa-linkedin:hover
     color white
     background-color #007bb6
-
 .fa-github:hover
     color white
     background-color black
-
 .fa-bitbucket:hover
     color white
     background-color #205081
-
 .fa-envelope-o:hover
     color white
     background-color #777
@@ -245,11 +232,26 @@ body
     display inline
     padding 0
 
-.centered
+// Classes that position the content based on itself.
+.self-center
     text-align center
 
-.float-right
-    float right
+// Classes that position the content based on the father.
+.base-center
+    margin-left auto
+    margin-right auto
+    
+// Classes that position the content based on the screen.
+.screen-center-x, .screen-center
+    left 50%    
+.screen-center-y, .screen-center
+    top 50%
+.screen-center
+    transform translate(-50%, -50%)
+.screen-center-x
+    transform translateX(-50%)
+.screen-center-y
+    transform translateY(-50%)
     
 .absolute
     position absolute
