@@ -2,7 +2,7 @@ doctype html
 
 html(lang=language)
     head
-        title #{ title }
+        title !{ title }
         
         meta(charset='utf-8')
         meta(name='author' content=title)
@@ -19,25 +19,25 @@ html(lang=language)
             .hero.absolute.screen-center.self-center
                 .avatar.base-center
                 .description.header-box.base-center
-                    h1.title #{ title }
-                    h2.subtitle #{ subtitle[0] }
-                    p.subtitle #{ subtitle[1] }
+                    h1.title !{ title }
+                    h2.subtitle !{ subtitle[0] }
+                    p.subtitle !{ subtitle[1] }
                     
             .header-image
             .header-layout
             .header-attribution
                 a.header-box-hover(href='//pixabay.com/pt/centro-s%C3%A3o-paulo-viadutos-271296/')
-                    span #{ header.photo }
+                    span !{ header.photo }
             
             nav.links.absolute.links-left
                 ul.menu
                     li.menu-item.links-left-item
                         a.links-item.header-box-hover(href=header.blog.url).
-                            #{ header.blog.title }
+                            !{ header.blog.title }
                     
                     li.menu-item.link-left-item
                         a#bitcoin-activator.links-item.header-box-hover(href=header.bitcoin.url).
-                            #{ header.bitcoin.title }
+                            !{ header.bitcoin.title }
                         
                         span#bitcoin-box.bitcoin-box.self-center.
                             Donate some BTCs for this poor programmer! Eu sô trabaiadô, sinhô!
@@ -46,7 +46,7 @@ html(lang=language)
                 ul.menu
                     li.menu-item.links-right-item
                         a.links-item.header-box-hover(href=header.curriculum.url).
-                            #{ header.curriculum.title } 
+                            !{ header.curriculum.title } 
                                 
             
         nav.social.self-center
@@ -54,26 +54,35 @@ html(lang=language)
                 each item, url in social
                     li.menu-item.social-item
                         a.social-icon(href=url)
-                            i(class='fa fa-'+item)
+                            i(class='fa fa-' + item)
         
         main.content(role='main')
             each section in content
                 section.content-section
-                    h3.content-info.content-title #{ section.title }
+                    h3.content-info.content-title !{ section.title }
                     
                     .content-info.content-text
                         each paragraph in section.paragraphs
-                            p.content-info #{ paragraph }
+                            p.content-info !{ paragraph }
         
         footer.footer.self-center
             
-            .footer-line #{ footer.copyright + year }
-                span.footer-focus #{ title }
+            - var year = new Date().getFullYear()
+            .footer-line !{ `${footer.copyright} ${year} ` }
+                span.footer-focus !{ title }
             
             each menu in footer.menus
-                nav.footer-line #{ menu.text }
-                    each item, url in menu.list
-                        a(href=url) item
+                nav.footer-line !{ `${menu.text} ` }
+                    - var index = 0
+                    - var length = Object.keys(menu.list).length
+                    each url, item in menu.list
+                        a(href=url) !{ item }
+                        
+                        - index++
+                        if index == length - 1
+                            !{ ` ${helpers.and} ` }
+                        else if index != length
+                            !{ helpers.joiner }
                         
 
         script(type='text/javascript' src='/public/scripts/bitcoin-tooltip.js')
