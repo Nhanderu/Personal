@@ -12,6 +12,7 @@
     "app": "node --harmony build/source",
     "tests": "mocha build/tests"
   },
+  "main": "--harmony server.js",
   "dependencies": {
     "chalk": "^1.1.1",
     "gulp": "^3.9.1",
