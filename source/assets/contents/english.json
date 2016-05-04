@@ -2,7 +2,10 @@
     "language": "en",
     
     "header": {
-        "photo": "Photo by Alex G. Ramos",
+        "photo":  {
+            "title": "Photo by Alex G. Ramos",
+            "url": "//pixabay.com/pt/centro-s%C3%A3o-paulo-viadutos-271296/"
+        },
         "blog": {
             "title": "Blog",
             "url": "//blog.nhanderu.com/"

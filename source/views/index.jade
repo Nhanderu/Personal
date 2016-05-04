@@ -26,8 +26,8 @@ html(lang=language)
             .header-image
             .header-layout
             .header-attribution
-                a.header-box-hover(href='//pixabay.com/pt/centro-s%C3%A3o-paulo-viadutos-271296/')
-                    span !{ header.photo }
+                a.header-box-hover(href=header.photo.url).
+                    !{ header.photo.title }
             
             nav.links.absolute.links-left
                 ul.menu
@@ -51,12 +51,12 @@ html(lang=language)
             
         nav.social.self-center
             ul.menu
-                each item, url in social
+                each url, item in social
                     li.menu-item.social-item
                         a.social-icon(href=url)
                             i(class='fa fa-' + item)
         
-        main.content(role='main')
+        main.content.base-center(role='main')
             each section in content
                 section.content-section
                     h3.content-info.content-title !{ section.title }
@@ -88,8 +88,3 @@ html(lang=language)
         script(type='text/javascript' src='/public/scripts/bitcoin-tooltip.js')
         script(type='text/javascript' src='/public/scripts/google-analytics.js')
         script(type='text/javascript' src='/public/scripts/smooth-scroll.js')
-        
-        noscript
-            style(type='text/css').
-                .header-image { background-image: url('/public/images/background/01.jpg'); }
-                .header-attribution { visibility: hidden; }
