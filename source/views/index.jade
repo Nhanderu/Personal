@@ -80,9 +80,9 @@ html(lang=language)
                         
                         - index++
                         if index == length - 1
-                            !{ ` ${helpers.and} ` }
+                            | !{ ` ${helpers.and} ` }
                         else if index != length
-                            !{ helpers.joiner }
+                            | !{ helpers.joiner }
                         
 
         script(type='text/javascript' src='/public/scripts/bitcoin-tooltip.js')
