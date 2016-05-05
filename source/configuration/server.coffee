@@ -18,17 +18,18 @@ logger = require './logger'
 render = require './rendering'
 
 # App definitions.
-port = app.context.port = process.env.OPENSHIFT_NODEJS_PORT || 8080
-ip = app.context.ipAddr = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1'
+port = app.context.port = process.env.OPENSHIFT_NODEJS_PORT or 8080
+address = app.context.ipAddr = process.env.OPENSHIFT_NODEJS_IP or '127.0.0.1'
 
 # Defines the middlewares.
 use = (x, arr) -> arr.map (y) -> y.use x
 use app, [render, router, logger] 
 
 # Function that runs the server with (or not) a specified port and log that it's working.
-run = (p) ->
+run = (p, ip) ->
     p = p or port
-    app.listen p
+    ip = ip or address
+    app.listen p, ip
     logger.start ip, p 
 
 # Exports the server runner function.
