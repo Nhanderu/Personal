@@ -29,7 +29,7 @@ use app, [render, router, logger]
 run = (p, ip) ->
     p = p or port
     ip = ip or address
-    app.listen p, ip
+    app.listen p
     logger.start ip, p 
 
 # Exports the server runner function.
