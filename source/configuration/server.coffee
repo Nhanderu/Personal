@@ -18,8 +18,8 @@ logger = require './logger'
 render = require './rendering'
 
 # App definitions.
-port = app.context.port = process.env.OPENSHIFT_NODEJS_PORT or 8080
-address = app.context.ipAddr = process.env.OPENSHIFT_NODEJS_IP or '127.0.0.1'
+port = app.context.port = process.env.PORT or 8080
+address = app.context.ipAddr = process.env.IP or '127.0.0.1'
 
 # Defines the middlewares.
 use = (x, arr) -> arr.map (y) -> y.use x
