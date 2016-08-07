@@ -1,10 +1,6 @@
 FROM node:6
 MAINTAINER Rafael Escobar <rafael@nhanderu.com>
 
-RUN adduser --disabled-password --gecos '' r && \
-    adduser r sudo && \
-    echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
-
 # Creates directory.
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
