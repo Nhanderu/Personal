@@ -1,13 +1,20 @@
 'use strict'
 
-# Imports the necessary modules.
-dir = require 'require-dir'
-contents = dir '../assets/contents'
-
 # Imports the definitions.
 definitions = require '../../../definitions.json'
 folders = definitions.folders
 routes = definitions.routes
+
+# Imports the required modules.
+dir = require 'require-dir'
+contents = dir "../../../#{folders.binaries}/#{folders.contents}"
+
+# Imports the models.
+Content = require "../../../#{folders.binaries}/#{folders.models}/content"
+
+# Creates the contents.
+portugueseContent = new Content contents.portuguese
+englishContent = new Content contents.english
 
 # Listener of the index route.
 index = (_) ->
@@ -20,11 +27,11 @@ index = (_) ->
         else index++
 
 # Listeners of the portuguese page route.    
-pt = (_) -> _.render 'index', contents.portuguese, false
+pt = (_) -> _.render 'index', portugueseContent.value, false
 ptRedirect = (_) -> _.response.redirect routes.portuguese.index
 
 # Listeners of the english page route.
-en = (_) -> _.render 'index', contents.english, false
+en = (_) -> _.render 'index', englishContent.value, false
 enRedirect = (_) -> _.response.redirect routes.english.index
 
 # Exports the listeners.

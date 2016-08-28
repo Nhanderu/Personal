@@ -1,14 +1,16 @@
 'use strict'
 
-# Imports the necessary modules.
-send = require 'koa-send'
-
 # Imports the definitions.
 definitions = require '../../../definitions.json'
 folders = definitions.folders
+routes = definitions.routes
+
+# Imports the required modules.
+send = require 'koa-send'
 
 root = "#{folders.binaries}/#{folders.assets}"        
-clean = (x) -> x.replace /^\/public\//, ''
+pattern = new RegExp routes.static.pattern, 'i'
+clean = (x) -> x.replace pattern, ''
 
 # Listener of any route.  
 index = (_) ->
