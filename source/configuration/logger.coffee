@@ -12,6 +12,7 @@ Exports the function that updates the application logging.
  
 ###
 
+# Imports the required modules.
 logger = require 'koa-logger'
 chalk = require 'chalk'
 
