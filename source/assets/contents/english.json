@@ -16,7 +16,7 @@
         },
         "curriculum": {
             "title": "Curriculum",
-            "url": "/en/download/curriculum"
+            "url": "/public/documents/RafaelEscobar-EN.pdf"
         }
     },
     
@@ -38,25 +38,25 @@
         {
             "title": "The person",
             "paragraphs": [
-                "Hello, my name is Rafael, I'm 18 and I'm from São Paulo, Brazil. Besides being a programmer, I'm a human being, also a Corinthians huge fan, a lover of coffee, philosophy and politics and an anarcho-capitalism enthusiast."
+                "Hello, my name is Rafael, I'm {{age}} and I'm from São Paulo, Brazil. Besides being a programmer, I'm a human being, also a Corinthians huge fan, an anarcho-capitalism enthusiast and a lover of coffee, philosophy and politics."
             ]
         },
         {
             "title": "The programmer",
             "paragraphs": [
-                "I work at BRQ, an IT services company, by building web apps and Windows programs using the .NET platform, mostly with the C# and VB.NET languages. In my free times, I like to search about new technologies and its best practices, to test what I've learned by creating little and useless projects, and to seek for minimum details to fix in this website that nobody would notice. I'm interested, most of all, in some new web frameworks for .NET, like ASP.NET vNext and other OWIN implementations (like NancyFx), and for the JavaScript world, like Node.js and Express, despite being a less frequent participant in this platforms."
+                "I work at BRQ, an IT services company, by building web apps and Windows programs using the .NET platform, mostly with C#. In my free times, I like to search about new technologies and its best practices, to test what I've learned by creating little and useless projects, and to seek for minimum details to fix in this website that nobody would notice. I'm interested, most of all, in web development with .NET (ASP.NET, ASP.NET Core and NancyFx) and with Node.js (Express and Koa), mobile (Xamarin) and for UWP platform."
             ]
         },
         {
             "title": "The student",
             "paragraphs": [
-                "Currently studying Information Systems at FIAP, an IT-focused faculty, one of the greatest colleges in this field in Brazil. But, even before I entered the universitarian life, I used to study about programming. Actually, I do it since when I had my first contact with computing, in my vocational and technical high school, when I was 14 years old. Curiously, I started with VB.NET and C#, which certainly influenced my decision for the higher education and for the programming platform."
+                "Currently studying Information Systems at FIAP. But, even before I entered the universitarian life, I used to study about programming. Actually, I do it since when I had my first contact with computing, in my vocational and technical high school, when I was 14 years old. Curiously, I started with VB.NET and C#, which certainly influenced my career."
             ]
         }
     ],
     
     "footer": {
-        "copyright": "Copyright &copy;",
+        "copyright": "Copyright &copy; {{year}}",
         "menus": [
             {
                 "text": "source and acknowledgments on",
@@ -70,7 +70,7 @@
     },
     
     "helpers": {
-        "joiner": ",",
-        "and": "and"
+        "joiner": ", ",
+        "and": " and "
     } 
 }

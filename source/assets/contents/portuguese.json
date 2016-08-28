@@ -16,7 +16,7 @@
         },
         "curriculum": {
             "title": "Currículo",
-            "url": "/pt/download/curriculum"
+            "url": "/public/documents/RafaelEscobar-PT.pdf"
         }
     },
     
@@ -38,25 +38,25 @@
         {
             "title": "A pessoa",
             "paragraphs": [
-                "Olá, meu nome é Rafael, tenho 18 anos e sou de São Paulo. Além de ser programador, sou um ser humano, também um corinthiano roxo, um amante de café, filosofia e política e um entusiasta do anarcocapitalismo."
+                "Olá, meu nome é Rafael, tenho {{age}} anos e sou de São Paulo. Além de ser programador, sou um ser humano, também um corinthiano roxo, um entusiasta do anarcocapitalismo e um amante de café, filosofia e política."
             ]
         },
         {
             "title": "O programador",
             "paragraphs": [
-                "Trabalho na BRQ, uma empresa de serviços de TI, construindo aplicativos para a web e Windows utilizando a plataforma .NET, principalmente com as liguagens C# e VB.NET. Nos meus tempos livres, gosto de pesquisar sobre novas tecnologias e suas melhores práticas, testar o que eu aprendi criando pequenos e inúteis projetos e procurar por mínimos detalhes para arrumar neste site que ninguém perceberia. Me interesso, acima de tudo, por algumas novas ferramentas web para .NET, como o ASP.NET vNext e outras implementações OWIN (como NancyFx), e para o mundo JavaScript, como Node.js e Express, apesar de ser um participante menos assíduo destas plataformas."
+                "Trabalho na BRQ, uma empresa de serviços de TI, construindo aplicativos para a web e Windows utilizando a plataforma .NET, principalmente com C#. Nos meus tempos livres, gosto de pesquisar sobre novas tecnologias e suas melhores práticas, testar o que eu aprendi criando pequenos e inúteis projetos e procurar por mínimos detalhes para arrumar neste site que ninguém perceberia. Interesso-me, acima de tudo, por desenvolvimento web com .NET (ASP.NET, ASP.NET Core e NancyFx) e com Node.js (Express e Koa), mobile (Xamarin e nativo) e para a plataforma UWP."
             ]
         },
         {
             "title": "O estudante",
             "paragraphs": [
-                "Atualmente estudo Sistemas da Informação na FIAP, faculdade focada em TI, uma das melhores deste ramo no Brasil. Mas, antes mesmo de eu entrar para a vida universitária, costumava a estudar sobre programação. Na verdade, o faço desde que tive meu primeiro contato com computação, no meu ensino médio técnico, quando eu tinha 14 anos. Curiosamente comecei com VB.NET e C#, o que certamente influenciou minha decisão para o ensino superior e para a plataforma de programação."
+                "Atualmente estudo Sistemas da Informação na FIAP. Mas, antes mesmo de entrar para a vida universitária, costumava a estudar sobre programação. Inclusive, faço-o desde que tive meu primeiro contato com computação, no meu ensino médio técnico, quando eu tinha 14 anos. Curiosamente comecei com VB.NET e C#, o que certamente influenciou minha carreira."
             ]
         }
     ],
     
     "footer": {
-        "copyright": "Copyright &copy;",
+        "copyright": "Copyright &copy; {{year}}",
         "menus": [
             {
                 "text": "código e agradecimentos no",
@@ -70,7 +70,7 @@
     },
     
     "helpers": {
-        "joiner": ",",
-        "and": "e"
+        "joiner": ", ",
+        "and": " e "
     } 
 }
