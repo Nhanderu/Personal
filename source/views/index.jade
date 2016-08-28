@@ -6,7 +6,7 @@ html(lang=language)
         
         meta(charset='utf-8')
         meta(name='author' content=title)
-        meta(name='description' content=subtitle.join(' '))
+        meta(name='description' content=subtitle[0])
         meta(name='viewport' content='width=device-width, initial-scale=1.0')
         
         link(rel='icon' href='/public/images/icons/favicon.ico' type='image/x-icon')
@@ -54,7 +54,7 @@ html(lang=language)
                 each url, item in social
                     li.menu-item.social-item
                         a.social-icon(href=url)
-                            i(class='fa fa-' + item)
+                            i(class=`fa fa-${item}`)
         
         main.content.base-center(role='main')
             each section in content
@@ -67,8 +67,7 @@ html(lang=language)
         
         footer.footer.self-center
             
-            - var year = new Date().getFullYear()
-            .footer-line !{ `${footer.copyright} ${year} ` }
+            .footer-line !{ `${footer.copyright} ` }
                 span.footer-focus !{ title }
             
             each menu in footer.menus
@@ -80,7 +79,7 @@ html(lang=language)
                         
                         - index++
                         if index == length - 1
-                            | !{ ` ${helpers.and} ` }
+                            | !{ helpers.and }
                         else if index != length
                             | !{ helpers.joiner }
                         

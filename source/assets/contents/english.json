@@ -44,7 +44,7 @@
         {
             "title": "The programmer",
             "paragraphs": [
-                "I work at BRQ, an IT services company, by building web apps and Windows programs using the .NET platform, mostly with C#. In my free times, I like to search about new technologies and its best practices, to test what I've learned by creating little and useless projects, and to seek for minimum details to fix in this website that nobody would notice. I'm interested, most of all, in web development with .NET (ASP.NET, ASP.NET Core and NancyFx) and with Node.js (Express and Koa), mobile (Xamarin) and for UWP platform."
+                "I work at BRQ, an IT services company, by building web apps and Windows programs using the .NET platform, mostly with C#. In my free times, I like to search about new technologies and its best practices, to test what I've learned by creating little and useless projects, and to seek for minimum details to fix in this website that nobody would notice. I'm interested, most of all, in web development with .NET (ASP.NET, ASP.NET Core and NancyFx) and with Node.js (Express and Koa), mobile (Xamarin and native) and for UWP platform."
             ]
         },
         {
