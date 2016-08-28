@@ -2,7 +2,10 @@
   "folders": {
     "binaries": "build",
     "source": "source",
+    "models": "source/models",
     "views": "source/views",
+    "controllers": "source/controllers",
+    "configuration": "source/configuration",
     "assets": "source/assets",
     "contents": "source/assets/contents",
     "documents": "source/assets/documents",
@@ -23,7 +26,7 @@
       },
       "static": {
           "index": "/public",
-          "pattern": "^\\/public\\/(.*)"
+          "pattern": "^\\/public\\/"
       }
   }
 }
