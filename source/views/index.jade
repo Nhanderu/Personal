@@ -23,9 +23,9 @@ html(lang=language)
                     h2.subtitle !{ subtitle[0] }
                     p.subtitle !{ subtitle[1] }
                     
-            .header-image
-            .header-layout
-            .header-attribution
+            #header-image.header-image.absolute.transparent
+            .header-layout.absolute
+            .header-attribution.absolute
                 a.header-box-hover(href=header.photo.url).
                     !{ header.photo.title }
             
@@ -39,7 +39,7 @@ html(lang=language)
                         a#bitcoin-activator.links-item.header-box-hover(href=header.bitcoin.url).
                             !{ header.bitcoin.title }
                         
-                        span#bitcoin-box.bitcoin-box.self-center.
+                        span#bitcoin-box.bitcoin-box.absolute.self-center.
                             Donate some BTCs for this poor programmer! Eu sô trabaiadô, sinhô!
             
             nav.links.absolute.links-right
@@ -87,3 +87,6 @@ html(lang=language)
         script(type='text/javascript' src='/public/scripts/bitcoin-tooltip.js')
         script(type='text/javascript' src='/public/scripts/google-analytics.js')
         script(type='text/javascript' src='/public/scripts/smooth-scroll.js')
+
+        script.
+            onload = () => document.querySelector('#header-image').classList.remove('transparent')
