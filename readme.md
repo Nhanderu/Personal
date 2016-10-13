@@ -9,7 +9,7 @@ My personal website, running @ `nhanderu.com`!
 * [Gulp](http://gulpjs.com/): automated tasks
 * [Koa](http://koajs.com/): the back-end of the web-app, controlling the routes and the HTTP requests
 * [Node.js](https://nodejs.org/): application platform
-* [Openshift](https://www.openshift.com/): hosting and server configurations
+* [Heroku](https://www.heroku.com/): hosting and server configurations
 * [Smooth Scroll](https://github.com/galambalazs/smoothscroll-for-websites/): better experience in scrolling
 
 ### To-do list
