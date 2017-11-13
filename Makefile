@@ -3,4 +3,4 @@ make: build
 
 .PHONY: build
 build:
-	pug ./src/index.html -o .
+	pug src -o .
