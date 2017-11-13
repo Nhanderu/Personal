@@ -2,16 +2,31 @@ doctype html
 
 html
 
+    link(rel="stylesheet", href="index.css")
+
     body
 
-        .main
-            | Hello, my name is Rafael, I'm 21 and I'm from São Paulo, Brazil.
-            | I'm a programmer, a Corinthians huge fan, an anarcho-capitalism enthusiast
-            | and a lover of coffee, philosophy, comp. sci. and linguistics.
+        .box
 
-        .info
-            | You can see more about me in the following links:
+            img.picture(src="static/profile.png")
 
-            ul
-                li Github = https://github.com/Nhanderu
-                li LinkedIn = https://linkedin.com/in/rafaelbzescobar
+            .profile
+
+                .description
+                    | Hello, my name is Rafael, I'm 21 and I'm from São Paulo, Brazil.
+                    | I'm a programmer, a Corinthians huge fan, an anarcho-capitalism enthusiast
+                    | and a lover of coffee, philosophy, comp. sci. and linguistics.
+
+                .social
+                    ul
+                        li: a(href="https://facebook.com/Nhanderu") Facebook
+                        li: a(href="https://linkedin.com/in/rafaelbzescobar") LinkedIn
+                        li: a(href="https://github.com/Nhanderu") Github
+                        li: a(href="https://telegram.me/Nhanderu") Telegram
+                        li: a(href="https://steamcommunity.com/id/Nhanderu") Steam
+
+            .links
+                ul
+                    li: a(href="#") Blog
+                    li: a(href="#") Bitcoin
+                    li: a(href="#") Résumé
