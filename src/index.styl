@@ -1,3 +1,4 @@
+
 /*
  * Grid.
  */
@@ -7,21 +8,27 @@
     grid-template-columns repeat(3, 1fr)
     grid-row-gap 1em
 
-.grid-box-profile
-    grid-column-start 2
-    grid-column-end 3
+    > .grid-box-picture
+        grid-column-start 1
+        grid-column-end 1
 
-.grid-box-links
-    grid-column-start 1
-    grid-column-end 3
+        > .picture
+            height 300px
+            width 300px
 
-/*
- * Picture.
- */
+    > .grid-box-profile
+        background-color #794
+        padding 1em
+        grid-column-start 2
+        grid-column-end 3
 
-.picture
-    height 300px
-    width 300px
+        > .description
+            font-family 'Roboto', sans-serif
+            color white
+
+    > .grid-box-links
+        grid-column-start 1
+        grid-column-end 3
 
 /*
  * Links.
