@@ -1,5 +1,11 @@
 doctype html
 
+- const msToYears = ms => ms / 31557600000
+
+- const year    = new Date().getFullYear()
+- const ageInMs = new Date() - new Date(1996, 7, 27)
+- const age     = Math.floor(msToYears(ageInMs))
+
 html
 
     header
@@ -21,7 +27,7 @@ html
             .grid-box-profile
 
                 .description
-                    | Hello, my name is Rafael, I'm 21 and I'm from São Paulo, Brazil.
+                    | Hello, my name is Rafael, I'm #{age} and I'm from São Paulo, Brazil.
                     | I'm a programmer, a Corinthians huge fan, an anarcho-capitalism enthusiast
                     | and a lover of coffee, philosophy, comp. sci. and linguistics.
 
