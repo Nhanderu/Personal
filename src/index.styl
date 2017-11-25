@@ -1,19 +1,66 @@
-.box
-    position absolute
-    top 50%
-    left 50%
-    transform translate(-50%, -50%)
+/*
+ * Grid.
+ */
 
-.picture
-.profile
-    border 1px solid black
+.grid-wrapper
+    display grid
+    grid-template-columns repeat(3, 1fr)
+    grid-row-gap 1em
+
+.grid-box-profile
+    grid-column-start 2
+    grid-column-end 3
+
+.grid-box-links
+    grid-column-start 1
+    grid-column-end 3
+
+/*
+ * Picture.
+ */
 
 .picture
     height 300px
     width 300px
 
-.description
-    background-color red
+/*
+ * Links.
+ */
 
-.social
-    background-color green
+.fa
+    color black
+
+.fa:hover
+    color white
+
+.fa-facebook:hover
+    background-color #3a5795
+
+.fa-linkedin:hover
+    background-color #007bb6
+
+.fa-github:hover
+    background-color black
+
+.fa-telegram:hover
+    background-color #0088cc
+
+.fa-steam:hover
+    background-color black
+
+.fa-envelope-o:hover
+    background-color #777
+
+.menu-item
+    display inline
+    text-decoration none
+
+/*
+ * Util.
+ */
+
+.screen-centered
+    position absolute
+    top 50%
+    left 50%
+    transform translate(-50%, -50%)

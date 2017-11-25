@@ -3,30 +3,43 @@ doctype html
 html
 
     link(rel="stylesheet", href="index.css")
+    link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css")
 
     body
 
-        .box
+        .grid-wrapper.screen-centered
 
-            img.picture(src="static/profile.png")
+            .grid-box-picture
+                img.picture(src="static/profile.png")
 
-            .profile
+            .grid-box-profile
 
                 .description
                     | Hello, my name is Rafael, I'm 21 and I'm from São Paulo, Brazil.
                     | I'm a programmer, a Corinthians huge fan, an anarcho-capitalism enthusiast
                     | and a lover of coffee, philosophy, comp. sci. and linguistics.
 
-                .social
-                    ul
-                        li: a(href="https://facebook.com/Nhanderu") Facebook
-                        li: a(href="https://linkedin.com/in/rafaelbzescobar") LinkedIn
-                        li: a(href="https://github.com/Nhanderu") Github
-                        li: a(href="https://telegram.me/Nhanderu") Telegram
-                        li: a(href="https://steamcommunity.com/id/Nhanderu") Steam
+                .social: ul
 
-            .links
+                    li.social-item.menu-item: a(href="https://facebook.com/Nhanderu")
+                        i.fa.fa-facebook(aria-hidden="true")
+
+                    li.social-item.menu-item: a(href="https://linkedin.com/in/rafaelbzescobar")
+                        i.fa.fa-linkedin(aria-hidden="true")
+
+                    li.social-item.menu-item: a(href="https://github.com/Nhanderu")
+                        i.fa.fa-github(aria-hidden="true")
+
+                    li.social-item.menu-item: a(href="https://telegram.me/Nhanderu")
+                        i.fa.fa-telegram(aria-hidden="true")
+
+                    li.social-item.menu-item: a(href="https://steamcommunity.com/id/Nhanderu")
+                        i.fa.fa-steam(aria-hidden="true")
+
+                    li.social-item.menu-item: a(href="mailto:rescobar@protonmail.com")
+                        i.fa.fa-envelope-o(aria-hidden="true")
+
+            .grid-box-links
                 ul
-                    li: a(href="#") Blog
-                    li: a(href="#") Bitcoin
-                    li: a(href="#") Résumé
+                    li.menu-item: a(href="https://blog.nhanderu.com") Blog
+                    li.menu-item#btc-link: a(href="#") Bitcoin
