@@ -1,10 +1,19 @@
 doctype html
 
-- const msToYears = ms => ms / 31557600000
+-
+    const msToYears = ms => ms / (1000*60*60*24*(365+365+365+366)/4)
+    const ageInMs   = new Date() - new Date(1996, 7, 27)
+    const age       = Math.floor(msToYears(ageInMs))
 
-- const year    = new Date().getFullYear()
-- const ageInMs = new Date() - new Date(1996, 7, 27)
-- const age     = Math.floor(msToYears(ageInMs))
+-
+    const socialMenuLinks =
+        { "facebook":   "https://facebook.com/Nhanderu"
+        , "linkedin":   "https://linkedin.com/in/rafaelbzescobar"
+        , "github":     "https://github.com/Nhanderu"
+        , "telegram":   "https://telegram.me/Nhanderu"
+        , "steam":      "https://steamcommunity.com/id/Nhanderu"
+        , "envelope-o": "mailto:rescobar@protonmail.com"
+        }
 
 html
 
@@ -12,51 +21,34 @@ html
 
         meta(charset="utf-8")
 
-        link(rel="stylesheet", href="index.css")
+        link(inline, rel="stylesheet", href="index.css")
         link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css")
 
         title Rafael Escobar!
 
     body
 
-        .grid-wrapper.screen-centered
 
-            .grid-box-picture
+        .wrapper: .box-wrapper
+
+            .box-picture
                 img.picture(src="static/profile.png")
 
-            .grid-box-profile
+            .box-profile
 
                 .description
                     | Hello, my name is Rafael, I'm #{age} and I'm from São Paulo, Brazil.
                     | I'm a programmer, a Corinthians huge fan, an anarcho-capitalism enthusiast
-                    | and a lover of coffee, philosophy, comp. sci. and linguistics.
+                    | and a lover of coffee, beer, philosophy, comp. sci. and linguistics.
 
-                .social: ul
+                ul.social
+                    each value, key in socialMenuLinks
+                        li.social-item.menu-item
+                            a.link-fa(href=value)
+                                i(class="fa fa-"+key, aria-hidden="true")
 
-                    li.social-item.menu-item
-                        a(href="https://facebook.com/Nhanderu")
-                            i.fa.fa-facebook(aria-hidden="true")
-
-                    li.social-item.menu-item
-                        a(href="https://linkedin.com/in/rafaelbzescobar")
-                            i.fa.fa-linkedin(aria-hidden="true")
-
-                    li.social-item.menu-item
-                        a(href="https://github.com/Nhanderu")
-                            i.fa.fa-github(aria-hidden="true")
-
-                    li.social-item.menu-item
-                        a(href="https://telegram.me/Nhanderu")
-                            i.fa.fa-telegram(aria-hidden="true")
-
-                    li.social-item.menu-item
-                        a(href="https://steamcommunity.com/id/Nhanderu")
-                            i.fa.fa-steam(aria-hidden="true")
-
-                    li.social-item.menu-item
-                        a(href="mailto:rescobar@protonmail.com")
-                            i.fa.fa-envelope-o(aria-hidden="true")
-
-            .grid-box-links: ul
-                li.menu-item: a(href="https://blog.nhanderu.com") Blog
-                li.menu-item#btc-link: a(href="#") Bitcoin
+            .box-links: ul
+                li.links-item.menu-item
+                    a(href="https://blog.nhanderu.com") Blog
+                li.links-item.menu-item#btc-link
+                    a(href="#") Bitcoin

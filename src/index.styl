@@ -1,73 +1,108 @@
-
 /*
- * Grid.
+ * Common.
  */
 
-.grid-wrapper
-    display grid
-    grid-template-columns repeat(3, 1fr)
-    grid-row-gap 1em
+*
+    box-sizing border-box
+    margin 0
+    padding 0
 
-    > .grid-box-picture
-        grid-column-start 1
-        grid-column-end 1
-
-        > .picture
-            height 300px
-            width 300px
-
-    > .grid-box-profile
-        background-color #794
-        padding 1em
-        grid-column-start 2
-        grid-column-end 3
-
-        > .description
-            font-family 'Roboto', sans-serif
-            color white
-
-    > .grid-box-links
-        grid-column-start 1
-        grid-column-end 3
+img
+    height auto
+    max-width 100%
 
 /*
- * Links.
+ * Main.
  */
 
-.fa
-    color black
+.wrapper
+    display flex
+    justify-content center
+    align-items center
+    height 100vh
+    width 100vw
 
-.fa:hover
-    color white
+    > .box-wrapper
+        display flex
+        flex-wrap wrap
+        width 50rem
 
-.fa-facebook:hover
-    background-color #3a5795
+        > .box-picture
+            flex-basis 40%
 
-.fa-linkedin:hover
-    background-color #007bb6
+            > .picture
+                display block
+                width inherit
 
-.fa-github:hover
-    background-color black
+        > .box-profile
+            flex-basis 60%
+            display flex
+            flex-direction column
+            justify-content space-between
+            padding 3.5rem 2.5rem
+            background-color #794
 
-.fa-telegram:hover
-    background-color #0088cc
+            > .description
+                text-align justify
+                font-family 'Roboto', sans-serif
+                font-size 1.1rem
+                color white
 
-.fa-steam:hover
-    background-color black
+            > .social
+                display flex
+                justify-content space-between
 
-.fa-envelope-o:hover
-    background-color #777
+                > .social-item
+                    display flex
+                    justify-content center
 
-.menu-item
-    display inline
-    text-decoration none
+                    > .link-fa
+                        text-decoration none
+
+                        > .fa
+                            display flex
+                            justify-content center
+                            align-items center
+                            height 2.5rem
+                            width 2.5rem
+                            border-radius 100%
+                            font-size 1.5rem
+                            color black
+
+                        &:hover .fa
+                            color white
+
+                        &:hover .fa.fa-facebook
+                            background-color #3a5795
+
+                        &:hover .fa.fa-linkedin
+                            background-color #007bb6
+
+                        &:hover .fa.fa-github
+                            background-color black
+
+                        &:hover .fa.fa-telegram
+                            background-color #0088cc
+
+                        &:hover .fa.fa-steam
+                            background-color black
+
+                        &:hover .fa.fa-envelope-o
+                            background-color #505061
+
+        > .box-links
+            flex-basis 100%
+
+            > .links-item:hover
+                background-color: rgba(0,0,0,0.5);
 
 /*
  * Util.
  */
 
-.screen-centered
-    position absolute
-    top 50%
-    left 50%
-    transform translate(-50%, -50%)
+.menu-item
+    display inline
+    width 100%
+
+    > a
+        text-decoration none
