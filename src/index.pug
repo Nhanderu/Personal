@@ -1,0 +1,54 @@
+doctype html
+
+-
+    const msToYears = ms => ms / (1000*60*60*24*(365+365+365+366)/4)
+    const ageInMs   = new Date() - new Date(1996, 7, 27)
+    const age       = Math.floor(msToYears(ageInMs))
+
+-
+    const socialMenuLinks =
+        { "facebook":   "https://facebook.com/Nhanderu"
+        , "linkedin":   "https://linkedin.com/in/rafaelbzescobar"
+        , "github":     "https://github.com/Nhanderu"
+        , "telegram":   "https://telegram.me/Nhanderu"
+        , "steam":      "https://steamcommunity.com/id/Nhanderu"
+        , "envelope-o": "mailto:rescobar@protonmail.com"
+        }
+
+html
+
+    header
+
+        meta(charset="utf-8")
+
+        link(inline, rel="stylesheet", href="index.css")
+        link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css")
+
+        title Rafael Escobar!
+
+    body
+
+
+        .wrapper: .box-wrapper
+
+            .box-picture
+                img.picture(src="static/profile.png")
+
+            .box-profile
+
+                .description
+                    | Hello, my name is Rafael, I'm #{age} and I'm from São Paulo, Brazil.
+                    | I'm a programmer, a Corinthians huge fan, an anarcho-capitalism enthusiast
+                    | and a lover of coffee, beer, philosophy, comp. sci. and linguistics.
+
+                ul.social
+                    each value, key in socialMenuLinks
+                        li.social-item.menu-item
+                            a.link-fa(href=value)
+                                i(class="fa fa-"+key, aria-hidden="true")
+
+            .box-links: ul
+                li.links-item.menu-item
+                    a(href="https://blog.nhanderu.com") Blog
+                li.links-item.menu-item#btc-link
+                    a(href="#") Bitcoin
