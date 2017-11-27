@@ -20,7 +20,9 @@ RUN stylus src --compress --out build/1.raw
 
 # Bundles the files.
 RUN mkdir -p build/2.bundle
-RUN cat build/1.raw/index.html | inline-source --root build/1.raw/ > build/2.bundle/index.html
+RUN cat build/1.raw/index.html | \
+    inline-source --root build/1.raw/ > \
+    build/2.bundle/index.html
 
 # Copies to root directory.
 RUN cp build/2.bundle/index.html build/index.html
