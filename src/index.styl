@@ -11,6 +11,9 @@ img
     height auto
     max-width 100%
 
+a
+    font-family inherit
+
 /*
  * Main.
  */
@@ -21,6 +24,7 @@ img
     align-items center
     height 100vh
     width 100vw
+    font-family 'Roboto', sans-serif
 
     > .box-wrapper
         display flex
@@ -44,7 +48,6 @@ img
 
             > .description
                 text-align justify
-                font-family 'Roboto', sans-serif
                 font-size 1.1rem
                 color white
 
@@ -56,7 +59,7 @@ img
                     display flex
                     justify-content center
 
-                    > .link-fa
+                    > .social-item-link
                         text-decoration none
 
                         > .fa
@@ -68,6 +71,7 @@ img
                             border-radius 100%
                             font-size 1.5rem
                             color black
+                            transition .1s
 
                         &:hover .fa
                             color white
@@ -93,8 +97,28 @@ img
         > .box-links
             flex-basis 100%
 
-            > .links-item:hover
-                background-color: rgba(0,0,0,0.5);
+            > .links-list
+                display flex
+                justify-content space-between
+                margin-top 2rem
+
+                > .links-item
+                    display flex
+                    justify-content center
+
+                    > .links-item-link
+                        width 10rem
+                        padding .6rem
+                        border .3rem solid #bca
+                        text-align center
+                        text-transform uppercase
+                        color #bca
+                        transition-duration .1s
+
+                        &:hover
+                            background-color #475b28
+                            border-color #475b28
+                            color white
 
 /*
  * Util.

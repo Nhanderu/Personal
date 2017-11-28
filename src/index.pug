@@ -6,6 +6,13 @@ doctype html
     const age       = Math.floor(msToYears(ageInMs))
 
 -
+    const description = `
+        Hello, my name is Rafael, I'm ${age} and I'm from São Paulo, Brazil.
+        I'm a programmer, a Corinthians huge fan, an anarcho-capitalism enthusiast
+        and a lover of coffee, beer, philosophy, comp. sci. and linguistics.
+    `
+
+-
     const socialMenuLinks =
         { "facebook":   "https://facebook.com/Nhanderu"
         , "linkedin":   "https://linkedin.com/in/rafaelbzescobar"
@@ -35,20 +42,15 @@ html
                 img.picture(src="https://s.gravatar.com/avatar/4755404e7968a565720746514e473296?s=300")
 
             .box-profile
-
-                .description
-                    | Hello, my name is Rafael, I'm #{age} and I'm from São Paulo, Brazil.
-                    | I'm a programmer, a Corinthians huge fan, an anarcho-capitalism enthusiast
-                    | and a lover of coffee, beer, philosophy, comp. sci. and linguistics.
-
+                .description= description
                 ul.social
                     each value, key in socialMenuLinks
                         li.social-item.menu-item
-                            a.link-fa(href=value)
+                            a.social-item-link(href=value)
                                 i(class="fa fa-"+key, aria-hidden="true")
 
-            .box-links: ul
+            .box-links: ul.links-list
                 li.links-item.menu-item
-                    a(href="https://blog.nhanderu.com") Blog
-                li.links-item.menu-item#btc-link
-                    a(href="#") Bitcoin
+                    a.links-item-link(href="https://blog.nhanderu.com") Blog
+                li.links-item.menu-item
+                    a#btc-link.links-item-link(href="#") Bitcoin
