@@ -41,10 +41,10 @@ build: clean create-build-container
 		--name ${BUILD_CONTAINER_NAME} \
 		${BUILD_CONTAINER_NAME}
 	
-	# Gets the binary.
+	# Gets the final HTML file.
 	docker cp \
 		${BUILD_CONTAINER_NAME}:${WORKDIR}/build/index.html \
-		./index.html
+		./docs/index.html
 
 	# Kills the container.
 	docker stop ${BUILD_CONTAINER_NAME}
@@ -56,4 +56,4 @@ build: clean create-build-container
 
 .PHONY: clean
 clean:
-	rm -f index.html
+	rm -f docs/index.html
