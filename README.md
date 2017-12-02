@@ -2,6 +2,8 @@
 
 My personal website, running @ `nhanderu.com`!
 
-### License
+## License
 
-This project content and code is released under the terms of the [CC0](https://creativecommons.org/publicdomain/zero/1.0/) license.
+This project code is in the public domain. See the [LICENSE file][1].
+
+[1]: https://github.com/Nhanderu/i/blob/master/LICENSE
