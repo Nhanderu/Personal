@@ -1,56 +1,62 @@
 doctype html
 
 -
-    const msToYears = ms => ms / (1000*60*60*24*(365+365+365+366)/4)
-    const ageInMs   = new Date() - new Date(1996, 7, 27)
-    const age       = Math.floor(msToYears(ageInMs))
-
--
-    const description = `
-        Hello, my name is Rafael, I'm ${age} and I'm from São Paulo, Brazil.
-        I'm a programmer, a Corinthians huge fan, an anarcho-capitalism enthusiast
-        and a lover of coffee, beer, philosophy, comp. sci. and linguistics.
-    `
-
--
     const socialMenuLinks =
-        { "facebook":   "https://facebook.com/Nhanderu"
-        , "linkedin":   "https://linkedin.com/in/rafaelbzescobar"
-        , "github":     "https://github.com/Nhanderu"
-        , "telegram":   "https://telegram.me/Nhanderu"
-        , "steam":      "https://steamcommunity.com/id/Nhanderu"
-        , "envelope-o": "mailto:rescobar@protonmail.com"
+        { 'facebook':   'https://facebook.com/Nhanderu'
+        , 'linkedin':   'https://linkedin.com/in/rafaelbzescobar'
+        , 'github':     'https://github.com/Nhanderu'
+        , 'telegram':   'https://telegram.me/Nhanderu'
+        , 'steam':      'https://steamcommunity.com/id/Nhanderu'
+        , 'envelope-o': 'mailto:rescobar@protonmail.com'
         }
 
 html
 
     header
 
-        meta(charset="utf-8")
-
-        link(inline, rel="stylesheet", href="index.css")
-        link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css")
+        meta(charset='utf-8')
+        meta(name='author' content='Rafael Escobar')
+        meta(name='description' content='')
+        meta(name='viewport' content='width=device-width, initial-scale=1.0')
+        
+        link(inline, rel='stylesheet', href='index.css')
+        link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
 
         title Rafael Escobar!
 
     body
 
-
         .wrapper: .box-wrapper
 
             .box-picture
-                img.picture(src="https://s.gravatar.com/avatar/4755404e7968a565720746514e473296?s=300")
+                img#picture.picture
 
             .box-profile
-                .description= description
+                .description
+                    | Hello, my name is Rafael, I'm
+                    span#age-text= ' 666 '
+                    | and I'm from São Paulo, Brazil.
+                    | I'm a programmer, a Corinthians
+                    | huge fan, an anarcho-capitalism
+                    | enthusiast and a lover of coffee,
+                    | beer, philosophy, comp. sci.
+                    | and linguistics.
                 ul.social
                     each value, key in socialMenuLinks
                         li.social-item.menu-item
                             a.social-item-link(href=value)
-                                i(class="fa fa-"+key, aria-hidden="true")
+                                i(class=`fa fa-${key}`, aria-hidden='true')
 
             .box-links: ul.links-list
                 li.links-item.menu-item
-                    a.links-item-link(href="https://blog.nhanderu.com") Blog
+                    a.links-item-link(href='https://blog.nhanderu.com') Blog
                 li.links-item.menu-item
-                    a#btc-link.links-item-link(href="#") Bitcoin
+                    a#btc-link.links-item-link(href='#') Bitcoin
+
+        #btc-modal.modal
+            span.modal-close close
+            | Donate some BTCs for this poor programmer! Eu sô trabaiadô, sinhô!
+
+        script(inline, src='random-picture.js')
+        script(inline, src='bitcoin-modal.js')
+        script(inline, src='date-update.js')

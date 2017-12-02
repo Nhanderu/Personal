@@ -7,6 +7,9 @@
     margin 0
     padding 0
 
+body
+    font-family 'Roboto', sans-serif
+
 img
     height auto
     max-width 100%
@@ -24,7 +27,6 @@ a
     align-items center
     height 100vh
     width 100vw
-    font-family 'Roboto', sans-serif
 
     > .box-wrapper
         display flex
@@ -130,3 +132,24 @@ a
 
     > a
         text-decoration none
+
+.modal
+    position fixed
+    top 50%
+    left 50%
+    transform translate3d(-50%, -50%, 0)
+    padding 5rem
+    color white
+    background-color rgba(0, 0, 0, .7)
+    transition .5s
+    opacity 0
+    pointer-events none
+
+    > .modal-close
+        position absolute
+        top .3rem
+        left .5rem
+        cursor pointer
+
+        &:hover
+            text-decoration underline
