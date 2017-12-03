@@ -55,53 +55,54 @@ a
 
             > .social
                 display flex
-                justify-content space-between
+                justify-content center
+                height 4rem
 
                 > .social-item
                     display flex
                     justify-content center
+                    width 100%
 
                     > .social-item-link
+                        width 100%
+                        color black
                         text-decoration none
+                        font-size 1.5rem
 
                         > .fa
                             display flex
                             justify-content center
                             align-items center
-                            height 2.5rem
-                            width 2.5rem
-                            border-radius 100%
-                            font-size 1.5rem
-                            color black
+                            height 100%
                             transition .1s
 
-                        &:hover .fa
+                        &:hover
                             color white
 
-                        &:hover .fa.fa-facebook
-                            background-color #3a5795
+                        &:hover > .fa.fa-facebook
+                            background-color rgba(58, 87, 149, .7)
 
-                        &:hover .fa.fa-linkedin
-                            background-color #007bb6
+                        &:hover > .fa.fa-linkedin
+                            background-color rgba(0, 123, 182, .7)
 
-                        &:hover .fa.fa-github
-                            background-color black
+                        &:hover > .fa.fa-github
+                            background-color rgba(0, 0, 0, .5)
 
-                        &:hover .fa.fa-telegram
-                            background-color #0088cc
+                        &:hover > .fa.fa-telegram
+                            background-color rgba(0, 136, 204, .7)
 
-                        &:hover .fa.fa-steam
-                            background-color black
+                        &:hover > .fa.fa-steam
+                            background-color rgba(0, 0, 0, .5)
 
-                        &:hover .fa.fa-envelope-o
-                            background-color #505061
+                        &:hover > .fa.fa-envelope-o
+                            background-color rgba(80, 80, 97, .7)
 
         > .box-links
             flex-basis 100%
 
             > .links-list
                 display flex
-                justify-content space-between
+                justify-content space-around
                 margin-top 2rem
 
                 > .links-item
@@ -114,6 +115,7 @@ a
                         border .3rem solid #bca
                         text-align center
                         text-transform uppercase
+                        text-decoration none
                         color #bca
                         transition-duration .1s
 
@@ -123,15 +125,8 @@ a
                             color white
 
 /*
- * Util.
+ * Modal.
  */
-
-.menu-item
-    display inline
-    width 100%
-
-    > a
-        text-decoration none
 
 .modal
     position fixed

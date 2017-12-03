@@ -43,14 +43,14 @@ html
                     | and linguistics.
                 ul.social
                     each value, key in socialMenuLinks
-                        li.social-item.menu-item
+                        li.social-item
                             a.social-item-link(href=value)
                                 i(class=`fa fa-${key}`, aria-hidden='true')
 
             .box-links: ul.links-list
-                li.links-item.menu-item
+                li.links-item
                     a.links-item-link(href='https://blog.nhanderu.com') Blog
-                li.links-item.menu-item
+                li.links-item
                     a#btc-link.links-item-link(href='#') Bitcoin
 
         #btc-modal.modal
