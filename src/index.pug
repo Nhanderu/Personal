@@ -2,12 +2,16 @@ doctype html
 
 -
     const socialMenuLinks =
-        { 'facebook':   'https://facebook.com/Nhanderu'
-        , 'linkedin':   'https://linkedin.com/in/rafaelbzescobar'
-        , 'github':     'https://github.com/Nhanderu'
-        , 'telegram':   'https://telegram.me/Nhanderu'
-        , 'steam':      'https://steamcommunity.com/id/Nhanderu'
-        , 'envelope-o': 'mailto:rescobar@protonmail.com'
+        { 'facebook-f':     'https://facebook.com/Nhanderu'
+        , 'linkedin-in':    'https://linkedin.com/in/rafaelbzescobar'
+        , 'github':         'https://github.com/Nhanderu'
+        , 'telegram-plane': 'https://telegram.me/Nhanderu'
+        , 'steam-symbol':   'https://steamcommunity.com/id/Nhanderu'
+        , 'instagram':      'https://www.instagram.com/zichiaescobar'
+        , 'lastfm':         'https://www.last.fm/user/Taevataat'
+        , 'goodreads-g':    'https://www.goodreads.com/Nhanderu'
+        , 'strava':         'https://www.strava.com/athletes/nhanderu'
+        , 'medium-m':       'https://medium.com/@Nhanderu'
         }
 
 html
@@ -21,6 +25,8 @@ html
         
         link(inline, rel='stylesheet', href='index.css')
         link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
+        link(rel='stylesheet', href='https://use.fontawesome.com/releases/v5.0.13/css/brands.css', integrity='sha384-VGCZwiSnlHXYDojsRqeMn3IVvdzTx5JEuHgqZ3bYLCLUBV8rvihHApoA1Aso2TZA', crossorigin='anonymous')
+        link(rel='stylesheet', href='https://use.fontawesome.com/releases/v5.0.13/css/fontawesome.css', integrity='sha384-GVa9GOgVQgOk+TNYXu7S/InPTfSDTtBalSgkgqQ7sCik56N9ztlkoTr2f/T44oKV', crossorigin='anonymous')
 
         title Rafael Escobar!
 
@@ -41,15 +47,18 @@ html
                     | enthusiast and a lover of coffee,
                     | beer, philosophy, comp. sci.
                     | and linguistics.
-                ul.social
-                    each value, key in socialMenuLinks
-                        li.social-item
-                            a.social-item-link(href=value)
-                                i(class=`fa fa-${key}`, aria-hidden='true')
+                .social
+                    ul.social-list
+                        each value, key in socialMenuLinks
+                            li.social-item
+                                a.social-item-link(href=value)
+                                    i(class=`fab fa-${key}`, aria-hidden='true')
 
             .box-links: ul.links-list
                 li.links-item
                     a.links-item-link(href='https://blog.nhanderu.com') Blog
+                li.links-item
+                    a.links-item-link(href='mailto:rescobar@protonmail.com') Email me
                 li.links-item
                     a#btc-link.links-item-link(href='#') Bitcoin
 

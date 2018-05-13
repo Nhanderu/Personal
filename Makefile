@@ -15,19 +15,23 @@ make: build
 create-build-container:
 
 	# Verifies if the container already exists.
-	$(eval CONTAINER_ID:=$(shell docker ps --quiet --all --filter ancestor=$(BUILD_CONTAINER_NAME)))
+	$(eval CONTAINER_ID:=$( \
+		shell docker ps \
+			--quiet \
+			--all \
+			--filter name=$(BUILD_CONTAINER_NAME) \
+	))
 	
 	# If it does, removes it.
 	if [ $(CONTAINER_ID) ]; then \
-		docker stop $(CONTAINER_ID) && \
-		docker rm $(CONTAINER_ID) && \
+		docker stop   $(CONTAINER_ID) && \
+		docker rm     $(CONTAINER_ID) && \
 		docker rmi -f $(BUILD_CONTAINER_NAME); \
 	fi
 
 	# Creates "build" container.
 	docker build \
-		--file Dockerfile.build \
-		--tag ${BUILD_CONTAINER_NAME}:latest \
+		--tag       ${BUILD_CONTAINER_NAME}:latest \
 		--build-arg WORKDIR=${WORKDIR} \
 		.
 
@@ -38,7 +42,7 @@ build: clean create-build-container
 	# Builds inside the container.
 	docker run \
 		--detach \
-		--name ${BUILD_CONTAINER_NAME} \
+		--name   ${BUILD_CONTAINER_NAME} \
 		${BUILD_CONTAINER_NAME}
 	
 	# Gets the final HTML file.
@@ -48,7 +52,7 @@ build: clean create-build-container
 
 	# Kills the container.
 	docker stop ${BUILD_CONTAINER_NAME}
-	docker rm ${BUILD_CONTAINER_NAME}
+	docker rm   ${BUILD_CONTAINER_NAME}
 
 ############
 ## Others ##
