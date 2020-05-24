@@ -1,173 +1,210 @@
-/*
- * Common.
- */
+@media screen
 
-*
-    box-sizing border-box
-    margin 0
-    padding 0
+    /*
+     * Common.
+     */
 
-body
-    font-family 'Roboto', sans-serif
+    *
+        box-sizing border-box
+        margin 0
+        padding 0
 
-img
-    height auto
-    max-width 100%
+    body
+        font-family 'Roboto', sans-serif
 
-a
-    font-family inherit
+    img
+        height auto
+        max-width 100%
 
-/*
- * Main.
- */
+    a
+        font-family inherit
 
-.wrapper
-    display flex
-    justify-content center
-    align-items center
-    height 100vh
-    width 100vw
+    /*
+     * Main.
+     */
 
-    > .box-wrapper
+    .wrapper
         display flex
-        flex-wrap wrap
-        width 50rem
+        justify-content center
+        height 100vh
+        width 100vw
 
-        > .box-picture
-            flex-basis 40%
-
-            > .picture
-                display block
-                width 100%
-
-        > .box-profile
-            flex-basis 60%
+        > .box-wrapper
             display flex
-            flex-direction column
-            justify-content space-between
-            padding 2.5rem
-            background-color #794
+            flex-wrap wrap
 
-            > .description
-                text-align justify
-                font-size 1.1rem
-                color white
-
-            > .social
+            > .box-profile
                 display flex
-                justify-content center
-                align-items center
+                flex-direction column
+                justify-content space-around
+                background-color #794
 
-                > .social-list
+                > .description
+                    text-align justify
+                    font-size 1.1rem
+                    color white
+
+                > .social
                     display flex
                     justify-content center
-                    flex-flow row wrap
-                    height 8rem
-                    width 20rem
+                    align-items center
 
-                    > .social-item
+                    > .social-list
                         display flex
                         justify-content center
-                        width 4rem
-                        height 4rem
+                        flex-flow row wrap
+                        height 8rem
+                        width 20rem
 
-                        > .social-item-link
-                            color black
-                            text-decoration none
-                            font-size 1.5rem
-                            width 100%
-                            height 100%
+                        > .social-item
+                            display flex
+                            justify-content center
+                            width 4rem
+                            height 4rem
 
-                            > .fab
-                                display flex
-                                justify-content center
-                                flex-flow row wrap
-                                align-items center
+                            > .social-item-link
+                                color black
+                                text-decoration none
+                                font-size 1.5rem
                                 width 100%
                                 height 100%
-                                transition .1s
+
+                                > .fab
+                                    display flex
+                                    justify-content center
+                                    flex-flow row wrap
+                                    align-items center
+                                    width 100%
+                                    height 100%
+                                    transition .1s
+
+                                &:hover
+                                    color white
+
+                                &:hover > .fab.fa-facebook-f
+                                    background-color rgba(58, 87, 149, .7)
+
+                                &:hover > .fab.fa-linkedin-in
+                                    background-color rgba(0, 123, 182, .7)
+
+                                &:hover > .fab.fa-github
+                                    background-color rgba(0, 0, 0, .5)
+
+                                &:hover > .fab.fa-telegram-plane
+                                    background-color rgba(0, 136, 204, .7)
+
+                                &:hover > .fab.fa-reddit-alien
+                                    background-color rgba(255, 69, 0, .7)
+
+                                &:hover > .fab.fa-instagram
+                                    background-color rgba(225, 48, 108, .7)
+
+                                &:hover > .fab.fa-lastfm
+                                    background-color rgba(213, 16, 7, .7)
+
+                                &:hover > .fab.fa-goodreads-g
+                                    background-color rgba(85, 59, 8, .7)
+
+                                &:hover > .fab.fa-strava
+                                    background-color rgba(252, 76, 2, .7)
+
+                                &:hover > .fab.fa-steam-symbol
+                                    background-color rgba(0, 0, 0, .5)
+
+            > .box-links
+                flex-basis 100%
+
+                > .links-list
+                    display flex
+                    justify-content space-around
+                    margin-top 2rem
+
+                    > .links-item
+                        display flex
+                        justify-content center
+
+                        > .links-item-link
+                            width 10rem
+                            padding .6rem
+                            border .3rem solid #bca
+                            text-align center
+                            text-transform uppercase
+                            text-decoration none
+                            color #bca
+                            transition-duration .1s
 
                             &:hover
+                                background-color #475b28
+                                border-color #475b28
                                 color white
 
-                            &:hover > .fab.fa-facebook-f
-                                background-color rgba(58, 87, 149, .7)
+    /*
+     * Modal.
+     */
 
-                            &:hover > .fab.fa-linkedin-in
-                                background-color rgba(0, 123, 182, .7)
+    .modal
+        position fixed
+        top 50%
+        left 50%
+        transform translate3d(-50%, -50%, 0)
+        padding 5rem
+        color white
+        background-color rgba(0, 0, 0, .7)
+        transition .5s
+        opacity 0
+        pointer-events none
 
-                            &:hover > .fab.fa-github
-                                background-color rgba(0, 0, 0, .5)
+        > .modal-close
+            position absolute
+            top .3rem
+            left .5rem
+            cursor pointer
 
-                            &:hover > .fab.fa-telegram-plane
-                                background-color rgba(0, 136, 204, .7)
+            &:hover
+                text-decoration underline
 
-                            &:hover > .fab.fa-reddit-alien
-                                background-color rgba(255, 69, 0, .7)
+    /*
+     * Media specific.
+     */
 
-                            &:hover > .fab.fa-instagram
-                                background-color rgba(225, 48, 108, .7)
+    @media (max-width: 800px)
 
-                            &:hover > .fab.fa-lastfm
-                                background-color rgba(213, 16, 7, .7)
+        .wrapper > .box-wrapper
+            flex-direction row
+            justify-content center
 
-                            &:hover > .fab.fa-goodreads-g
-                                background-color rgba(85, 59, 8, .7)
-
-                            &:hover > .fab.fa-strava
-                                background-color rgba(252, 76, 2, .7)
-
-                            &:hover > .fab.fa-steam-symbol
-                                background-color rgba(0, 0, 0, .5)
-
-        > .box-links
-            flex-basis 100%
-
-            > .links-list
+            > .box-picture
                 display flex
-                justify-content space-around
-                margin-top 2rem
+                align-items center
+                width 60vw
+                height 40vh
 
-                > .links-item
-                    display flex
-                    justify-content center
+            > .box-profile
+                padding 1rem
+                height 40vh
+                width 100vw
 
-                    > .links-item-link
-                        width 10rem
-                        padding .6rem
-                        border .3rem solid #bca
-                        text-align center
-                        text-transform uppercase
-                        text-decoration none
-                        color #bca
-                        transition-duration .1s
+                > .description
+                    margin 0 2rem
 
-                        &:hover
-                            background-color #475b28
-                            border-color #475b28
-                            color white
+            > .box-links
+                height 15vh
 
-/*
- * Modal.
- */
+    @media (min-width: 801px)
 
-.modal
-    position fixed
-    top 50%
-    left 50%
-    transform translate3d(-50%, -50%, 0)
-    padding 5rem
-    color white
-    background-color rgba(0, 0, 0, .7)
-    transition .5s
-    opacity 0
-    pointer-events none
+        .wrapper
+            align-items center
 
-    > .modal-close
-        position absolute
-        top .3rem
-        left .5rem
-        cursor pointer
+            > .box-wrapper
+                width 50rem
 
-        &:hover
-            text-decoration underline
+                > .box-picture
+                    flex-basis 40%
+
+                    > .picture
+                        display block
+                        width 100%
+
+                > .box-profile
+                    padding 2.5rem
+                    flex-basis 60%

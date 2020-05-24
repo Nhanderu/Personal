@@ -38,12 +38,9 @@ html
                 .description
                     | Hello, my name is Rafael, I'm
                     span#age-text= ' 666 '
-                    | and I'm from São Paulo, Brazil.
-                    | I'm a programmer, a Corinthians
-                    | huge fan, an anarcho-capitalism
-                    | enthusiast and a lover of coffee,
-                    | beer, philosophy, comp. sci.
-                    | and linguistics.
+                    | and I'm from São Paulo, Brazil. I'm a programmer, a S. C. Corinthians P. huge fan, an
+                    | anarcho-capitalism enthusiast and a lover of coffee, beer, philosophy, comp. sci. and
+                    | linguistics.
                 .social
                     ul.social-list
                         each value, key in socialMenuLinks
@@ -52,8 +49,6 @@ html
                                     i(class=`fab fa-${key}`, aria-hidden='true')
 
             .box-links: ul.links-list
-                li.links-item
-                    a.links-item-link(href='https://blog.nhanderu.com') Blog
                 li.links-item
                     a.links-item-link(href='mailto:rescobar@protonmail.com') Mail me
                 li.links-item
@@ -66,6 +61,19 @@ html
         script(inline, src='bitcoin-modal.js')
         script(inline, src='date-update.js')
 
-        link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
-        link(rel='stylesheet', href='https://use.fontawesome.com/releases/v5.0.13/css/brands.css', integrity='sha384-VGCZwiSnlHXYDojsRqeMn3IVvdzTx5JEuHgqZ3bYLCLUBV8rvihHApoA1Aso2TZA', crossorigin='anonymous')
-        link(rel='stylesheet', href='https://use.fontawesome.com/releases/v5.0.13/css/fontawesome.css', integrity='sha384-GVa9GOgVQgOk+TNYXu7S/InPTfSDTtBalSgkgqQ7sCik56N9ztlkoTr2f/T44oKV', crossorigin='anonymous')
+        link(
+            rel='stylesheet',
+            href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css',
+        )
+        link(
+            rel='stylesheet',
+            href='https://use.fontawesome.com/releases/v5.0.13/css/brands.css',
+            integrity='sha384-VGCZwiSnlHXYDojsRqeMn3IVvdzTx5JEuHgqZ3bYLCLUBV8rvihHApoA1Aso2TZA',
+            crossorigin='anonymous',
+        )
+        link(
+            rel='stylesheet',
+            href='https://use.fontawesome.com/releases/v5.0.13/css/fontawesome.css',
+            integrity='sha384-GVa9GOgVQgOk+TNYXu7S/InPTfSDTtBalSgkgqQ7sCik56N9ztlkoTr2f/T44oKV',
+            crossorigin='anonymous',
+        )
