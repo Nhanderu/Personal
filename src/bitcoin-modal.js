@@ -1,18 +1,25 @@
-const link        = window['btc-link'] || document.getElementById('btc-link')
-const modal       = window['btc-modal'] || document.getElementById('btc-modal')
-const modalCloser = modal.getElementsByClassName('modal-close')[0]
+const link         = window['btc-link'] || document.getElementById('btc-link')
+const modal        = window['btc-modal'] || document.getElementById('btc-modal')
+const modalClosers = modal.getElementsByClassName('modal-close')
 
-const pointerEventsByOpacity =
-    { 1: 'all'
-    , 0: 'none'
-    }
+const isModalOpen = () => !!Number(modal.style.opacity)
 
-link.addEventListener('click', () => {
-    modal.style.opacity = Number(!Number(modal.style.opacity))
-    modal.style.pointerEvents = pointerEventsByOpacity[modal.style.opacity]
-})
-
-modalCloser.addEventListener('click', () => {
+const closeModal = () => {
     modal.style.opacity = 0
-    modal.style.pointerEvents = pointerEventsByOpacity[modal.style.opacity]
+    modal.style.pointerEvents = 'none'
+}
+
+const openModal = () => {
+    modal.style.opacity = 1
+    modal.style.pointerEvents = 'all'
+}
+
+window.addEventListener('click', event => {
+    if (event.target == link)
+        isModalOpen() ? closeModal() : openModal()
+    else if (event.target != modal)
+        isModalOpen() && closeModal()
 })
+
+for (const modalCloser of modalClosers)
+    modalCloser.addEventListener('click', closeModal)
