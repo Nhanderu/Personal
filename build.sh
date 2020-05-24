@@ -1,30 +1,15 @@
 #!/usr/bin/env bash
 
-CONTAINER_NAME=i-build
-WORKDIR=/opt/app
+# Builds the code.
+mkdir -p build/1.raw
+pug src --out build/1.raw
+stylus src --compress --out build/1.raw
+cp src/*.js build/1.raw
 
-CONTAINER_ID=`docker ps --quiet --all --filter name="$CONTAINER_NAME"`
+# Bundles the files.
+mkdir -p build/2.bundle
+cat build/1.raw/index.html | inline-source --root build/1.raw/ > build/2.bundle/index.html
 
-if [ ! -z "$CONTAINER_ID" ]; then
-    docker stop   "$CONTAINER_ID";
-    docker rm     "$CONTAINER_ID";
-    docker rmi -f "$CONTAINER_NAME";
-fi
-
-docker build \
-    --tag       "$CONTAINER_NAME":latest \
-    --build-arg WORKDIR="$WORKDIR" \
-    .
-
-docker run \
-    --detach \
-    --name   "$CONTAINER_NAME" \
-    "$CONTAINER_NAME"
-
-rm -f docs/index.html
-docker cp \
-    "$CONTAINER_NAME":"$WORKDIR"/build/index.html \
-    ./docs/index.html
-
-docker stop "$CONTAINER_NAME"
-docker rm   "$CONTAINER_NAME"
+# Copies to output directory.
+mkdir -p docs
+cp build/2.bundle/index.html docs/index.html
