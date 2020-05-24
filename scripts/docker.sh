@@ -12,6 +12,7 @@ if [ ! -z "$CONTAINER_ID" ]; then
 fi
 
 docker build \
+    --file      ./scripts/Dockerfile \
     --tag       "$CONTAINER_NAME":latest \
     --build-arg WORKDIR="$WORKDIR" \
     .
