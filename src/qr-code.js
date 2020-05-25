@@ -16,14 +16,16 @@ const setCrypto = event => {
         else
             button.classList.remove('button-active')
 
+    const crypto = event.target.getAttribute("data-crypto")
     const walletAddress = event.target.getAttribute("data-wallet-address")
+
     document.getElementById('wallet-address').innerText = walletAddress
-    qrCode.makeCode('bitcoin:' + walletAddress)
+    qrCode.makeCode(`${crypto}:${walletAddress}`)
 
 }
 
 for (const button of cryptoButtons)
     button.addEventListener('click', setCrypto)
 
-const defaultButton = document.querySelectorAll('[data-crypto="bitcoin"]')[0]
+const defaultButton = document.querySelector('[data-crypto="bitcoin"]')
 setCrypto({ target: defaultButton })
