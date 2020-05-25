@@ -10,9 +10,9 @@ RUN npm i -g stylus
 RUN npm i -g inline-source-cli
 
 # Prepares the source.
-RUN mkdir -p src
 ADD ./src src
-ADD ./build.sh build.sh
+ADD ./lib lib
+ADD ./scripts/build.sh build.sh
 
 # Builds the code.
 RUN ./build.sh

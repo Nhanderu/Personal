@@ -14,6 +14,21 @@ doctype html
         , 'steam-symbol':   'https://steamcommunity.com/id/Nhanderu'
         }
 
+    const walletAddresses =
+        { bitcoin:
+            { name: 'Bitcoin'
+            , address: '3HqHtkJXny6ktgKrAgBdCZpQ8Thv1LE2uU'
+            }
+        , ethereum:
+            { name: 'Ethereum'
+            , address: 'unavailable'
+            }
+        , litecoin:
+            { name: 'Litecoin'
+            , address: 'unavailable'
+            }
+        }
+
 html
 
     header
@@ -32,7 +47,7 @@ html
         .wrapper: .box-wrapper
 
             .box-picture
-                img#picture.picture(src='https://s.gravatar.com/avatar/4755404e7968a565720746514e473296?s=300')
+                img#picture(src='https://s.gravatar.com/avatar/4755404e7968a565720746514e473296?s=300')
 
             .box-profile
                 .description
@@ -50,15 +65,21 @@ html
 
             .box-links: ul.links-list
                 li.links-item
-                    a.links-item-link(href='mailto:rescobar@protonmail.com') Mail me
+                    a.links-item-link.button(href='mailto:rescobar@protonmail.com') Mail me
                 li.links-item
-                    a#btc-link.links-item-link(href='#') Bitcoin
+                    a#modal-link.links-item-link.button(href='#') Wallets
 
-        #btc-modal.modal
-            span.modal-close close
-            | Donate some BTCs for this poor programmer! Eu sô trabaiadô, sinhô!
+        #modal
+            .modal-wrapper
+                span#modal-closer close
+                .modal-links
+                    each value, key in walletAddresses
+                        span.button(data-crypto=key, data-wallet-address=value.address) #{value.name}
+                #qr-code
+                .box-wallet-address
+                    span Wallet address
+                    button#wallet-address.button
 
-        script(inline, src='bitcoin-modal.js')
         script(inline, src='date-update.js')
 
         link(
@@ -77,3 +98,7 @@ html
             integrity='sha384-GVa9GOgVQgOk+TNYXu7S/InPTfSDTtBalSgkgqQ7sCik56N9ztlkoTr2f/T44oKV',
             crossorigin='anonymous',
         )
+
+        script(inline, src='modal.js')
+        script(inline, src='../lib/qrcodejs/qrcode.min.js')
+        script(inline, src='qr-code.js')

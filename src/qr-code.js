@@ -1,0 +1,29 @@
+const cryptoButtons = document.querySelectorAll('[data-crypto]')
+
+const qrCodeImage = window['qr-code'] || document.getElementById('qr-code')
+const qrCode = new QRCode(qrCodeImage, {
+    text: '',
+    width: 320,
+    height: 320,
+    colorLight: '#BBCCAA',
+})
+
+const setCrypto = event => {
+
+    for (const button of cryptoButtons)
+        if (button == event.target)
+            event.target.classList.add('button-active')
+        else
+            button.classList.remove('button-active')
+
+    const walletAddress = event.target.getAttribute("data-wallet-address")
+    document.getElementById('wallet-address').innerText = walletAddress
+    qrCode.makeCode('bitcoin:' + walletAddress)
+
+}
+
+for (const button of cryptoButtons)
+    button.addEventListener('click', setCrypto)
+
+const defaultButton = document.querySelectorAll('[data-crypto="bitcoin"]')[0]
+setCrypto({ target: defaultButton })

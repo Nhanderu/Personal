@@ -1,6 +1,6 @@
-const link         = window['btc-link'] || document.getElementById('btc-link')
-const modal        = window['btc-modal'] || document.getElementById('btc-modal')
-const modalClosers = modal.getElementsByClassName('modal-close')
+const modal = window['modal'] || document.getElementById('modal')
+const modalLink = window['modal-link'] || document.getElementById('modal-link')
+const modalCloser = window['modal-closer'] || document.getElementById('modal-closer')
 
 const isModalOpen = () => !!Number(modal.style.opacity)
 
@@ -15,11 +15,10 @@ const openModal = () => {
 }
 
 window.addEventListener('click', event => {
-    if (event.target == link)
+    if (event.target == modalLink)
         isModalOpen() ? closeModal() : openModal()
+    else if (event.target == modalCloser)
+        closeModal()
     else if (event.target != modal)
         isModalOpen() && closeModal()
 })
-
-for (const modalCloser of modalClosers)
-    modalCloser.addEventListener('click', closeModal)

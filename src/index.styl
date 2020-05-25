@@ -12,10 +12,6 @@
     body
         font-family 'Roboto', sans-serif
 
-    img
-        height auto
-        max-width 100%
-
     a
         font-family inherit
 
@@ -123,45 +119,70 @@
                         display flex
                         justify-content center
 
-                        > .links-item-link
-                            width 10rem
-                            padding .6rem
-                            border .3rem solid #bca
-                            text-align center
-                            text-transform uppercase
-                            text-decoration none
-                            color #bca
-                            transition-duration .1s
-
-                            &:hover
-                                background-color #475b28
-                                border-color #475b28
-                                color white
-
     /*
      * Modal.
      */
 
-    .modal
+    #modal
+        display flex
+        align-items center
+        justify-content center
         position fixed
         top 50%
         left 50%
         transform translate3d(-50%, -50%, 0)
-        padding 5rem
         color white
         background-color rgba(0, 0, 0, .7)
         transition .5s
         opacity 0
         pointer-events none
 
-        > .modal-close
-            position absolute
-            top .3rem
-            left .5rem
-            cursor pointer
+        > .modal-wrapper
+            display flex
+            flex-direction column
+            align-items center
+            justify-content space-around
+            height 60vh
 
-            &:hover
-                text-decoration underline
+            > #modal-closer
+                position absolute
+                top .3rem
+                left .5rem
+                cursor pointer
+
+                &:hover
+                    text-decoration underline
+            
+            > .modal-links
+                display flex
+                justify-content space-around
+                width 100%
+
+            > #qr-code
+                display flex
+                align-items center
+                justify-content center
+                width 100%
+
+                > img
+                    border .3rem solid #bca
+                    height 320px
+                    width 320px
+
+            > .box-wallet-address
+                display flex
+                flex-direction column
+                align-items start
+                justify-content center
+                width 100%
+
+                > #wallet-address
+                    width 100%
+                    background-color rgba(0, 0, 0, 0)
+                    text-transform none
+
+                    &:hover
+                        background-color #475b28
 
     /*
      * Media specific.
@@ -176,6 +197,7 @@
             > .box-picture
                 display flex
                 align-items center
+                justify-content center
                 width 60vw
                 height 40vh
 
@@ -190,6 +212,13 @@
             > .box-links
                 height 15vh
 
+                .links-item-link
+                    width 7rem
+
+        #modal
+            height 100vh
+            width 100vw
+
     @media (min-width: 801px)
 
         .wrapper
@@ -201,10 +230,47 @@
                 > .box-picture
                     flex-basis 40%
 
-                    > .picture
+                    > #picture
                         display block
                         width 100%
 
                 > .box-profile
                     padding 2.5rem
                     flex-basis 60%
+
+                > .box-links .links-item-link
+                    width 12rem
+
+        #modal
+            height 70vh
+            width 30vw
+            min-width 400px
+
+    /*
+     * Utils.
+     */
+
+    .button
+        cursor pointer
+        padding .6rem
+        border .3rem solid #bca
+        text-align center
+        text-transform uppercase
+        text-decoration none
+        color #bca
+        transition-duration .1s
+
+        &:hover
+            background-color #475b28
+            border-color #475b28
+            color white
+
+        &:active
+            background-color #475b28
+            border-color #475b28
+            color white
+
+    .button-active
+        background-color #475b28
+        border-color #475b28
+        color white
