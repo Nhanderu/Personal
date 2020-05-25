@@ -69,7 +69,7 @@ html
                 li.links-item
                     a#modal-link.links-item-link.button(href='#') Wallets
 
-        #modal
+        #modal.tooltip
             .modal-wrapper
                 span#modal-closer close
                 .modal-links
@@ -77,10 +77,12 @@ html
                         span.button(data-crypto=key, data-wallet-address=value.address) #{value.name}
                 #qr-code
                 .box-wallet-address
-                    span Wallet address
+                    div
+                        span Wallet address
+                        span#clipboard-tooltip.tooltip copied
                     button#wallet-address.button
 
-        #modal-background
+        #modal-background.tooltip
 
         script(inline, src='date-update.js')
 
@@ -104,3 +106,4 @@ html
         script(inline, src='modal.js')
         script(inline, src='../lib/qrcodejs/qrcode.min.js')
         script(inline, src='qr-code.js')
+        script(inline, src='copy-address.js')

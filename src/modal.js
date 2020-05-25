@@ -6,17 +6,17 @@ const modalBackground = window['modal-background'] || document.getElementById('m
 const isModalOpen = () => !!Number(modal.style.opacity)
 
 const closeModal = () => {
-    modal.style.opacity = 0
-    modal.style.pointerEvents = 'none'
-    modalBackground.style.opacity = 0
-    modalBackground.style.pointerEvents = 'none'
+    modal.classList.add('tooltip')
+    modal.classList.remove('active-tooltip')
+    modalBackground.classList.add('tooltip')
+    modalBackground.classList.remove('active-tooltip')
 }
 
 const openModal = () => {
-    modal.style.opacity = 1
-    modal.style.pointerEvents = 'all'
-    modalBackground.style.opacity = 1
-    modalBackground.style.pointerEvents = 'all'
+    modal.classList.remove('tooltip')
+    modal.classList.add('active-tooltip')
+    modalBackground.classList.remove('tooltip')
+    modalBackground.classList.add('active-tooltip')
 }
 
 modalLink.addEventListener('click', () => isModalOpen() ? closeModal() : openModal())

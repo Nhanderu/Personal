@@ -134,9 +134,6 @@
         transform translate3d(-50%, -50%, 0)
         color white
         background-color rgba(0, 0, 0, .7)
-        transition opacity .5s
-        opacity 0
-        pointer-events none
 
         > .modal-wrapper
             display flex
@@ -177,6 +174,14 @@
                 justify-content center
                 width 100%
 
+                > div
+                    display flex
+                    justify-content space-between
+                    width 100%
+
+                    > #clipboard-tooltip
+                        font-size .8rem
+
                 > #wallet-address
                     width 100%
                     background-color rgba(0, 0, 0, 0)
@@ -192,7 +197,6 @@
         left 0
         height 100vh
         width 100vw
-        opacity 0
 
     /*
      * Media specific.
@@ -284,3 +288,13 @@
         background-color #475b28
         border-color #475b28
         color white
+
+    .tooltip
+        opacity 0
+        pointer-events none
+        transition opacity .5s
+
+    .active-tooltip
+        opacity 1
+        pointer-events all
+        transition opacity .5s
