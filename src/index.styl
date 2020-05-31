@@ -1,3 +1,11 @@
+/*
+ * Mixins.
+ */
+
+full-size()
+    height 100vh
+    width 100vw
+
 @media screen
 
     /*
@@ -9,7 +17,11 @@
         margin 0
         padding 0
 
+    html
+        full-size()
+
     body
+        full-size()
         font-family 'Roboto', sans-serif
 
     a
@@ -20,14 +32,16 @@
      */
 
     .wrapper
+        full-size()
         display flex
         justify-content center
-        height 100vh
-        width 100vw
 
         > .box-wrapper
             display flex
             flex-wrap wrap
+
+            > .box-picture > #picture
+                max-width 100%
 
             > .box-profile
                 display flex
@@ -135,21 +149,21 @@
         color white
         background-color rgba(0, 0, 0, .7)
 
+        > #modal-closer
+            position absolute
+            top .3rem
+            left .5rem
+            cursor pointer
+
+            &:hover
+                text-decoration underline
+
         > .modal-wrapper
             display flex
             flex-direction column
             align-items center
             justify-content space-around
-            height 60vh
-
-            > #modal-closer
-                position absolute
-                top .3rem
-                left .5rem
-                cursor pointer
-
-                &:hover
-                    text-decoration underline
+            height 70vh
             
             > .modal-links
                 display flex
@@ -191,12 +205,11 @@
                         background-color #475b28
 
     #modal-background
+        full-size()
         z-index 10
         position absolute
         top 0
         left 0
-        height 100vh
-        width 100vw
 
     /*
      * Media specific.
@@ -204,34 +217,42 @@
 
     @media (max-width: 800px)
 
-        .wrapper > .box-wrapper
-            flex-direction row
-            justify-content center
+        .wrapper
+            @supports (-webkit-appearance: none)
+                height calc(100vh - 56px)
 
-            > .box-picture
-                display flex
-                align-items center
+            > .box-wrapper
+                flex-direction row
                 justify-content center
-                width 60vw
-                height 40vh
 
-            > .box-profile
-                height 40vh
-                width 100vw
-                padding 1rem
+                > .box-picture
+                    display flex
+                    align-items center
+                    justify-content center
+                    width 60vw
+                    height 40vh
 
-                > .description
-                    margin 0 2rem
+                > .box-profile
+                    height 40vh
+                    width 100vw
+                    padding 1rem
 
-            > .box-links
-                height 15vh
+                    > .description
+                        margin 0 2rem
 
-                .links-item-link
-                    width 7rem
+                > .box-links
+                    height 15vh
+
+                    .links-item-link
+                        width 7rem
 
         #modal
-            height 100vh
-            width 100vw
+            full-size()
+
+            > #modal-closer
+                @supports (-webkit-appearance: none)
+                    top 56px
+                    left 56px
 
     @media (min-width: 801px)
 

@@ -70,8 +70,8 @@ html
                     a#modal-link.links-item-link.button(href='#') Wallets
 
         #modal.tooltip
+            span#modal-closer close
             .modal-wrapper
-                span#modal-closer close
                 .modal-links
                     each value, key in walletAddresses
                         span.button(data-crypto=key, data-wallet-address=value.address) #{value.name}
