@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+rm -rf build
+mkdir -p build
+
+pug src -o build
+stylus src -c -o build
+cp src/*.js build
+
+inline-source --compress --root build build/index.html docs/index.html
+
+rm -rf build
