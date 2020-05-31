@@ -31,7 +31,7 @@ doctype html
 
 html
 
-    header
+    head
 
         meta(charset='utf-8')
         meta(name='author' content='Rafael Escobar')
@@ -70,7 +70,8 @@ html
                     a#modal-link.links-item-link.button(href='#') Wallets
 
         #modal.tooltip
-            span#modal-closer close
+            span#modal-closer
+                i.fa.fa-times.fa-2x
             .modal-wrapper
                 .modal-links
                     each value, key in walletAddresses
@@ -86,24 +87,10 @@ html
 
         script(inline, src='date-update.js')
 
-        link(
-            rel='stylesheet',
-            href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css',
-        )
-        link(
-            rel='stylesheet',
-            href='https://use.fontawesome.com/releases/v5.0.13/css/brands.css',
-            integrity='sha384-VGCZwiSnlHXYDojsRqeMn3IVvdzTx5JEuHgqZ3bYLCLUBV8rvihHApoA1Aso2TZA',
-            crossorigin='anonymous',
-        )
-        link(
-            rel='stylesheet',
-            href='https://use.fontawesome.com/releases/v5.0.13/css/fontawesome.css',
-            integrity='sha384-GVa9GOgVQgOk+TNYXu7S/InPTfSDTtBalSgkgqQ7sCik56N9ztlkoTr2f/T44oKV',
-            crossorigin='anonymous',
-        )
-
-        script(inline, src='modal.js')
-        script(inline, src='../lib/qrcodejs/qrcode.min.js')
-        script(inline, src='qr-code.js')
-        script(inline, src='copy-address.js')
+        link(rel='stylesheet', href='https://use.fontawesome.com/releases/v5.13.0/css/all.css')
+        script(defer, src='https://kit.fontawesome.com/0159d4f9a6.js' crossorigin='anonymous')
+        
+        script(inline, defer, src='modal.js')
+        script(inline, defer, src='../lib/qrcodejs/qrcode.min.js')
+        script(inline, defer, src='qr-code.js')
+        script(inline, defer, src='copy-address.js')
