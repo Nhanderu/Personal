@@ -6,6 +6,11 @@ full-size()
     height 100vh
     width 100vw
 
+button-active()
+    background-color #475b28
+    border-color #475b28
+    color white
+
 @media screen
 
     /*
@@ -294,19 +299,13 @@ full-size()
         transition-duration .1s
 
         &:hover
-            background-color #475b28
-            border-color #475b28
-            color white
+            button-active()
 
         &:active
-            background-color #475b28
-            border-color #475b28
-            color white
+            button-active()
 
     .button-active
-        background-color #475b28
-        border-color #475b28
-        color white
+        button-active()
 
     .tooltip
         opacity 0
