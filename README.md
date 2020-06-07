@@ -4,7 +4,7 @@ My personal website, running @ `nhanderu.com`!
 
 ## Build
 
-To build it, simply run `./scripts/build.sh` (or `./scripts/docker.sh` if you want to build with Docker) in your terminal.
+To build it, simply run `./scripts/build`. The output will be on `/docs` folder.
 
 ## License
 
