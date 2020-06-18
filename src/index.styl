@@ -65,14 +65,12 @@ button-active()
                         display flex
                         justify-content center
                         flex-flow row wrap
-                        height 8rem
-                        width 20rem
+                        height 120px
+                        width 400px
 
                         > .social-item
                             display flex
                             justify-content center
-                            width 4rem
-                            height 4rem
 
                             > .social-item-link
                                 color black
@@ -96,20 +94,29 @@ button-active()
                                 &:hover > .fab.fa-facebook-f
                                     background-color rgba(58, 87, 149, .7)
 
-                                &:hover > .fab.fa-linkedin-in
-                                    background-color rgba(0, 123, 182, .7)
-
-                                &:hover > .fab.fa-github
-                                    background-color rgba(0, 0, 0, .5)
-
                                 &:hover > .fab.fa-telegram-plane
                                     background-color rgba(0, 136, 204, .7)
+
+                                &:hover > .fab.fa-linkedin-in
+                                    background-color rgba(0, 123, 182, .7)
 
                                 &:hover > .fab.fa-reddit-alien
                                     background-color rgba(255, 69, 0, .7)
 
                                 &:hover > .fab.fa-instagram
                                     background-color rgba(225, 48, 108, .7)
+
+                                &:hover > .fab.fa-github
+                                    background-color rgba(0, 0, 0, .7)
+
+                                &:hover > .fab.fa-discord
+                                    background-color rgba(114, 137, 218, .7)
+
+                                &:hover > .fab.fa-steam-symbol
+                                    background-color rgba(0, 0, 0, .7)
+
+                                &:hover > .fab.fa-spotify
+                                    background-color rgba(30, 215, 96, .7)
 
                                 &:hover > .fab.fa-lastfm
                                     background-color rgba(213, 16, 7, .7)
@@ -120,16 +127,13 @@ button-active()
                                 &:hover > .fab.fa-strava
                                     background-color rgba(252, 76, 2, .7)
 
-                                &:hover > .fab.fa-steam-symbol
-                                    background-color rgba(0, 0, 0, .5)
-
             > .box-links
                 flex-basis 100%
 
                 > .links-list
                     display flex
                     justify-content space-around
-                    margin-top 2rem
+                    margin-top 30px
 
                     > .links-item
                         display flex
@@ -153,8 +157,6 @@ button-active()
 
         > #modal-closer
             position absolute
-            top .3rem
-            left .5rem
             cursor pointer
 
             &:hover
@@ -179,7 +181,7 @@ button-active()
                 width 100%
 
                 > img
-                    border .3rem solid #bca
+                    border 5px solid #bca
                     height 320px
                     width 320px
 
@@ -231,18 +233,21 @@ button-active()
                 height 40vh
 
             > .box-profile
-                height 40vh
                 width 100vw
-                padding 1rem
+                padding 15px
 
                 > .description
-                    margin 0 2rem
+                    margin 0 30px
+
+                .social-item
+                    width 50px
+                    height 50px
 
             > .box-links
                 height 15vh
 
                 .links-item-link
-                    width 7rem
+                    width 100px
 
         #modal
             full-size()
@@ -257,7 +262,7 @@ button-active()
             align-items center
 
             > .box-wrapper
-                width 50rem
+                width 800px
 
                 > .box-picture
                     flex-basis 40%
@@ -267,16 +272,24 @@ button-active()
                         width 100%
 
                 > .box-profile
-                    padding 2.5rem
+                    padding 40px
                     flex-basis 60%
 
+                    .social-item
+                        width 60px
+                        height 60px
+
                 > .box-links .links-item-link
-                    width 12rem
+                    width 200px
 
         #modal
             height 70vh
             width 30vw
             min-width 400px
+
+            > #modal-closer
+                top 5px
+                left 10px
 
     /*
      * Utils.
@@ -284,8 +297,8 @@ button-active()
 
     .button
         cursor pointer
-        padding .6rem
-        border .3rem solid #bca
+        padding 10px
+        border 5px solid #bca
         text-align center
         text-transform uppercase
         text-decoration none
