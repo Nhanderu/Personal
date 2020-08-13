@@ -7,8 +7,9 @@ My personal website, running @ [nhanderu.com][1]!
 
 ## Redirect domains
 
-I'm still looking for the perfect domain. While I don't choose one, I'll live
-with multiple domains. Any of the following redirects to [nhanderu.com][1]:
+I'm still looking for the perfect domain. While I don't choose one, I'll
+live with multiple domains. Any of the following redirects to
+[nhanderu.com][1]:
 
 - [nhande.ru][2]
 - [esco.dev][3]
@@ -18,7 +19,8 @@ with multiple domains. Any of the following redirects to [nhanderu.com][1]:
 
 ## Build
 
-To build it, simply run `yarn && yarn build`. The output will be on `docs/`.
+To build it, simply run `yarn && yarn build`. The output will be on
+`docs/`.
 
 ## License
 
@@ -28,9 +30,9 @@ The `lib/` folder contains external libraries with their own licenses.
 
 ### Contribution
 
-Unless you explicitly state otherwise, any contribution intentionally submitted
-for inclusion in the work by you shall be in the public domain, without any
-additional terms or conditions.
+Unless you explicitly state otherwise, any contribution intentionally
+submitted for inclusion in the work by you shall be in the public
+domain, without any additional terms or conditions.
 
 [1]: https://nhanderu.com
 [2]: https://nhande.ru
