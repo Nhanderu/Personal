@@ -1,12 +1,15 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 
-rm -rf build
-mkdir -p build
+set -e
 
-pug src -o build
-stylus src -c -o build
+rm -rf build docs
+mkdir -p build docs
+
+npx pug src -o build
+npx stylus src -c -o build
 cp src/*.js build
-
-inline-source --compress --root build build/index.html docs/index.html
+npx inline-source --compress --root build build/index.html docs/index.html
 
 rm -rf build
+
+cp static/* docs
