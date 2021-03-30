@@ -1,335 +1,39 @@
-/*
- * Mixins.
- */
+*
+    background #282828
+    color #fdf4c1
+    font-family 'Fira Mono', monospace
 
-full-size()
-    height 100vh
-    width 100vw
+body
+    max-width 100vw
+    padding 0 36px
 
-button-active()
-    background-color #475b28
-    border-color #475b28
-    color white
-
-@media screen
-
-    /*
-     * Common.
-     */
-
-    *
-        box-sizing border-box
-        margin 0
-        padding 0
-
+@media (max-width: 600px)
     body
-        full-size()
-        font-family 'Roboto', sans-serif
+        padding 0 14px
 
-    a
-        font-family inherit
+main
+    max-width 480px
 
-    /*
-     * Main.
-     */
+h1
+    margin 14px 0
+    font-size 49px
+    font-weight normal
 
-    .wrapper
-        full-size()
-        display flex
-        justify-content center
+p
+    margin 7px 0
 
-        > .box-wrapper
-            display flex
-            flex-wrap wrap
+main, nav, #wallet
+    margin-top 21px
 
-            > .box-picture > #picture
-                max-width 100%
+#qr-code
+    margin 14px 0
 
-            > .box-profile
-                display flex
-                flex-direction column
-                justify-content space-around
-                background-color #794
+.invisible
+    opacity 0
+    pointer-events none
+    transition opacity .2s
 
-                > .description
-                    text-align justify
-                    font-size 1.1rem
-                    color white
-
-                > .social
-                    display flex
-                    justify-content center
-                    align-items center
-
-                    > .social-list
-                        display flex
-                        justify-content center
-                        flex-flow row wrap
-                        height 120px
-
-                        > .social-item
-                            display flex
-                            justify-content center
-
-                            > .social-item-link
-                                color black
-                                text-decoration none
-                                font-size 1.5rem
-                                width 100%
-                                height 100%
-
-                                > .fab, > .fas
-                                    display flex
-                                    justify-content center
-                                    flex-flow row wrap
-                                    align-items center
-                                    width 100%
-                                    height 100%
-                                    transition .1s
-
-                                &:hover
-                                    color white
-
-                                &:hover > .fa-facebook-f
-                                    background-color rgba(58, 87, 149, .7)
-
-                                &:hover > .fa-telegram-plane
-                                    background-color rgba(0, 136, 204, .7)
-
-                                &:hover > .fa-linkedin-in
-                                    background-color rgba(0, 123, 182, .7)
-
-                                &:hover > .fa-reddit-alien
-                                    background-color rgba(255, 69, 0, .7)
-
-                                &:hover > .fa-instagram
-                                    background-color rgba(225, 48, 108, .7)
-
-                                &:hover > .fa-github
-                                    background-color rgba(0, 0, 0, .7)
-
-                                &:hover > .fa-spotify
-                                    background-color rgba(30, 215, 96, .7)
-
-                                &:hover > .fa-steam-symbol
-                                    background-color rgba(0, 0, 0, .7)
-
-                                &:hover > .fa-film
-                                    background-color rgba(32, 40, 48, .7)
-
-                                &:hover > .fa-lastfm
-                                    background-color rgba(213, 16, 7, .7)
-
-                                &:hover > .fa-goodreads-g
-                                    background-color rgba(85, 59, 8, .7)
-
-                                &:hover > .fa-strava
-                                    background-color rgba(252, 76, 2, .7)
-
-            > .box-links
-                flex-basis 100%
-
-                > .links-list
-                    display flex
-                    justify-content space-around
-                    margin-top 30px
-
-                    > .links-item
-                        display flex
-                        justify-content center
-
-    /*
-     * Modal.
-     */
-
-    #modal
-        z-index 20
-        display flex
-        align-items center
-        justify-content center
-        position fixed
-        top 50%
-        left 50%
-        transform translate3d(-50%, -50%, 0)
-        color white
-        background-color rgba(0, 0, 0, .7)
-
-        > #modal-closer
-            position absolute
-            cursor pointer
-
-            &:hover
-                text-decoration underline
-
-        > .modal-wrapper
-            display flex
-            flex-direction column
-            align-items center
-            justify-content space-around
-            height 70vh
-            
-            > .modal-links
-                display flex
-                justify-content space-around
-                width 100%
-
-            > #qr-code
-                display flex
-                align-items center
-                justify-content center
-                width 100%
-
-                > img
-                    border 5px solid #bca
-                    height 320px
-                    width 320px
-
-            > .box-wallet-address
-                display flex
-                flex-direction column
-                align-items start
-                justify-content center
-                width 100%
-
-                > div
-                    display flex
-                    justify-content space-between
-                    width 100%
-
-                    > #clipboard-tooltip
-                        font-size .8rem
-
-                > #wallet-address
-                    width 100%
-                    background-color rgba(0, 0, 0, 0)
-                    text-transform none
-
-                    &:hover
-                        background-color #475b28
-
-    #modal-background
-        full-size()
-        z-index 10
-        position absolute
-        top 0
-        left 0
-
-    /*
-     * Media specific.
-     */
-
-    @media (max-width: 800px)
-
-        .wrapper > .box-wrapper
-            flex-direction row
-            justify-content center
-
-            > .box-picture
-                display flex
-                align-items center
-                justify-content center
-                width 60vw
-                height 40vh
-
-            > .box-profile
-                width 100vw
-                padding 15px
-
-                > .description
-                    margin 0 30px
-
-                > .social > .social-list
-                    width 300px
-
-                    > .social-item
-                        width 50px
-                        height 50px
-
-            > .box-links
-                height 15vh
-
-                .links-item-link
-                    width 100px
-
-        #modal
-            full-size()
-
-            > #modal-closer
-                top 56px
-                left 56px
-
-    @media (min-width: 801px)
-
-        .wrapper
-            align-items center
-
-            > .box-wrapper
-                width 800px
-
-                > .box-picture
-                    flex-basis 40%
-
-                    > #picture
-                        display block
-                        width 100%
-
-                > .box-profile
-                    padding 40px
-                    flex-basis 60%
-
-                    > .social > .social-list
-                        width 400px
-
-                        > .social-item
-                            width 60px
-                            height 60px
-
-                > .box-links .links-item-link
-                    width 200px
-
-        #modal
-            height 70vh
-            width 30vw
-            min-width 400px
-
-            > #modal-closer
-                top 5px
-                left 10px
-
-    /*
-     * Utils.
-     */
-
-    .button
-        cursor pointer
-        padding 10px
-        border 5px solid #bca
-        text-align center
-        text-transform uppercase
-        text-decoration none
-        color #bca
-        transition-duration .1s
-
-        &:hover
-            button-active()
-
-        &:active
-            button-active()
-
-    .button-active
-        button-active()
-
-    .tooltip
-        opacity 0
-        pointer-events none
-        transition opacity .5s
-
-    .active-tooltip
-        opacity 1
-        pointer-events all
-        transition opacity .5s
-
-    .webkit-mobile-full-height
-        @media (orientation: portrait)
-            height calc(100vh - 56px)
-            overflow hidden
+.visible
+    opacity 1
+    pointer-events all
+    transition opacity .2s

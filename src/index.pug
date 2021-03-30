@@ -1,35 +1,9 @@
 doctype html
 
 -
-    const socialMenuLinks =
-        { 'facebook-f':     'https://facebook.com/Nhanderu'
-        , 'telegram-plane': 'https://telegram.me/Nhanderu'
-        , 'linkedin-in':    'https://linkedin.com/in/rafaelbzescobar'
-        , 'reddit-alien':   'https://www.reddit.com/user/Nhanderu'
-        , 'instagram':      'https://www.instagram.com/zichiaescobar'
-        , 'github':         'https://github.com/Nhanderu'
-        , 'spotify':        'https://open.spotify.com/user/nhanderu'
-        , 'steam-symbol':   'https://steamcommunity.com/id/Nhanderu'
-        , 'film fas':       'https://letterboxd.com/Nhanderu'
-        , 'lastfm':         'https://www.last.fm/user/Taevataat'
-        , 'goodreads-g':    'https://www.goodreads.com/Nhanderu'
-        , 'strava':         'https://www.strava.com/athletes/nhanderu'
-        }
-
-    const walletAddresses =
-        { bitcoin:
-            { name: 'Bitcoin'
-            , address: '3HqHtkJXny6ktgKrAgBdCZpQ8Thv1LE2uU'
-            }
-        , ethereum:
-            { name: 'Ethereum'
-            , address: '0x8017b435270a71cd3d53c828304b0a8b97685cc8'
-            }
-        , litecoin:
-            { name: 'Litecoin'
-            , address: 'LQoBR1fUtfhV6evk17MZJ7NGbz6xKk6uDo'
-            }
-        }
+    const wbtc = 'bc1qz9s87ddg00xy0z0z2pkwcjrhylmwzfs0z687fz'
+    const wltc = 'LS4VFwq131LSDcjJfHad7hSmUJmaE6ux6E'
+    const weth = '0xf00F626d07BFa39d340944ec9f00133A71a40cf4'
 
 html
 
@@ -39,61 +13,52 @@ html
         meta(name='author' content='Rafael Escobar')
         meta(name='description' content='')
         meta(name='viewport' content='width=device-width, initial-scale=1.0')
-        
+
+        link(rel='icon', type='image/png', sizes='32x32', href='/favicon-32x32.png')
+        link(rel='icon', type='image/png', sizes='16x16', href='/favicon-16x16.png')
+        link(rel='icon', type='image/ico', href='/favicon.ico')
+        link(rel='apple-touch-icon', sizes='180x180', href='/apple-touch-icon.png')
+        link(rel='manifest', href='/site.webmanifest')
+
+        link(rel='stylesheet', href='https://code.cdn.mozilla.net/fonts/fira.css')
         link(inline, rel='stylesheet', href='index.css')
 
-        title Rafael Escobar!
+        title Rafael Escobar
 
     body
 
-        .wrapper: .box-wrapper
+        main
+            h1 Rafael Escobar
+            p
+                | Hello, my name is Rafael, I'm
+                span#age-text= ' 666 '
+                | and I'm from São Paulo, Brazil. I'm a programmer, a
+                | libertarian and a lover of coffee, beer, philosophy, comp.
+                | sci. and linguistics.
 
-            .box-picture
-                img#picture(src='https://s.gravatar.com/avatar/4755404e7968a565720746514e473296?s=300')
+        nav
+            p
+                a(href='https://github.com/Nhanderu.gpg') pgp 3E61740BD0944B1A
+            p
+                a(href='mailto:rafael@esco.dev') email
+                |  - 
+                a(href='https://github.com/Nhanderu') github
+                |  - 
+                a(href='https://linkedin.com/in/Nhanderu') linkedin
+            p
+                a(href='javascript:;', data-wallet=wbtc) bitcoin
+                |  - 
+                a(href='javascript:;', data-wallet=wltc) litecoin
+                |  - 
+                a(href='javascript:;', data-wallet=weth) ethereum
 
-            .box-profile
-                .description
-                    | Hello, my name is Rafael, I'm
-                    span#age-text= ' 666 '
-                    | and I'm from São Paulo, Brazil. I'm a programmer, a Corinthians huge fan, an
-                    | anarcho-capitalism enthusiast and a lover of coffee, beer, philosophy, comp.
-                    | sci. and linguistics.
-                .social
-                    ul.social-list
-                        each value, key in socialMenuLinks
-                            li.social-item
-                                a.social-item-link(href=value)
-                                    i(class=`fab fa-${key}`, aria-hidden='true')
+        #wallet.invisible
+            #qr-code
+            p
+                a#wallet-address(href='javascript:;')
+                span#clipboard-tooltip.invisible  copied
 
-            .box-links: ul.links-list
-                li.links-item
-                    a.links-item-link.button(href='mailto:rafael@esco.dev') Mail me
-                li.links-item
-                    a#modal-link.links-item-link.button(href='#') Wallets
-
-        #modal.tooltip
-            span#modal-closer
-                i.fa.fa-times.fa-2x
-            .modal-wrapper
-                .modal-links
-                    each value, key in walletAddresses
-                        span.button(data-crypto=key, data-wallet-address=value.address) #{value.name}
-                #qr-code
-                .box-wallet-address
-                    div
-                        span Wallet address
-                        span#clipboard-tooltip.tooltip copied
-                    button#wallet-address.button
-
-        #modal-background.tooltip
-
-        script(inline, src='date-update.js')
-
-        link(rel='stylesheet', href='https://use.fontawesome.com/releases/v5.13.0/css/all.css')
-        script(defer, src='https://kit.fontawesome.com/0159d4f9a6.js' crossorigin='anonymous')
-        
-        script(inline, defer, src='modal.js')
+        script(inline, defer, src='age.js')
         script(inline, defer, src='../lib/qrcodejs/qrcode.min.js')
-        script(inline, defer, src='qr-code.js')
-        script(inline, defer, src='copy-address.js')
-        script(inline, defer, src="chrome-mobile.js")
+        script(inline, defer, src='qrcode.js')
+        script(inline, defer, src='clipboard.js')
