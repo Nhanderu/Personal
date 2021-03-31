@@ -45,12 +45,12 @@
         outputContainer.classList.add('visible')
 
         const name = event.target.innerText
-        const wallet = event.target.getAttribute('w')
+        const wallet = event.target.getAttribute('data-w')
         walletOutput.innerText = wallet
         qrCodeGenerator.makeCode(`${name}:${wallet}`)
     }
 
-    const btns = document.querySelectorAll('[w]')
+    const btns = document.querySelectorAll('[data-w]')
     for (const btn of btns) {
         btn.addEventListener('click', qrCodeListener)
     }
