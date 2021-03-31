@@ -17,11 +17,6 @@ live with multiple domains. Any of the following redirects to
 - [bevilacqua.dev][5]
 - [zichia.dev][6]
 
-## Build
-
-To build it, simply run `yarn && yarn build`. The output will be on
-`docs/`.
-
 ## License
 
 This project code is in the public domain. See the [LICENSE file][7].
