@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Rafael Escobar">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" sizes="32x32" href="/static/icon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/static/icon/favicon-16x16.png">
+        <link rel="icon" type="image/ico" href="/static/icon/favicon.ico">
+        <link rel="apple-touch-icon" sizes="180x180" href="/static/icon/apple-touch-icon.png">
+        <link rel="manifest" href="/static/icon/site.webmanifest">
+        <link rel="stylesheet" href="https://code.cdn.mozilla.net/fonts/fira.css">
+        <link rel="stylesheet" href="/static/index.css">
+        <title>Rafael Escobar</title>
+    </head>
+    <body>
+        <main>
+            <h1>Rafael Escobar</h1>
+            <p>
+                Hello, my name is Rafael, I'm<span id="age-text"> 666 </span>and I'm from São
+                Paulo, Brazil. I'm a programmer, a libertarian and a lover of coffee, beer,
+                philosophy, comp. sci. and linguistics.
+            </p>
+        </main>
+        <nav>
+            <p>
+                <a href="https://github.com/Nhanderu.gpg">pgp 3E61740BD0944B1A</a>
+            </p>
+            <p>
+                <a href="mailto:rafael@esco.dev">email</a>
+                <span> - </span>
+                <a href="https://github.com/Nhanderu">github</a>
+                <span> - </span>
+                <a href="https://linkedin.com/in/Nhanderu">linkedin</a>
+            </p>
+            <p>
+                <a href="javascript:;" data-wallet="bc1qz9s87ddg00xy0z0z2pkwcjrhylmwzfs0z687fz">
+                    bitcoin
+                </a>
+                <span> - </span>
+                <a href="javascript:;" data-wallet="LS4VFwq131LSDcjJfHad7hSmUJmaE6ux6E">
+                    litecoin
+                </a>
+                <span> - </span>
+                <a href="javascript:;" data-wallet="0xf00F626d07BFa39d340944ec9f00133A71a40cf4">
+                    ethereum
+                </a>
+            </p>
+        </nav>
+        <div class="invisible" id="wallet">
+            <div id="qr-code"></div>
+            <p>
+                <a id="wallet-address" href="javascript:;"></a>
+                <span class="invisible" id="clipboard-tooltip"> copied</span>
+            </p>
+        </div>
+        <script src="/static/age.js"></script>
+        <script defer src="/lib/qrcodejs/qrcode.min.js"></script>
+        <script defer src="/static/wallet.js"></script>
+    </body>
+</html>
