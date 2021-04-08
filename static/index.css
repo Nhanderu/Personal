@@ -22,6 +22,14 @@ main {
 h1 {
     margin: 14px 0;
     font-size: 49px;
+}
+
+h2 {
+    margin: 14px 0;
+    font-size: 28px;
+}
+
+h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
     line-height: 1;
 }
