@@ -19,6 +19,10 @@ main, img {
     max-width: 480px;
 }
 
+img {
+    width: 100%;
+}
+
 h1 {
     margin: 14px 0;
     font-size: 49px;
