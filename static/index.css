@@ -15,12 +15,8 @@ body {
     }
 }
 
-main, img {
+main {
     max-width: 480px;
-}
-
-img {
-    width: 100%;
 }
 
 h1 {
@@ -48,6 +44,11 @@ main, nav, #wallet {
 
 #qr-code {
     margin: 14px 0;
+}
+
+#dog-img {
+    max-width: 480px;
+    width: 100%;
 }
 
 .invisible {
