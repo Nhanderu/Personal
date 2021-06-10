@@ -40,6 +40,8 @@ p {
 
 main, nav, #wallet {
     margin-top: 21px;
+    display: flex;
+    flex-direction: column;
 }
 
 #qr-code {
@@ -63,3 +65,7 @@ main, nav, #wallet {
     transition: opacity 0.2s;
 }
 
+::selection {
+    color: #282828;
+    background: #fdf4c1;
+}
